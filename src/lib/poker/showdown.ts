@@ -74,6 +74,56 @@ const specs: ShowdownSpec[] = [
       { id: 'omaha', label: 'Omaha hand (high)', ranking: 'high', select: OMAHA },
     ],
   },
+  {
+    id: 'drawmaha-27',
+    ways: [
+      { id: 'draw', label: 'Draw hand (2-7 low)', ranking: '27-low', select: HOLE },
+      { id: 'omaha', label: 'Omaha hand (high)', ranking: 'high', select: OMAHA },
+    ],
+  },
+  {
+    id: 'drawmaha-a5',
+    ways: [
+      { id: 'draw', label: 'Draw hand (A-5 low)', ranking: 'a5-low', select: HOLE },
+      { id: 'omaha', label: 'Omaha hand (high)', ranking: 'high', select: OMAHA },
+    ],
+  },
+  {
+    id: 'drawmaha-badugi',
+    ways: [
+      { id: 'draw', label: 'Draw hand (Badugi)', ranking: 'badugi', select: HOLE },
+      { id: 'omaha', label: 'Omaha hand (high)', ranking: 'high', select: OMAHA },
+    ],
+  },
+  { id: 'holdem-8', ways: [{ id: 'high', label: 'High', ranking: 'high', select: ALL }, { ...LOW8, select: ALL }] },
+  {
+    id: 'omaha-no-qualifier',
+    ways: [
+      { id: 'high', label: 'High', ranking: 'high', select: OMAHA },
+      { id: 'low', label: 'Low (A-5, no qualifier)', ranking: 'a5-low', select: OMAHA },
+    ],
+  },
+  {
+    id: 'stud-no-qualifier',
+    ways: [
+      { id: 'high', label: 'High', ranking: 'high', select: HOLE },
+      { id: 'low', label: 'Low (A-5, no qualifier)', ranking: 'a5-low', select: HOLE },
+    ],
+  },
+  {
+    id: 'razzdugi',
+    ways: [
+      { id: 'low', label: 'Razz low (A-5)', ranking: 'a5-low', select: HOLE },
+      { id: 'badugi', label: 'Badugi', ranking: 'badugi', select: HOLE },
+    ],
+  },
+  {
+    id: 'razzdeucey',
+    ways: [
+      { id: 'low', label: '2-7 Low', ranking: '27-low', select: HOLE },
+      { id: 'badugi', label: 'Badugi (aces high)', ranking: 'badugi-ace-high', select: HOLE },
+    ],
+  },
 ];
 
 export const SHOWDOWNS: Record<string, ShowdownSpec> = Object.fromEntries(specs.map((s) => [s.id, s]));

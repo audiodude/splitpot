@@ -42,6 +42,8 @@ canonicalSource: "Caesars WSOP Live-Action Rules 2026, Section IX (rules 218-236
 - **Dealer announcing straights/flushes:** WSOP 229 — never announced. Robert's — not announced "except for specified low-stakes games".
 - **Short-stub fallback:** WSOP 232 (burn cards can be mixed back first) vs TDA RP-10H (similar order: scramble with prior three burns if that reaches the needed number, else community card).
 
+- **Variants seen in sources:** BARGE (2.41) documents "Mississippi Stud," a button-and-blinds version (stud, stud 8 or razz) where 4th and 5th street are dealt together and 7th street is face up, aimed at pot-limit play — a BARGE-rulebook game, not a room staple. Wikipedia also describes six-card stud (home/online). Neither is given its own page here. Stud is "usually" limit, but pot-limit 7-card stud was the staple London club game in the Stewart Reuben era (poker-vibe.com review of *Poker 24/7*).
+
 ## Common newcomer mistakes
 - Treating position like Hold'em: in stud the first-to-act seat is determined by the up cards each round and changes. The bring-in is forced on the lowest door card, NOT the dealer's left.
 - Not knowing the ace is high for the bring-in and for ranking the board (A♠ is not the "lowest" card in 7-card stud high).

@@ -75,6 +75,25 @@ describe('evaluate', () => {
     expect(r.ways[0].winners).toEqual(['B']);
   });
 
+  it('Razzdugi: chooses best 5 of 7 for razz and best 4 of 7 for badugi', () => {
+    const r = evaluate(SHOWDOWNS.razzdugi, [
+      { name: 'A', cards: 'Ac 2d 3h 4s 5c Kd Kh' },
+      { name: 'B', cards: 'Ah 2c 3c 4d Ks 9s 9d' },
+    ]);
+    // Razz: A has the wheel (A-5 low), B's best is K-4-3-2-A.
+    expect(r.ways[0].winners).toEqual(['A']);
+    // Badugi: A has A-2-3-4 rainbow, the nuts. B's best four rainbow cards are worse.
+    expect(r.ways[1].winners).toEqual(['A']);
+  });
+
+  it('Stud hi-lo: best five of seven for each half', () => {
+    const r = evaluate(SHOWDOWNS['stud-8'], [
+      { name: 'A', cards: 'Ac 2d 3h 4s 6c Kd Kh' },
+      { name: 'B', cards: 'Qs Qd 9c 9h 2c 7d 7h' },
+    ]);
+    expect(r.ways.map((w) => w.winners)).toEqual([['B'], ['A']]);
+  });
+
   it('rejects duplicate cards', () => {
     expect(() => evaluate(SHOWDOWNS.holdem, [{ name: 'A', cards: 'As Ks' }], 'As 2c 3d')).toThrow(/As appears/);
   });
