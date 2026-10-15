@@ -26,8 +26,17 @@ Glossary entries live in `src/content/glossary.yaml`; link them from lingo pages
 
 ## Deploy
 
-Cloudflare Pages, **deploy `dist/` only, never the project root**: `npm run build && wrangler pages deploy dist`. After the first deploy, check `/.env`, `/.git/config`, `/wrangler.toml` return no real file bytes.
+Cloudflare Pages project `splitpot` (custom domain splitpot.poker). **Deploy `dist/` only, never the project root**:
 
+```
+npm run build && npx wrangler pages deploy dist --project-name splitpot --branch main
+```
+
+(needs `CLOUDFLARE_API_TOKEN` and `CLOUDFLARE_ACCOUNT_ID` in the environment.)
+
+Gotchas:
+- Do NOT run `wrangler pages project create` or `wrangler deploy` in this repo: wrangler's auto-configuration rewrites `astro.config.mjs`/`package.json` to add the Cloudflare adapter and deploys a Worker instead. The Pages project was created via the Pages API.
+- After a first deploy, verify by **content** that `/.env`, `/.git/config`, `/wrangler.toml` return only the site's HTML fallback (compare `md5sum` with `/`), not real file bytes.
 ## Later
 
 - "Who wins?" showdown quiz (the evaluator is built for it).
