@@ -1,0 +1,7 @@
+term: Eight-or-better
+aka:
+  - qualifier
+  - 8-or-better
+definition: In hi-lo split games, a low hand only counts if it's five unpaired
+  cards all 8 or lower (aces low). No qualifying low? The high hand takes the
+  whole pot.

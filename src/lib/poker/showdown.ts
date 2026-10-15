@@ -124,6 +124,12 @@ const specs: ShowdownSpec[] = [
       { id: 'badugi', label: 'Badugi (aces high)', ranking: 'badugi-ace-high', select: HOLE },
     ],
   },
+  { id: 'razz-27', ways: [{ id: 'low', label: '2-7 Low', ranking: '27-low', select: HOLE }] },
+  /**
+   * Games whose showdown the evaluator can't express yet (pip-count hands, multi-board pots, qualifiers
+   * on both halves, jokers, short-deck rankings). They ship WITHOUT worked examples: examples must be empty.
+   */
+  { id: 'custom', ways: [] },
 ];
 
 export const SHOWDOWNS: Record<string, ShowdownSpec> = Object.fromEntries(specs.map((s) => [s.id, s]));

@@ -1,0 +1,6 @@
+term: Badugi (hand)
+definition: A four-card hand with four different suits and four different ranks.
+  Aces are low (except in Badeucy, where they are high). A four-card badugi
+  beats any three-card hand; among equals, compare highest card down (lowest
+  wins). If you have duplicate suits or ranks you play the biggest clean subset,
+  e.g. a "three-card" hand.

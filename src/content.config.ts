@@ -1,5 +1,5 @@
 import { defineCollection, reference } from 'astro:content';
-import { file, glob } from 'astro/loaders';
+import { glob } from 'astro/loaders';
 import { z } from 'astro/zod';
 import { SHOWDOWNS, verifyExample } from './lib/poker/showdown';
 
@@ -61,8 +61,9 @@ const gameBodies = defineCollection({
   loader: glob({ pattern: '*/{full,lingo}.mdx', base: './src/content/games' }),
 });
 
+/** One file per entry: src/content/glossary/<id>.yaml */
 const glossary = defineCollection({
-  loader: file('src/content/glossary.yaml'),
+  loader: glob({ pattern: '*.yaml', base: './src/content/glossary' }),
   schema: z.object({
     term: z.string(),
     aka: z.array(z.string()).default([]),

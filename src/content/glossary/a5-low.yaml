@@ -1,0 +1,8 @@
+term: Ace-to-five low
+aka:
+  - A-5
+  - California lowball ranking
+definition: "Low hand ranking where aces are the lowest card and straights and
+  flushes don't count against you. The best possible hand is A-2-3-4-5 (the <a
+  href=\"#wheel\">wheel</a>). Pairs are bad: any unpaired hand beats any pair.
+  Hands are compared from the highest card down, so 8-6-4-2-A beats 8-7-3-2-A."
