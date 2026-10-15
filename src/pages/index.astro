@@ -1,0 +1,150 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import { FAMILY_LABEL, slugify, STRUCTURE_LABEL, winsFacets } from '../lib/games';
+
+const games = (await getCollection('games')).sort((a, b) => a.data.name.localeCompare(b.data.name));
+const rows = games.map((game) => ({
+  game,
+  wins: winsFacets(game.data),
+}));
+
+const uniq = <T,>(xs: T[]) => [...new Set(xs)];
+const facets = [
+  { key: 'family', label: 'Family', options: Object.keys(FAMILY_LABEL).map((v) => ({ value: v, label: FAMILY_LABEL[v] })) },
+  { key: 'wins', label: 'What wins', options: uniq(rows.flatMap((r) => r.wins)).sort().map((w) => ({ value: slugify(w), label: w })) },
+  { key: 'structure', label: 'Usually played', options: Object.keys(STRUCTURE_LABEL).map((v) => ({ value: v, label: STRUCTURE_LABEL[v] })) },
+  {
+    key: 'hole',
+    label: 'Cards per player',
+    options: uniq(games.map((g) => g.data.holeCards)).sort((a, b) => a - b).map((n) => ({ value: String(n), label: String(n) })),
+  },
+  {
+    key: 'draws',
+    label: 'Draws',
+    options: uniq(games.map((g) => g.data.draws)).sort((a, b) => a - b).map((n) => ({ value: String(n), label: n === 0 ? 'None' : String(n) })),
+  },
+];
+const families = Object.keys(FAMILY_LABEL).filter((f) => games.some((g) => g.data.family === f));
+---
+
+<Base title="Split Pot">
+  <h1>Split Pot</h1>
+  <p class="muted">
+    Just sat down at a mixed game and the button's coming? Every game in the rotation, explained for Hold'em players.
+  </p>
+
+  <input class="search" type="search" id="q" placeholder="Search games, abbreviations, nicknames… (press /)" autocomplete="off" />
+  {
+    facets.map((f) => (
+      <div class="facet" data-facet={f.key}>
+        <span class="facet-label">{f.label}</span>
+        <div class="chips">
+          {f.options.map((o) => (
+            <button type="button" data-value={o.value} aria-pressed="false">
+              {o.label}
+            </button>
+          ))}
+        </div>
+      </div>
+    ))
+  }
+  <p class="muted" id="count"></p>
+
+  {
+    families.map((fam) => (
+      <section data-group>
+        <h2>{FAMILY_LABEL[fam]}</h2>
+        <ul class="game-list">
+          {rows
+            .filter((r) => r.game.data.family === fam)
+            .map(({ game, wins }) => {
+              const d = game.data;
+              return (
+                <li
+                  data-family={d.family}
+                  data-wins={wins.map(slugify).join(' ')}
+                  data-structure={d.structures.join(' ')}
+                  data-hole={d.holeCards}
+                  data-draws={d.draws}
+                  data-search={[d.name, ...d.abbrevs, ...d.nicknames].join(' ').toLowerCase()}
+                >
+                  <a class="name" href={`/games/${game.id}`}>
+                    {d.name}
+                  </a>
+                  {d.abbrevs.length > 0 && <span class="abbr">{d.abbrevs.join(', ')}</span>}
+                  <p>{d.summary}</p>
+                  <ul class="chips">
+                    {[...wins, ...d.structures.map((s) => STRUCTURE_LABEL[s])].map((c) => (
+                      <li class="chip">{c}</li>
+                    ))}
+                  </ul>
+                </li>
+              );
+            })}
+        </ul>
+      </section>
+    ))
+  }
+
+  <script>
+    const q = document.getElementById('q') as HTMLInputElement;
+    const facets = [...document.querySelectorAll<HTMLElement>('[data-facet]')];
+    const rows = [...document.querySelectorAll<HTMLElement>('[data-search]')];
+    const count = document.getElementById('count')!;
+
+    // Restore state from the URL, e.g. ?wins=badugi&family=draw,hybrid&q=deuce
+    const params = new URLSearchParams(location.search);
+    q.value = params.get('q') ?? '';
+    for (const f of facets) {
+      const on = (params.get(f.dataset.facet!) ?? '').split(',');
+      for (const b of f.querySelectorAll('button')) b.setAttribute('aria-pressed', String(on.includes(b.dataset.value!)));
+    }
+
+    function apply() {
+      // OR within a facet, AND across facets.
+      const active = facets
+        .map((f) => ({
+          key: f.dataset.facet!,
+          values: [...f.querySelectorAll<HTMLElement>('button[aria-pressed="true"]')].map((b) => b.dataset.value!),
+        }))
+        .filter((f) => f.values.length);
+      const terms = q.value.toLowerCase().split(/\s+/).filter(Boolean);
+      let shown = 0;
+      for (const row of rows) {
+        const ok =
+          terms.every((t) => row.dataset.search!.includes(t)) &&
+          active.every((f) => f.values.some((v) => (row.dataset[f.key] ?? '').split(' ').includes(v)));
+        row.hidden = !ok;
+        if (ok) shown++;
+      }
+      for (const g of document.querySelectorAll<HTMLElement>('[data-group]')) {
+        g.hidden = !g.querySelector('[data-search]:not([hidden])');
+      }
+      count.textContent = `${shown} of ${rows.length} games`;
+
+      const next = new URLSearchParams();
+      if (q.value) next.set('q', q.value);
+      for (const f of active) next.set(f.key, f.values.join(','));
+      const qs = next.toString();
+      history.replaceState(null, '', qs ? `?${qs}` : location.pathname);
+    }
+
+    for (const f of facets) {
+      f.addEventListener('click', (e) => {
+        const b = (e.target as HTMLElement).closest('button');
+        if (!b) return;
+        b.setAttribute('aria-pressed', String(b.getAttribute('aria-pressed') !== 'true'));
+        apply();
+      });
+    }
+    q.addEventListener('input', apply);
+    document.addEventListener('keydown', (e) => {
+      if (e.key === '/' && document.activeElement !== q) {
+        e.preventDefault();
+        q.focus();
+      }
+    });
+    apply();
+  </script>
+</Base>

@@ -1,0 +1,119 @@
+:root {
+  --bg: #ffffff;
+  --surface: #f6f7f9;
+  --fg: #1b1f24;
+  --muted: #5d6673;
+  --border: #dde1e6;
+  --accent: #1a7f5a;
+  --accent-soft: #e3f4ec;
+  --win: #b7791f;
+  --card-bg: #ffffff;
+  --card-border: #b9c0c8;
+  --suit-s: #1b1f24;
+  --suit-h: #d12f2f;
+  --suit-d: #1f5fd1;
+  --suit-c: #17803d;
+  color-scheme: light;
+}
+:root[data-theme='dark'] {
+  --bg: #12151a;
+  --surface: #1b2027;
+  --fg: #e6e9ed;
+  --muted: #98a2ae;
+  --border: #2c333d;
+  --accent: #4cc794;
+  --accent-soft: #173328;
+  --win: #e2b04a;
+  --card-bg: #f4f5f7;
+  --card-border: #59616c;
+  color-scheme: dark;
+}
+:root[data-deck='2'] {
+  --suit-d: var(--suit-h);
+  --suit-c: var(--suit-s);
+}
+
+/* Two hand-written versions per game; Full shows by default and without JS. */
+.mode-lingo { display: none; }
+:root[data-mode='lingo'] .mode-lingo { display: block; }
+:root[data-mode='lingo'] .mode-full { display: none; }
+
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font: 16px/1.6 system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+}
+a { color: var(--accent); }
+main { max-width: 46rem; margin: 0 auto; padding: 1rem 1rem 4rem; }
+h1 { font-size: 1.9rem; line-height: 1.2; margin: 1rem 0 0.25rem; }
+h2 { font-size: 1.3rem; margin: 2rem 0 0.5rem; padding-bottom: 0.25rem; border-bottom: 1px solid var(--border); }
+h3 { font-size: 1.05rem; margin: 1.5rem 0 0.5rem; }
+code { background: var(--surface); padding: 0.1em 0.3em; border-radius: 4px; }
+table { border-collapse: collapse; width: 100%; font-size: 0.95rem; }
+th, td { border: 1px solid var(--border); padding: 0.35rem 0.5rem; text-align: left; vertical-align: top; }
+th { background: var(--surface); }
+blockquote { margin: 1rem 0; padding: 0.5rem 1rem; border-left: 4px solid var(--accent); background: var(--surface); }
+
+.site-header {
+  position: sticky; top: 0; z-index: 10;
+  display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap;
+  padding: 0.5rem 1rem; background: var(--bg); border-bottom: 1px solid var(--border);
+}
+.site-header .brand { font-weight: 800; color: var(--fg); text-decoration: none; font-size: 1.1rem; }
+.site-header nav { display: flex; gap: 0.75rem; }
+.site-header nav a { color: var(--muted); text-decoration: none; }
+.site-header .prefs { margin-left: auto; display: flex; gap: 0.4rem; }
+
+button, .btn {
+  font: inherit; font-size: 0.85rem; color: var(--fg); background: var(--surface);
+  border: 1px solid var(--border); border-radius: 999px; padding: 0.2rem 0.65rem; cursor: pointer;
+}
+button[aria-pressed='true'] { background: var(--accent); border-color: var(--accent); color: var(--bg); }
+
+.segmented { display: inline-flex; border: 1px solid var(--border); border-radius: 999px; overflow: hidden; }
+.segmented button { border: 0; border-radius: 0; }
+
+.chips { display: flex; flex-wrap: wrap; gap: 0.35rem; margin: 0.5rem 0; padding: 0; list-style: none; }
+.chip { font-size: 0.78rem; padding: 0.1rem 0.55rem; border-radius: 999px; background: var(--accent-soft); color: var(--fg); }
+.muted { color: var(--muted); }
+
+/* Playing cards */
+.cards { display: inline-flex; gap: 3px; flex-wrap: wrap; vertical-align: middle; }
+.card { width: 2.1rem; height: 2.9rem; flex: none; }
+.cards.small .card { width: 1.55rem; height: 2.15rem; }
+.card rect { fill: var(--card-bg); stroke: var(--card-border); }
+.card.dim { opacity: 0.35; }
+.card text { font: 700 22px system-ui, sans-serif; }
+.suit-s { fill: var(--suit-s); }
+.suit-h { fill: var(--suit-h); }
+.suit-d { fill: var(--suit-d); }
+.suit-c { fill: var(--suit-c); }
+
+/* Worked examples */
+.example { border: 1px solid var(--border); border-radius: 10px; background: var(--surface); padding: 0.75rem; margin: 1rem 0; }
+.example h4 { margin: 0 0 0.5rem; font-size: 1rem; }
+.example .row { display: flex; align-items: center; gap: 0.6rem; flex-wrap: wrap; margin: 0.35rem 0; }
+.example .who { min-width: 4.5rem; font-weight: 600; }
+.example .ways { margin: 0.25rem 0 0.4rem 0; padding: 0; list-style: none; font-size: 0.88rem; }
+.example .ways li { display: flex; gap: 0.4rem; align-items: center; flex-wrap: wrap; margin: 0.15rem 0; }
+.example .win { color: var(--win); font-weight: 700; }
+.example .result { border-top: 1px dashed var(--border); margin-top: 0.5rem; padding-top: 0.5rem; font-size: 0.92rem; }
+.example .player { border-top: 1px solid var(--border); padding-top: 0.35rem; }
+
+/* Index */
+.search { width: 100%; font: inherit; padding: 0.55rem 0.8rem; border: 1px solid var(--border); border-radius: 8px; background: var(--bg); color: var(--fg); }
+.facet { margin: 0.5rem 0; }
+.facet-label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); }
+.game-list { list-style: none; padding: 0; margin: 0; }
+.game-list li { padding: 0.6rem 0; border-bottom: 1px solid var(--border); }
+.game-list a.name { font-weight: 700; text-decoration: none; }
+.game-list .abbr { color: var(--muted); font-size: 0.85rem; margin-left: 0.35rem; }
+.game-list p { margin: 0.15rem 0; }
+[hidden] { display: none !important; }
+
+.glossary dt { font-weight: 700; margin-top: 1.25rem; scroll-margin-top: 4rem; }
+.glossary dd { margin: 0.25rem 0 0; }
+:target { background: var(--accent-soft); }

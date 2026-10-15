@@ -1,0 +1,76 @@
+---
+import { getEntry } from 'astro:content';
+import { cardStr } from '../lib/poker/cards';
+import { evaluate, SHOWDOWNS } from '../lib/poker/showdown';
+import Cards from './Cards.astro';
+
+interface Props {
+  game: string;
+  id: string;
+}
+const { game, id } = Astro.props;
+const entry = await getEntry('games', game);
+const ex = entry?.data.examples.find((e) => e.id === id);
+if (!entry || !ex) throw new Error(`<Example game="${game}" id="${id}"> not found in ${game}/meta.yaml`);
+
+// Already verified against `winners` at content-sync time; recomputed here for display.
+const result = evaluate(SHOWDOWNS[entry.data.showdown], ex.players, ex.board);
+const FRACTION: Record<string, string> = { '1': 'the whole pot', '0.5': 'half', '0.25': 'a quarter', '0.75': 'three quarters' };
+const share = (x: number) => FRACTION[String(x)] ?? `${Math.round(x * 1000) / 10}%`;
+const scoops = Object.entries(result.shares).filter(([, s]) => s === 1).map(([n]) => n);
+---
+
+<figure class="example">
+  <h4>{ex.title}</h4>
+  {
+    ex.board && (
+      <div class="row">
+        <span class="who">Board</span>
+        <Cards c={ex.board} />
+      </div>
+    )
+  }
+  {
+    ex.players.map((p) => (
+      <div class="player">
+        <div class="row">
+          <span class="who">{p.name}</span>
+          <Cards c={p.cards} />
+          {p.discards && (
+            <span class="muted">
+              threw <Cards c={p.discards} small />
+            </span>
+          )}
+        </div>
+        <ul class="ways">
+          {result.ways.map((w) => {
+            const h = w.hands.find((x) => x.name === p.name)!;
+            const won = w.winners.includes(p.name);
+            return (
+              <li>
+                {result.ways.length > 1 && <span class="muted">{w.way.label}:</span>}
+                <span class:list={{ win: won }}>{h.description}</span>
+                {h.best && <Cards c={h.best.map(cardStr).join(' ')} small />}
+                {won && <span class="win">✓ wins</span>}
+              </li>
+            );
+          })}
+        </ul>
+      </div>
+    ))
+  }
+  <div class="result">
+    {
+      scoops.length === 1 ? (
+        <strong>{scoops[0]} scoops the whole pot.</strong>
+      ) : (
+        <span>
+          {Object.entries(result.shares)
+            .filter(([, s]) => s > 0)
+            .map(([n, s]) => `${n} takes ${share(s)}`)
+            .join(' · ')}
+        </span>
+      )
+    }
+  </div>
+</figure>

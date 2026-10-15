@@ -1,0 +1,50 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../layouts/Base.astro';
+
+const entries = (await getCollection('glossary')).sort((a, b) => a.data.term.localeCompare(b.data.term));
+const games = await getCollection('games');
+const bodies = await getCollection('gameBodies');
+const nameById = Object.fromEntries(games.map((g) => [g.id, g.data.name]));
+
+// Backlinks: which games link to /glossary#<id> from either version of their page.
+const usedBy: Record<string, Set<string>> = {};
+for (const b of bodies) {
+  const gameId = b.id.split('/')[0];
+  for (const m of (b.body ?? '').matchAll(/\/glossary#([a-z0-9-]+)/g)) (usedBy[m[1]] ??= new Set()).add(gameId);
+}
+const known = new Set(entries.map((e) => e.id));
+const broken = Object.keys(usedBy).filter((id) => !known.has(id));
+if (broken.length) throw new Error(`Glossary links to missing entries: ${broken.join(', ')}`);
+---
+
+<Base title="Glossary" description="Mixed-games lingo, from bring-in to Badugi.">
+  <h1>Glossary</h1>
+  <p class="muted">The lingo, decoded. Game pages in “I know the lingo” mode link here.</p>
+  <dl class="glossary">
+    {
+      entries.map((e) => (
+        <>
+          <dt id={e.id}>
+            {e.data.term}
+            {e.data.aka.length > 0 && <span class="muted"> ({e.data.aka.join(', ')})</span>}
+          </dt>
+          <dd>
+            <p set:html={e.data.definition} />
+            {usedBy[e.id] && (
+              <p class="muted">
+                Used in:{' '}
+                {[...usedBy[e.id]].sort().map((id, i) => (
+                  <>
+                    {i > 0 && ', '}
+                    <a href={`/games/${id}`}>{nameById[id]}</a>
+                  </>
+                ))}
+              </p>
+            )}
+          </dd>
+        </>
+      ))
+    }
+  </dl>
+</Base>

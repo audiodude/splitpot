@@ -1,0 +1,90 @@
+---
+import { getCollection, getEntries, getEntry, render } from 'astro:content';
+import Cards from '../../components/Cards.astro';
+import Example from '../../components/Example.astro';
+import Base from '../../layouts/Base.astro';
+import { FAMILY_LABEL, STRUCTURE_LABEL, winsFacets } from '../../lib/games';
+
+export async function getStaticPaths() {
+  const games = await getCollection('games');
+  return games.map((game) => ({ params: { slug: game.id }, props: { game } }));
+}
+
+const { game } = Astro.props;
+const g = game.data;
+const [fullEntry, lingoEntry] = await Promise.all([
+  getEntry('gameBodies', `${game.id}/full`),
+  getEntry('gameBodies', `${game.id}/lingo`),
+]);
+if (!fullEntry || !lingoEntry) throw new Error(`${game.id}: needs both full.mdx and lingo.mdx`);
+const [{ Content: Full }, { Content: Lingo }] = await Promise.all([render(fullEntry), render(lingoEntry)]);
+
+const related = await getEntries(g.related);
+const parent = g.parent ? await getEntry(g.parent) : undefined;
+const variants = (await getCollection('games', (x) => x.data.parent?.id === game.id)).sort((a, b) =>
+  a.data.name.localeCompare(b.data.name),
+);
+const components = { Example, Cards };
+const chips = [
+  FAMILY_LABEL[g.family].replace(/s$/, ''),
+  ...winsFacets(g),
+  ...g.structures.map((s) => STRUCTURE_LABEL[s]),
+  `${g.holeCards} cards`,
+  g.draws ? `${g.draws} draw${g.draws > 1 ? 's' : ''}` : null,
+].filter(Boolean);
+---
+
+<Base title={g.name} description={g.summary}>
+  <article>
+    <h1>{g.name}</h1>
+    <p class="muted">
+      {[...g.abbrevs, ...g.nicknames.map((n) => `“${n}”`)].join(' · ')}
+    </p>
+    <ul class="chips">{chips.map((c) => <li class="chip">{c}</li>)}</ul>
+    {
+      parent && (
+        <p class="muted">
+          A variant of <a href={`/games/${parent.id}`}>{parent.data.name}</a>.
+        </p>
+      )
+    }
+    <div class="segmented" role="group" aria-label="Explanation style">
+      <button type="button" data-set="mode:full">Full breakdown</button>
+      <button type="button" data-set="mode:lingo">I know the lingo</button>
+    </div>
+
+    <div class="mode-full"><Full components={components} /></div>
+    <div class="mode-lingo"><Lingo components={components} /></div>
+
+    {
+      (variants.length > 0 || related.length > 0) && (
+        <>
+          <h2>Related games</h2>
+          <ul>
+            {variants.map((v) => (
+              <li>
+                <a href={`/games/${v.id}`}>{v.data.name}</a> <span class="muted">(variant)</span>
+              </li>
+            ))}
+            {related.map((r) => (
+              <li>
+                <a href={`/games/${r.id}`}>{r.data.name}</a> <span class="muted">— {r.data.summary}</span>
+              </li>
+            ))}
+          </ul>
+        </>
+      )
+    }
+
+    <h2>Sources</h2>
+    <ul>
+      {
+        g.sources.map((s) => (
+          <li>
+            <a href={s.url} rel="noopener">{s.title}</a>
+          </li>
+        ))
+      }
+    </ul>
+  </article>
+</Base>

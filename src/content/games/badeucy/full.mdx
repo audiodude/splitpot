@@ -1,0 +1,70 @@
+## It's 2-7 triple draw, except every hand has to do two jobs
+
+You've (maybe) played 2-7 triple draw: five cards, three draws, lowest hand wins, aces high, straights and flushes are poison. Badeucy plays exactly the same way, but the pot is **split in half**. One half goes to the best 2-7 low. The other half goes to the best **badugi**: the best four cards that are all different suits *and* all different ranks.
+
+You're looking at the same five cards two different ways, and the two halves are judged independently. You can win one, both, or neither.
+
+## 30-second cheat sheet
+
+- Five cards each, three draws, four betting rounds. Small bet before the draw and after the first draw, big bet after the second and third.
+- Half 1: **2-7 low**, five cards. Aces high, straights and flushes count against you. Best hand: **7-5-4-3-2**, not all one suit.
+- Half 2: **badugi**, up to four cards, all different suits and ranks. Four cards beat three, three beat two. Within the same size, lower is better.
+- **Aces are high in both halves.** The best badugi is 5-4-3-2 in four suits, and A-2-3-4 is *not* the nuts here.
+- Almost always played limit, six players max.
+
+## Full rules
+
+### The deal
+There's a button, a small blind and a big blind, like any flop game. Everybody gets five cards face down. Betting starts to the left of the big blind.
+
+### The draws
+After the first betting round, starting left of the button, each player says how many cards to throw away (zero to five) and gets replacements. Zero is called **standing pat**. Then betting. Do that three times in total. In limit games the first two betting rounds use the small bet and the last two use the big bet (double).
+
+### 2-7 low half
+All five of your cards count. The aces are always high. A straight or flush is *worse* than any pair: 6-5-4-3-2 is a straight and a terrible hand. Pairs are bad too. The best possible hand is **7-5-4-3-2** with mixed suits. You compare from the top card down, so 9-7-5-3-2 beats 10-6-4-3-2.
+
+### Badugi half
+Pick the best four-or-fewer of your five cards where every card has a different suit and a different rank. A four-card badugi always beats a three-card hand, however ugly the four-card one is. If both players have the same number of cards, compare the highest card first, lowest wins. **The ace is the highest card.** A-2-3-4 in four suits is an ace-high badugi and loses to K-Q-J-9. The best badugi is **5-4-3-2**, and the dream hand is 2-3-4-5-7 with four suits, which is the nuts for both halves.
+
+### Ties
+A tie splits that half. If two players tie for the badugi half, they each get a quarter of the whole pot.
+
+## Worked examples
+
+### Two good hands, one chopped pot
+
+<Example game="badeucy" id="real-hand" />
+
+This hand actually happened at the 2019 WSOP $1,500 Dealer's Choice. Collopy had a lovely 9-7-5-3-2 for the low. Ross's best low was ten-high, which loses. But Ross's four cards 6-4-3-2 form a rainbow badugi, and Collopy's best badugi, 9-5-3-2, is higher. Result: one half each.
+
+### The ace trap
+
+<Example game="badeucy" id="ace-high" />
+
+Xavier has the classic A-2-3-4 rainbow that is the nuts in ordinary Badugi. Here the ace counts high, so it's an ace-high badugi and Yolanda's 5-4-3-2 beats it. Yolanda also takes the 2-7 half, since Xavier's pair of fours loses to her 8-5-4-3-2.
+
+### A straight that's useless for low
+
+<Example game="badeucy" id="straight" />
+
+Rita's 2-3-4-5-6 is a straight, which is a disaster in 2-7. But her 5-4-3-2 is the best possible badugi, so she gets half the pot with a "wheel-looking" hand. Tom wins low with K-Q-J-9-8, an ugly king-high hand that just has no straight or pair.
+
+### Quartered
+
+<Example game="badeucy" id="quartered" />
+
+Ann and Ben both have 5-4-3-2 rainbow for the badugi half, so they split it. Ben's 7-5-4-3-2 is the nut low, so he takes the whole 2-7 half. Ben gets three quarters of the pot and Ann gets one.
+
+## How you'll embarrass yourself
+
+- **Treating the ace as low in the badugi half.** This is the number one mistake. A-2-3-4 is not the nuts. It's an ace-high badugi.
+- **Thinking A-2-3-4-5 is the best 2-7 hand.** It's ace-high and not even good.
+- **Keeping a pat 2-7 hand with no badugi.** Something like 2-3-4-5-7 with four hearts and a seven is a perfect low, but only a two-card badugi, so you're easy to freeroll for half the pot.
+- **Forgetting a four-card badugi of any rank beats every three-card hand.** A king-high four-suit badugi is better than a perfect three-card A-2-3.
+- **Playing it as a deep game.** It's a six-handed limit game. Don't ask for a table of nine.
+
+## Lore and reputation
+
+Badeucy (spelled Baduci in WSOP live-action rules and Badeucey in the WSOP tournament rules) shows up around Las Vegas in the mid-2000s, and Bryan Devonshire wrote in Card Player that it "first showed up in Vegas around 2007". It's a staple of high-stakes mixed games, and it was on the list of Dealer's Choice games at the WSOP when those events started. Pros love to say the game is about freerolling: *freeroll them, don't get freerolled*.
+
+If you want the version with ace-to-five low and an ace-low badugi, that's a different game called Badacey.

@@ -1,0 +1,69 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description?: string;
+}
+const { title, description = 'The rules of every weird game at the mixed-games table, explained for Hold\'em players.' } = Astro.props;
+const pageTitle = title === 'Split Pot' ? title : `${title} · Split Pot`;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>{pageTitle}</title>
+    <meta name="description" content={description} />
+    <script is:inline>
+      // Apply saved prefs before first paint. Keys: mode (full|lingo), deck (4|2), theme (light|dark).
+      (() => {
+        const root = document.documentElement;
+        const get = (k) => { try { return localStorage.getItem('sp-' + k); } catch { return null; } };
+        root.dataset.mode = get('mode') || 'full';
+        root.dataset.deck = get('deck') || '4';
+        root.dataset.theme = get('theme') || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      })();
+    </script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="/">Split Pot</a>
+      <nav>
+        <a href="/">Games</a>
+        <a href="/glossary">Glossary</a>
+      </nav>
+      <div class="prefs">
+        <button type="button" data-cycle="deck" title="Toggle four-color / two-color deck">
+          <span class="suit-preview">♠<span style="color:var(--suit-h)">♥</span><span style="color:var(--suit-d)">♦</span><span style="color:var(--suit-c)">♣</span></span>
+        </button>
+        <button type="button" data-cycle="theme" title="Toggle light / dark">◐</button>
+      </div>
+    </header>
+    <main>
+      <slot />
+    </main>
+    <script is:inline>
+      (() => {
+        const root = document.documentElement;
+        const cycle = { deck: ['4', '2'], theme: ['light', 'dark'] };
+        const save = (k, v) => { root.dataset[k] = v; try { localStorage.setItem('sp-' + k, v); } catch {} sync(); };
+        const sync = () => {
+          for (const b of document.querySelectorAll('[data-set]')) {
+            const [k, v] = b.dataset.set.split(':');
+            b.setAttribute('aria-pressed', String(root.dataset[k] === v));
+          }
+        };
+        document.addEventListener('click', (e) => {
+          const set = e.target.closest('[data-set]');
+          if (set) { const [k, v] = set.dataset.set.split(':'); save(k, v); }
+          const cyc = e.target.closest('[data-cycle]');
+          if (cyc) { const k = cyc.dataset.cycle; const opts = cycle[k]; save(k, opts[(opts.indexOf(root.dataset[k]) + 1) % opts.length]); }
+        });
+        sync();
+      })();
+    </script>
+  </body>
+</html>

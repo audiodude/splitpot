@@ -1,0 +1,45 @@
+name: Badeucy
+abbrevs: [Baduci, Badeucey]
+nicknames: [2-7 Badugi]
+summary: 2-7 triple draw where one half of the pot goes to the best 2-7 low and the other to the best badugi, with aces high in both.
+family: draw
+structures: [limit]
+holeCards: 5
+draws: 3
+showdown: badeucy
+sources:
+  - title: WSOP 2026 Live-Action Rules (Baduci)
+    url: https://assets.wsopcdn.com/wsop/853ee602-e1e9-4019-a0cf-381419d805c6.pdf
+  - title: Wikipedia — Baduci
+    url: https://en.wikipedia.org/wiki/Baduci
+  - title: PokerListings — How to Play Badeucy
+    url: https://www.pokerlistings.com/poker-rules/badeucy-poker
+  - title: CountingOuts — Badeucey rules and basic strategy
+    url: https://www.countingouts.com/badeucey-rules-and-basic-strategy/
+  - title: Card Player — Badeucey fundamentals with Randy Ohel
+    url: https://www.cardplayer.com/poker-news/24936-poker-strategy-badeucey-fundamentals-with-randy-ohel
+examples:
+  - id: real-hand
+    title: A real hand from the 2019 WSOP $1,500 Dealer's Choice
+    players:
+      - { name: Collopy, cards: 9h 7s 5s 3c 2d }
+      - { name: Ross, cards: 6s 4c 3d 2h Tc }
+    winners: { badugi: [Ross], low: [Collopy] }
+  - id: ace-high
+    title: The ace is high, so A-2-3-4 is not the nuts
+    players:
+      - { name: Xavier, cards: As 2h 3d 4c 4s }
+      - { name: Yolanda, cards: 5h 4d 3c 2s 8h }
+    winners: { badugi: [Yolanda], low: [Yolanda] }
+  - id: straight
+    title: A straight wrecks the low but makes the nut badugi
+    players:
+      - { name: Rita, cards: 2c 3d 4h 5s 6c }
+      - { name: Tom, cards: Ks Qd Jh 9c 8s }
+    winners: { badugi: [Rita], low: [Tom] }
+  - id: quartered
+    title: Tie one half, lose the other
+    players:
+      - { name: Ann, cards: 2s 3h 4d 5c Ks }
+      - { name: Ben, cards: 2h 3s 4c 5d 7d }
+    winners: { badugi: [Ann, Ben], low: [Ben] }

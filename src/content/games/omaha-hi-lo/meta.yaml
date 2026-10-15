@@ -1,0 +1,42 @@
+name: Omaha Hi-Lo
+abbrevs: [O8, Omaha/8]
+nicknames: [Omaha Eight-or-Better]
+summary: Omaha where the pot splits between the best high hand and the best 8-or-better low.
+family: board
+structures: [limit]
+holeCards: 4
+draws: 0
+showdown: omaha-8
+sources:
+  - title: Wikipedia — Omaha hold 'em
+    url: https://en.wikipedia.org/wiki/Omaha_hold_%27em
+examples:
+  - id: scoop
+    title: One hand, two different two-card combos, whole pot
+    board: 2c 5d 9h Kc 7s
+    players:
+      - { name: Alice, cards: Ac 3d Kh Ks }
+      - { name: Bob, cards: Ad 4h Qs Js }
+    winners: { high: [Alice], low: [Alice] }
+  - id: no-low
+    title: Three high cards on board means no low, so high takes it all
+    board: Ks 9h Th 9c 4d
+    players:
+      - { name: Alice, cards: As 2s 3c 5d }
+      - { name: Bob, cards: Kh Kd 7c 6c }
+    winners: { high: [Bob], low: [] }
+  - id: counterfeit
+    title: Alice's A-2 gets counterfeited
+    board: 2d 6c 7h Ac Ks
+    players:
+      - { name: Alice, cards: Ah 2h 9s 9d }
+      - { name: Bob, cards: 3s 4s Jd Qd }
+    winners: { high: [Alice], low: [Bob] }
+  - id: quartered
+    title: Two A-2s tie for low and get a quarter each
+    board: 3c 5h 8d Jh Tc
+    players:
+      - { name: Alice, cards: As 2d Ks Kd }
+      - { name: Bob, cards: Ac 2h Qs Qd }
+      - { name: Carol, cards: Js Jd Jc 9s }
+    winners: { high: [Carol], low: [Alice, Bob] }

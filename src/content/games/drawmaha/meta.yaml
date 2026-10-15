@@ -1,0 +1,43 @@
+name: Drawmaha
+abbrevs: [Dramaha, Drawmaha High]
+nicknames: [Sviten]
+summary: Five cards, a flop, one draw. Half the pot goes to the best five-card hand, half to the best Omaha hand.
+family: hybrid
+structures: [limit, pot-limit]
+holeCards: 5
+draws: 1
+showdown: drawmaha
+related: [omaha-hi-lo]
+sources:
+  - title: WSOP 2026 Live-Action Rules (Drawmaha)
+    url: https://assets.wsopcdn.com/wsop/853ee602-e1e9-4019-a0cf-381419d805c6.pdf
+  - title: PokerListings — Drawmaha rules
+    url: https://www.pokerlistings.com/poker-rules/drawmaha-poker
+  - title: CountingOuts — Drawmaha rules and basic strategy
+    url: https://www.countingouts.com/drawmaha-rules-and-basic-strategy/
+  - title: Card Player Lifestyle — Mixed game poker rules
+    url: https://cardplayerlifestyle.com/poker-tips-strategy/mixed-game-poker-rules/
+  - title: SwC Poker — Drawmaha (Sviten)
+    url: https://swcpoker.club/poker-rules/draw-poker-games/drawmaha-sviten-poker
+examples:
+  - id: split-halves
+    title: A full house that loses half the pot
+    board: Qs 8s 3s 7d 2c
+    players:
+      - { name: Alice, cards: Kh Kd Kc 4s 4d }
+      - { name: Bob, cards: As Js 9h 6c 2d }
+    winners: { draw: [Alice], omaha: [Bob] }
+  - id: scoop
+    title: One set of five cards, two winning hands
+    board: 9h 8c 7d 2s Ks
+    players:
+      - { name: Carol, cards: 6s 5s 4c 3d 2h }
+      - { name: Dave, cards: Kh Kd 4s 4h Jc }
+    winners: { draw: [Carol], omaha: [Carol] }
+  - id: other-straight
+    title: Same board, different hole cards unlock a higher straight
+    board: 5h 6d 7c Kc Kd
+    players:
+      - { name: Gus, cards: Ah Ac 4h 3d 8s }
+      - { name: Hana, cards: 9h 9d 8h 4c 2s }
+    winners: { draw: [Gus], omaha: [Hana] }
