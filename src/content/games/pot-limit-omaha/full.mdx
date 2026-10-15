@@ -1,0 +1,87 @@
+## It's Hold'em, except you have four cards and you have to use exactly two of them
+
+You get **four** hole cards instead of two. The board is the same five community cards. The catch is the whole game: your hand must be made from **exactly two** of your hole cards and **exactly three** of the board cards. Not one, not three, not "I'll play my pair and the board". Exactly two and exactly three.
+
+And the bet sizes are *pot-limit*: you can bet as much as the pot, but not more. Not no-limit, not fixed-limit. You'll need to learn how to count a pot.
+
+## 30-second cheat sheet
+
+- Four hole cards. Button, small blind, big blind, then flop, turn, river and four betting rounds, just like Hold'em.
+- Your hand = exactly 2 hole cards + exactly 3 board cards. This is the [two-and-three rule](/glossary#omaha-rule).
+- High hand only here (PLO). Hi-lo Omaha is a separate game, listed as Omaha Hi-Lo.
+- [Pot-limit](/glossary#pot-limit): the most you can bet is the size of the pot. The most you can raise to is: call, then raise the size of the new pot.
+- The minimum bet is the big blind.
+- Four cards give you **six** different two-card combos, so you can have several hands at once. Most games run 6 to 9 players. The deck allows up to 11.
+- In mixed games it's a standard rotation slot (the 10-game mix at the WSOP Poker Players Championship has had it since 2015).
+
+## Full rules
+
+### The deal
+Same as Hold'em. Button, small blind, big blind, each player gets four cards face down. The WSOP also allows one blind, several blinds, antes, or combinations. Betting starts left of the big blind. Burn, three-card flop, betting, burn, turn, betting, burn, river, final betting round. After the flop, action starts with the first live player left of the button.
+
+### Building your hand
+At showdown you pick two of your four cards and three of the five board cards, and that is your five-card hand. Every ordinary ranking applies, including aces playing low in a wheel straight (A-2-3-4-5).
+
+Some consequences that surprise Hold'em players:
+
+- **A flush needs two suited hole cards** and three suited board cards. Four hearts on the board and one in your hand is *not* a flush.
+- **You can't play the board.** A royal flush on the board doesn't give anyone a royal flush.
+- **Pairs in your hand don't make trips together.** A pocket pair of nines and a nine on the board is three of a kind, a [set](/glossary#set). Having three nines in your hand and none on the board is just a pair of nines.
+- Four hole cards make six two-card combinations, so you may have a straight, a flush, and a set all at once. Only the best five-card hand plays.
+
+### The betting: pot-limit math
+Pre-flop, flop, turn, river. The minimum bet is the big blind. The maximum bet is the size of the pot. The maximum **raise** is the pot *after you call*.
+
+The way to think about it: call the bet first, count the pot, then raise that amount on top.
+
+- **Pot is $100, someone bets $50.** You call $50, so the pot is now $200. You can raise by $200. Your total wager is $250. (The WSOP uses this exact example.)
+- **Opening pre-flop with $1/$2 blinds.** The pot is $3. The first player to act can call $2, which would make the pot $5, then raise $5, for a total of $7. WSOP live rooms round the small blind up to a full big blind for this math, so a $5/$10 game can open to $40 (four big blinds), and a $1/$2 game to $8.
+
+Honestly, don't do the math yourself. Say **"pot"** and let the dealer count it. That's normal, and it's the thing that keeps you from betting $9 into a pot where the maximum was $8.
+
+Live-room conventions from the WSOP rules: pots can be rounded up to the next chip denomination. An oversized chip tossed in as a first bet counts as a pot-sized bet, and as a call if there's already a bet. An over-pot bet gets corrected, with the surplus returned unless action has already completed.
+
+### Showdown
+Table all four of your hole cards face up so the dealer and the players can read your hand (that's the TDA rule on Omaha tabling). Best high hand wins. Ties split evenly, and the odd [chip](/glossary#odd-chip) goes to the first tied hand clockwise from the button. In mixed-game rotations the WSOP simplifies the odd chip to the worst position in button games. Side pots are split separately, last one first.
+
+### Rooms disagree
+- **Pot-size rounding.** WSOP rounds the small blind up to the big blind and the pot to chip units when working out the max open. The TDA uses exact pot math: in their example with 100-200 blinds, the first player to act can open to 700 (call 200 plus the 500 that would be in the pot), and a dead or short blind doesn't change the calculation. Exact math with $1/$2 blinds opens to $7. WSOP rounding gives $8. This page teaches exact pot math and notes the live rounding.
+- **Blind structure.** WSOP also lists a three-blind $1-$2-$5 game ("3 Blind PLO"), where blinds are rounded up for the pot calculation and the quoted opening choices are $10, $15, $20, or pot ($25). Straddles are optional and capped by the room.
+- **High or hi-lo.** "Omaha" with no qualifier is ambiguous: in Europe it normally means high only, and elsewhere the same word can mean hi-lo. The game is posted per table, so ask.
+
+## Worked examples
+
+### One heart does not make a flush
+
+<Example game="pot-limit-omaha" id="one-heart" />
+
+Alice has the ace of hearts and four hearts are on the board. In Hold'em that's the nut flush. In Omaha she needs *two* hearts in her hand, so she doesn't have a flush. She's got a pair of queens (her queen of clubs plus the queen on board) and an ace kicker. Bob's pair of nines in his hand plus the nine on board is a set, and he wins.
+
+### Nobody plays the board
+
+<Example game="pot-limit-omaha" id="cant-play-board" />
+
+A royal flush is sitting right there on the board. Nobody gets to use it as is. Alice uses her ace and king of diamonds with the queen-jack-ten of clubs for a broadway straight. Bob's two clubs plus three of the five board clubs make a flush. A flush beats a straight, so Bob wins.
+
+### Different hole cards, different straights
+
+<Example game="pot-limit-omaha" id="two-straights" />
+
+On an 8-9-T board, Alice's J-Q makes a queen-high straight and Bob's 6-7 makes a ten-high straight. They both used two of their hole cards and three from the board. Alice's two fives also make two pair with the board's deuces, but the straight beats that. Higher straight wins.
+
+## How you'll embarrass yourself
+
+- **Using one hole card.** The single most common Omaha error, per PokerNews. A flush with one suited hole card and four on board is not a flush.
+- **Falling in love with top set, two pair, and non-nut flushes.** PokerNews calls two pair the most overplayed hand by Hold'em converts. The second-best straight or flush loses a lot of money.
+- **Miscounting a pot-sized raise.** Tell the dealer "pot". Don't push in a bunch of chips and hope.
+- **Forgetting how many outs you can have.** With four cards, a wraparound straight draw can have up to 20 outs. Wikipedia's example is J-T-7-6 on a 9-8-2 flop.
+- **Playing a "high" game that's actually hi-lo.** Check what's being called.
+- **Tabling only two cards.** Turn all four over.
+
+## Lore and reputation
+
+Wikipedia says casino executive Robert Turner brought Omaha into a casino by introducing it to Bill Boyd, who spread it at the Golden Nugget in Las Vegas under the name "Nugget Hold'em". The origin beyond that is "unknown" per Wikipedia. Pagat says it arrived in the 1980s and caught on quickly with casino and tournament players.
+
+PLO is popular in Europe, online, and in high-stakes mixed games in some American casinos. PokerNews calls it an "action game" and a popular alternative to no-limit Hold'em. It's the pot-limit Omaha slot in the WSOP Poker Players Championship's 10-game mix (since 2015) and in H.O.R.S.E.H.A.T., the 8-game style mix on PokerStars (per Wikipedia).
+
+Room-menu evidence is thin: from search snippets only, Commerce Casino lists PLO, Aria is described as the Strip's busiest PLO room, and Wynn and Venetian run 2/5 PLO "occasionally" according to third-party guides. Treat those as reports, not schedules.

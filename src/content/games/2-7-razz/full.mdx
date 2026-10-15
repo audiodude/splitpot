@@ -1,0 +1,78 @@
+## It's like Razz, except it plays like 2-7 lowball
+
+You know [Razz](/games/razz): seven-card stud, lowest hand wins. In ordinary Razz the ace is low and straights and flushes don't matter. In 2-7 Razz you flip both of those. The ace is **always high**, and straights and flushes **count against you**. It's the worst possible *poker* hand that wins, which means the nuts is **7-5-4-3-2** with at least two suits.
+
+The deal, streets and bet sizes are exactly the same as Razz. Only the ranking changes, and that changes who brings it in.
+
+## 30-second cheat sheet
+
+- Antes, no blinds. Two cards down, one up, then three more up, then one last down. Best five of seven.
+- **Lowest hand wins the whole pot.** No qualifier.
+- Aces are **high**. Straights and flushes **count against you**. Pairs are bad.
+- Best hand: **7-5-4-3-2**, not all one suit. A-2-3-4-5 is *not* a wheel here, just ace-high junk.
+- Third street: the **highest** door card brings it in, and **A♠** is the automatic bring-in.
+- Later streets: the **lowest** board acts first.
+- Limit game: small bet on third and fourth street, big bet on fifth, sixth and seventh.
+
+## Full rules
+
+### The deal
+Everyone antes. Two cards face down, one card face up, which is your **door card**.
+
+### Street by street
+1. **Third street.** The player showing the **highest** door card posts the **bring-in**. The ace is high, so A♠ is the highest card in the deck, then A♥, A♦, A♣, then K♠, and so on. BARGE puts it plainly: "an ace is a high card for bring-in purposes." The bring-in player may instead **complete** to a full small bet. Action goes clockwise from the bring-in. Small bet.
+2. **Fourth street.** Everyone still in gets one up card. The player whose **up cards show the lowest hand** acts first. Four up cards can never make a straight or a flush, so boards are compared by pairs and high cards only. Small bet.
+3. **Fifth street.** Another up card, lowest board acts first. Big bet from here.
+4. **Sixth street.** Another up card, lowest board acts first. Big bet.
+5. **Seventh street.** The last card comes face down. Lowest board acts first. Big bet, then showdown.
+
+Raise caps, the eight-player community-card fallback and dead-hand rules are the same as Razz and Seven-Card Stud. Nothing in the WSOP or BARGE text gives an open pair on fourth street any special effect in a razz game, so there isn't one. [INFERENCE from both sources being silent]
+
+### Ranking hands
+From your seven cards, pick the best five. That means **the lowest five-card hand under deuce-to-seven rules**:
+
+- **Aces are high only.** A-2-3-4-5 is not a straight here, just an ace-high hand.
+- **Straights and flushes count against you.** They're ordinary poker straights and flushes, which makes them very good poker hands and therefore very bad lows.
+- **Pairs are bad.** But a pair beats a straight or a flush.
+- You compare from the highest card down. 9-7-5-3-2 beats 10-6-4-3-2.
+- You pick the best *five* of your seven, so you avoid pairs, straights and flushes where you can. If you have 7♥ 3♠ 4♥ 6♠ 10♦ J♥ 5♥, you can't play 3-4-5-6-7 (it's a straight), so your best low is 3-4-5-6-10, a ten-low. That's Haney's example.
+
+### Showdown
+Lowest hand wins the whole pot. Ties split it, with the odd chip going to the highest card by suit among the five cards (WSOP/TDA).
+
+### Rooms disagree
+- **The name.** WSOP calls it "Kansas City Razz" (rule 238). BARGE calls it "Deuce-to-Seven Razz" and says it uses Kansas City Lowball rules. Card Player (Haney) calls it "2-7 Razz". All three describe the same ranking. "Kansas City" also names the *draw* lowball game, so make sure you're thinking of the stud version.
+- **Is it a standard game?** Haney (2022): "been around awhile in mixed games where the game choices are more exotic, but has recently become more prevalent in all games." The WSOP lists it only as a note under Razz, not as its own section, and it isn't on the PokerNews Dealer's Choice list. Treat it as a notable variant.
+
+## Worked examples
+
+### The straight trap
+
+<Example game="2-7-razz" id="straight-trap" />
+
+Alice has 3-4-5-6-7 in her seven cards. In Razz that would be a gorgeous seven-low. Here it's a straight, so she has to play 3-4-5-6-10. Bob's best is 9-7-5-3-2, with no pair and no flush. Nine-high beats ten-high, so Bob wins, even though he also holds a pair of kings. He doesn't want them.
+
+### The ace is high
+
+<Example game="2-7-razz" id="ace-is-high" />
+
+Alice has A-2-3-4-5. In regular Razz she'd have the nuts. Here the ace is high, so it's an ace-high hand, which loses to every king-high hand or lower. Her other two cards are a second 5 and a second 4, which only make pairs, so she has nothing better to play. Bob plays K-Q-J-9-8. King-high beats ace-high, so Bob wins.
+
+### The suited nuts
+
+<Example game="2-7-razz" id="flush-trap" />
+
+Alice holds 7♥ 5♥ 4♥ 3♥ 2♥. That's the nut low in ranks and a flush in suits, which means it's a very strong *high* hand. She can't play it. The best she can do is drop one heart for the queen of diamonds, making Q-5-4-3-2. Bob's T-8-6-4-2 is ten-high, which beats queen-high. Bob wins.
+
+## How you'll embarrass yourself
+
+- **Treating the ace as low.** The ace is the worst card in this game. The best door card to have is a deuce.
+- **Not seeing the straight.** 3-4-5-6-7 is a straight, which is a good poker hand and a terrible low. A pair is a *better* low than a straight or a flush.
+- **Playing "tight" starting hands.** Haney says hands that can make straights, like 4-5-6 or 5-6-7, are worse than "stretch" hands like 2-3-7, 2-5-7 or 2-4-8.
+- **Playing hands with aces.** Haney notes that players play hands with aces "more than one would think", because it's easy to read the ace as a good card. An ace door card is the worst possible and will be the bring-in.
+
+## Lore and reputation
+
+Haney (Card Player, 2022) wrote that this is "truly what Seven Card Stud Lowball is supposed to be if making the worst possible high hand is the goal." He predicted it might "make inroads, possibly even replacing the A-5 version" where Razz is spread in cash games and tournaments. That's an opinion piece, not a record of what rooms actually spread.
+
+Wikipedia's Razz article just notes that "Deuce-to-seven Razz is also sometimes played." Haney's starting-hand table puts three-to-a-7, 8 or 9 at a combined 15.93% of hands, roughly the same share of playable starting hands as three-to-an-8 in A-5 Razz (16.2%).

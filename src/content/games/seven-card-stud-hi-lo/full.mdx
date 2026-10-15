@@ -1,0 +1,94 @@
+## It's like Seven-Card Stud, except the pot gets cut in half
+
+Seven-card stud, same cards, same streets, same face-up cards you read every hand, but now there are two ways to win. Half the pot goes to the best **high** hand. The other half goes to the best **low** hand, as long as it's an eight-or-better low. If nobody has a qualifying low, the high hand gets everything.
+
+If you've played Omaha Hi-Lo, you already know how this works. The difference is that you build your hands from seven cards of your own, and you can see four of your opponents' cards.
+
+## 30-second cheat sheet
+
+- Antes, no blinds. Two down, one up, three more up, one last down. Five betting rounds, called streets.
+- Each player picks the best five cards for **high** and the best five for **low**, from the same seven. They can be different cards.
+- A low needs five cards of **five different ranks, all 8 or lower**. Aces are low, and straights and flushes don't count against you. Best low: A-2-3-4-5.
+- No low qualifies? The best high takes the **whole** pot.
+- One player can win both halves. That's a **scoop**.
+- Third street opens with a **bring-in** from the lowest door card. **Ace is high** for this, so 2♣ is the lowest.
+- Later streets: the best **high** showing acts first.
+- An open pair on fourth street does **not** let anyone make a big bet.
+- Limit game: small bet on third and fourth, big bet on fifth, sixth and seventh.
+
+## Full rules
+
+### The deal
+Everyone antes. Each player gets two cards face down and one card face up, the **door card**. The lowest door card posts the **bring-in**, a forced partial bet. Ties are broken by suit: clubs, diamonds, hearts, spades, low to high. The **ace counts as high** for this, so the lowest possible bring-in is the 2♣. The bring-in player may instead **complete** the bet to the full small bet.
+
+### Street by street
+1. **Third street.** Bring-in, then action clockwise from the bring-in. Small bet.
+2. **Fourth street.** Everyone still in gets another card face up. The player whose **up cards make the best high hand** acts first. If the best high hands are tied, the tied player closest to the dealer's left goes first. Small bet. A pair on board does **nothing** here: it does not let you bet the big bet, as it can in some Stud high games.
+3. **Fifth street.** Another up card. Best high showing acts first. Big bet from here.
+4. **Sixth street.** Another up card. Best high showing acts first. Big bet.
+5. **Seventh street.** The last card comes down. Best high among the four up cards acts first. Big bet, then showdown. If the player with the best high board is already all-in, action starts as if they'd checked.
+
+Eight players is the maximum. If all eight are still in on seventh street, the deck runs out, and the dealer deals a single community card face up that everyone uses as their seventh card.
+
+### Making your two hands
+You choose from the same seven cards twice. Each hand is exactly five cards.
+
+- **High:** the usual ranking. The ace plays high, or low in a wheel.
+- **Low:** five cards, all different ranks, none higher than 8. The ace is low. Straights and flushes don't count against a low, so A-2-3-4-5 is both the best low and a straight. Compare from the top card down: 7-5-4-3-2 beats 8-6-4-2-A, because a seven-low beats any eight-low.
+
+You can use the same five cards for both or different ones. Splits are determined by the cards only: you can't agree to deal the pot a certain way.
+
+### The qualifier
+A low only counts if it's **8-or-better**: five different ranks, all 8 or less. The highest possible qualifying low is 8-7-6-5-4. If nobody has one, the best high wins the whole pot. If only one player qualifies, they win the low half.
+
+### Ties and quartering
+If two players tie for the same half, they split that half. A player who ties for low while someone else wins high gets a **quarter** of the pot.
+
+### Rooms disagree
+- **Odd chips.** The odd chip in the total pot goes to the high hand. Within a tied half, WSOP and TDA give it to the highest card by suit in the five-card hand; Robert's Rules give a tied *low* half's chip to the *low* card by suit. This page follows the WSOP.
+- **Bring-in ties.** WSOP, Robert's, TDA and BARGE all use rank, then suit, with the ace high. PokerNews' Stud 8 page says the lowest card brings it in and breaks rank ties by position, and says nothing about aces. Upswing uses suit ties but never says what happens with an ace.
+- **Tied high boards on later streets.** WSOP and Robert's: the tied player closest to the dealer's left goes first. TDA tournament rules: the high card by suit starts the betting.
+- **Raise cap.** WSOP: bet and four raises, not counting a completed bring-in. Robert's, Pagat and PokerNews: three raises.
+- **Qualifier wording.** Upswing's article says "below 8", but its own example treats 8-7-6-5-3 as a qualifying low. Every rulebook says 8 or lower, and so does this page.
+- **"Three Cards Down."** Resorts World's mix lists "Stud 8/OB (Three Cards Down)". It's probably a version where you get three hole cards and discard one, but I couldn't find an article spelling out that room's rules, so don't count on it. [INFERENCE]
+
+## Worked examples
+
+### Wheel, both halves
+
+<Example game="seven-card-stud-hi-lo" id="scoop" />
+
+Alice has A-2-3-4-5, the best possible low. It's also a five-high straight, which beats Bob's kings and nines. She wins high *and* low and scoops. Bob's best low is useless: he only has two cards of 8 or lower, a 6 and a 7.
+
+### No low
+
+<Example game="seven-card-stud-hi-lo" id="no-low" />
+
+Alice has kings and nines for two pair. Bob has A-3-7-8 and nothing else under nine, so he can only produce a four-card low. Nobody has five different ranks of 8 or lower, so there is no low half. Alice's two pair takes the whole pot.
+
+### Quartered
+
+<Example game="seven-card-stud-hi-lo" id="quartered" />
+
+Alice and Bob both make 7-6-4-2-A for low. Neither has a hand that can win the high half. Carol has jacks full of threes, takes the high half, and has no low to speak of. Alice and Bob split the low half, which is a quarter of the pot each.
+
+### One card short
+
+<Example game="seven-card-stud-hi-lo" id="one-card-short" />
+
+Alice has A-2-3-4 and a nine. She feels great, but a nine can't be part of a low, and only four of her cards are 8 or lower. She has no low. Bob's 8-7-6-5-3 is a qualifying low and wins the low half. Alice's pair of kings is the best high.
+
+## How you'll embarrass yourself
+
+- **Counting a 9 in your low.** Nope. Five cards, all 8 or lower, no pairs.
+- **Playing it like Stud high.** Big pairs are hard to profit from in split-pot stud. Hands with low cards can chase the low half without needing to win the high.
+- **Thinking the ace is low for the bring-in.** It's high. The 2♣ is the lowest card.
+- **Expecting the big bet on a fourth-street pair.** Some Stud high rooms allow it. Stud 8 never does.
+- **Thinking a lone qualifier doesn't get paid.** If only one player has a low, they win half. If *nobody* does, high gets it all.
+- **Forgetting about quartering.** If you and someone else hold the same low, each of you gets a quarter. This is how an apparently strong low loses you money.
+
+## Lore and reputation
+
+Card Player's Haney writes that the earliest kitchen-table hi-lo stud had **no** low qualifier. The eight-or-better rule was added "to provide balance and make high hands more playable," and Stud 8 then "flourished" in HORSE (it's the "E") and in 8-game mixes. Haney rates it a 4 out of 10 for action, "grading on a curve", which is his opinion and not a fact.
+
+Pagat says formal games often use a qualification rule, and this variant is the formal-game standard for hi-lo stud. It shows up in WSOP cardroom mix rosters (the rules sheet lists "$20-$40 MIX ... Stud 8/O" as an example) and in the WSOP Dealer's Choice event roster.

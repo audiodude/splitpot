@@ -1,0 +1,46 @@
+name: Crazy Pineapple Hi-Lo
+abbrevs: [Crazy Pineapple 8, CP8, Crazy Pineapple Hi-Lo 8 or Better]
+nicknames: [Crazy Pineapple Eight or Better, Crazy Pineapple Hi-Low Split]
+summary: Hold'em with three hole cards, one discarded after the flop betting, and the pot split between high and an 8-or-better low.
+family: board
+structures: [limit]
+holeCards: 3
+draws: 0
+showdown: holdem-8
+parent: crazy-pineapple
+related: [crazy-pineapple, pineapple, omaha-hi-lo, limit-holdem]
+sources:
+  - title: Pagat — Texas Hold'em variants (Crazy Pineapple Hi-Lo 8 or Better)
+    url: https://www.pagat.com/poker/variants/texasholdem.html
+  - title: California AG — Deuces Wild Casino approved Crazy Pineapple rules
+    url: https://oag.ca.gov/sites/all/files/agweb/pdfs/gambling/deuces_wild.pdf
+  - title: Wizard of Odds — Pineapple and Crazy Pineapple
+    url: https://wizardofodds.com/games/pineapple-and-crazy-pineapple/
+  - title: WSOP 2026 Live-Action Rules (Pineapple, Crazy Pineapple, odd chip)
+    url: https://assets.wsopcdn.com/wsop/853ee602-e1e9-4019-a0cf-381419d805c6.pdf
+  - title: Wikipedia — High-low split
+    url: https://en.wikipedia.org/wiki/High-low_split
+examples:
+  - id: play-the-board
+    title: Three players all play the board for low
+    board: 2c 3d 5h 7s 8c
+    players:
+      - { name: Alice, cards: Qh Qs }
+      - { name: Bob, cards: Kd Kc }
+      - { name: Carol, cards: Jc Td }
+    winners: { high: [Bob], low: [Alice, Bob, Carol] }
+  - id: no-low
+    title: Three high board cards mean no low, and the straight takes it all
+    board: Kc Qh Jc 8s 3d
+    players:
+      - { name: Alice, cards: Ad 2d }
+      - { name: Bob, cards: Kd Ks }
+      - { name: Carol, cards: Tc 9h }
+    winners: { high: [Carol], low: [] }
+  - id: scoop
+    title: A club flush that is also a low
+    board: 3c 4h 8d Kc Jc
+    players:
+      - { name: Alice, cards: Ac 2c }
+      - { name: Bob, cards: Ks Kd }
+    winners: { high: [Alice], low: [Alice] }

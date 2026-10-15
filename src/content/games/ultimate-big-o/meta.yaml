@@ -1,0 +1,22 @@
+name: Ultimate Big O
+abbrevs: [UBO, DBO8 Best/Best]
+nicknames: [Double Board Big O, Double Board Omaha Ultimate High/Low (Best/Best)]
+summary: Big O with two boards, one high half and one low half to the best hands on either board, so a pot is never split four ways.
+family: board
+structures: [pot-limit, limit]
+holeCards: 5
+draws: 0
+showdown: custom
+parent: big-o
+related: [big-o, omaha-hi-lo, double-board-omaha, bomb-pot, 5-card-plo, big-easy]
+sources:
+  - title: WSOP 2026 Live-Action Rules (Ultimate Big O)
+    url: https://assets.wsopcdn.com/wsop/853ee602-e1e9-4019-a0cf-381419d805c6.pdf
+  - title: Card Player Lifestyle — Mixed game poker rules
+    url: https://cardplayerlifestyle.com/poker-tips-strategy/mixed-game-poker-rules/
+  - title: Steve Badger — Double Board Omaha
+    url: https://www.stevebadger.com/poker/omaha/double-board/
+  - title: Mixed Game Masters — Double Board Omaha FAQ
+    url: https://mixedgamemasters.com/strategy/double-board-omaha/double-board-faq/
+  - title: PokerSkill — Big O rules and strategy
+    url: https://www.pokerskill.com/blog/big-o-poker-rules-and-strategy/

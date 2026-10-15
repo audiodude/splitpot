@@ -1,0 +1,37 @@
+name: Sviten Special
+abbrevs: [Sviten, PL Sviten]
+nicknames: [Sviten]
+summary: "Drawmaha with a Nordic twist: draw exactly one card and it comes face up, and you may reject it."
+family: hybrid
+structures: [pot-limit, limit]
+holeCards: 5
+draws: 1
+showdown: drawmaha
+parent: drawmaha
+related: [2-7-drawmaha, drawmaha-49]
+sources:
+  - title: PokerNews — How to Play Sviten Special
+    url: https://www.pokernews.com/strategy/how-to-play-sviten-special-poker-rules-gameplay-strategy-52241.htm
+  - title: PokerListings — Drawmaha rules
+    url: https://www.pokerlistings.com/poker-rules/drawmaha-poker
+  - title: Card Player Lifestyle — Mixed game poker rules
+    url: https://cardplayerlifestyle.com/poker-tips-strategy/mixed-game-poker-rules/
+  - title: SwC Poker — Drawmaha (Sviten)
+    url: https://swcpoker.club/poker-rules/draw-poker-games/drawmaha-sviten-poker
+  - title: Canadianpoker.com — Drawmaha rules
+    url: https://www.canadianpoker.com/en/poker-rules/drawmaha-rules/
+examples:
+  - id: kept-face-up
+    title: Kept the face-up card, and it made a flush
+    board: 7h 3h 2c Ks 5d
+    players:
+      - { name: Alice, cards: Ah Kh Qh Jh 9h, discards: 4s }
+      - { name: Bob, cards: 7d 7c 3d 3s 9c }
+    winners: { draw: [Alice], omaha: [Bob] }
+  - id: rejected-face-up
+    title: Rejected the face-up card, got a full house anyway
+    board: Qc 8s 8h 2d Ks
+    players:
+      - { name: Dave, cards: Qs Qh Qd 6c 6s, discards: 4h }
+      - { name: Erin, cards: Kd Kc 9d 9c 4c }
+    winners: { draw: [Dave], omaha: [Erin] }

@@ -1,0 +1,47 @@
+name: Omaha Hi-Lo Regular
+abbrevs: [O8 Regular, Omaha High-Low Regular, O/Regular]
+nicknames: [Omaha hi-lo no qualifier]
+summary: Omaha Hi-Lo with the 8-or-better qualifier removed, so the low half always gets paid, even if it's a 9-high ugly duckling.
+family: board
+structures: [limit, pot-limit]
+holeCards: 4
+draws: 0
+showdown: omaha-no-qualifier
+parent: omaha-hi-lo
+related: [omaha-hi-lo, big-o, big-easy, sick-o]
+sources:
+  - title: WSOP 2026 Live-Action Rules (Omaha High Low Regular)
+    url: https://assets.wsopcdn.com/wsop/853ee602-e1e9-4019-a0cf-381419d805c6.pdf
+  - title: PokerStars — 5-card Omaha Hi/Lo (A-5 low ranking baseline)
+    url: https://www.pokerstars.com/poker/games/omaha/5-card-high-low/
+  - title: Venetian — Omaha basic rules
+    url: https://www.venetianlasvegas.com/resort/casino/poker/omaha-basic-rules.html
+  - title: PokerChipForum — Big O but no qualifier
+    url: https://www.pokerchipforum.com/threads/big-o-but-no-qualifier-discuss.117620/
+  - title: Wikipedia — High-low split
+    url: https://en.wikipedia.org/wiki/High-low_split
+  - title: Wikipedia — Omaha hold 'em
+    url: https://en.wikipedia.org/wiki/Omaha_hold_%27em
+examples:
+  - id: ugly-low
+    title: No 8-or-better low on board, and the low still gets paid
+    board: Ks Qd 9h Td 4c
+    players:
+      - { name: Alice, cards: As 2d 7c 8c }
+      - { name: Bob, cards: Kh Kc 3s 5s }
+    winners: { high: [Bob], low: [Alice] }
+  - id: scoop
+    title: A 9-high low scoops the pot
+    board: 2d 6h 9c Jd Kc
+    players:
+      - { name: Alice, cards: Ac 3s Kd Kh }
+      - { name: Bob, cards: Qs Qd 4h 5h }
+    winners: { high: [Alice], low: [Alice] }
+  - id: quartered
+    title: Two players tie for a 10-high low and take a quarter each
+    board: 9s Th Jd Kc 4h
+    players:
+      - { name: Alice, cards: As 2c 5c 6c }
+      - { name: Bob, cards: Ad 2d 6s 7s }
+      - { name: Carol, cards: Qh 8c 5d 5s }
+    winners: { high: [Carol], low: [Alice, Bob] }

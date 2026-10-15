@@ -1,0 +1,86 @@
+## Drawmaha, except the draw half is a deuce-to-seven low
+
+Everything about [Drawmaha](/games/drawmaha) stays the same: five cards, a flop, one draw, a turn, a river, and a pot split in two. The Omaha half is still Omaha *high*: exactly two of your cards plus exactly three from the board, biggest hand wins.
+
+The only thing that changes is the other half. In regular Drawmaha it goes to the best five-card high hand. Here it goes to the **lowest** five-card hand, ranked as **deuce-to-seven lowball**, which is basically "the worst poker hand wins." Straights and flushes count against you, and aces are always high.
+
+So you're hunting for two opposite things with the same five cards. Good luck with that.
+
+## 30-second cheat sheet
+
+- Five hole cards, then betting, then a three-card flop, then betting.
+- **One draw**: say how many cards you're replacing (1 to 3 at the WSOP, or stand pat), get them, then turn, betting, river, betting.
+- **Half the pot** to the best Omaha high hand: exactly 2 hole cards + exactly 3 board cards.
+- **Half the pot** to the lowest hand from your own five final cards, board ignored.
+- Low half rules: aces are **high**, straights and flushes **hurt** you, pairs hurt you more. The best hand is **7-5-4-3-2** with at least two suits.
+- Both halves always get paid; there is no qualifier. Somebody wins the low half even if it's ugly.
+- Usually limit or pot-limit. Seven players max at the WSOP.
+
+## Full rules
+
+### The deal and first round
+Button, blinds (the WSOP lets a room use one blind, several, an ante, or a mix). Everybody gets five cards face down. Betting starts left of the big blind.
+
+### The flop
+The dealer burns a card and puts three face-up cards in the middle. Betting round, starting left of the button.
+
+### The draw
+Starting left of the button, each player announces how many cards they're replacing: one to three at the WSOP, or none if you stand pat. Once you say a number, you're stuck with it. Everyone's discards go away for good. The dealer then burns, deals the turn, and gives out the replacement cards (the WSOP order), and there's a betting round.
+
+Because only your final five cards count, anything you throw is gone from *both* halves.
+
+### The turn and river
+Turn card, betting round, river card, betting round. In limit, BARGE's rules use the small bet for the first two rounds and the big bet for the last two.
+
+### Showdown: two separate halves
+**Omaha half.** Same as Omaha high: exactly two of your five cards plus exactly three board cards, best five-card high hand takes half the pot.
+
+**2-7 half.** Use all five of your own cards, and ignore the board. The lowest hand wins, with these rules:
+
+- Aces are always **high**. A-2-3-4-5 is not a wheel here; it's just an ace-high hand, and it loses to any king-high hand.
+- **Straights and flushes count against you.** 6-5-4-3-2 is a straight, which makes it a worse hand than K-Q-J-9-8.
+- Pairs, trips, and so on count against you as usual. Any unpaired hand beats any paired hand. A pair of aces is the worst pair to hold, since aces are high.
+- The nuts is **7-5-4-3-2, not all one suit**. After that come 7-6-4-3-2, 7-6-5-3-2 and 7-6-5-4-2, then the eight-lows beginning with 8-5-4-3-2.
+- Compare hands from the highest card down. 7-6-5-3-2 beats 7-6-5-4-2 because the 3 is lower than the 4.
+
+If one player wins both halves, they scoop. If two players tie for a half, they split that half. The WSOP gives an odd chip to the first tied player clockwise from the button. Main pot and side pots each get split two ways.
+
+### Rooms disagree
+- **Draw cap.** This page uses the WSOP rule: draw 1 to 3 or stand pat. BARGE's base Dramaha allows 0 to 5, PokerListings allows up to 5 with five or fewer players and 3 with six or seven, and some home games cap it at 2. Ask before you assume.
+- **Turn before or after the draw cards.** The WSOP text deals the turn, then the draw cards. A Poker Chip Forum thread reports several Vegas rooms do the same, but BARGE, CountingOuts and Kevin Haney's Card Player column describe the draw cards first and then the turn. The room tells you which.
+- **Structure.** The WSOP allows limit, pot-limit and no-limit. Casino mixed games lean limit, home games lean pot-limit.
+
+## Worked examples
+
+### Perfect low, useless Omaha hand
+
+<Example game="2-7-drawmaha" id="nut-low-bad-omaha" />
+
+Eve has 7-5-4-3-2 in four suits, the best possible 2-7 hand, so she wins the low half. But her five cards are a lousy Omaha hand on a board of A-K-Q-J-9. Frank's hole cards are A♥ T♥ T♠ K♥ 8♦, a pair of tens in the draw half (terrible for low). But A♥ T♥ plus the board's K-Q-J makes an ace-high straight. Eve takes the low half, Frank takes the Omaha half.
+
+### A straight is a bad low
+
+<Example game="2-7-drawmaha" id="straight-is-bad" />
+
+Alice's 6-5-4-3-2 looks like the sort of hand you'd love in lowball. In 2-7 it's a straight, which is worse than any plain no-pair hand. Bob's K-Q-J-9-8 is not a straight (the ten is missing), so his king-high wins the low half. Alice's consolation prize: 6♣ 5♦ plus the board's 9-8-7 makes a nine-high straight, beating Bob's two pair in the Omaha half.
+
+### The wheel is not a wheel
+
+<Example game="2-7-drawmaha" id="wheel-is-ace-high" />
+
+Gina's A-5-4-3-2 would be unbeatable in ace-to-five lowball. Here the ace is high, so she holds ace-high. That still beats Hal's pair of nines, since a pair is worse than any high card hand. Hal makes up for it by holding 9♥ 9♦ on a board with two more nines: four of a kind, and the Omaha half.
+
+## How you'll embarrass yourself
+
+- **Playing the ace as low.** It's high. A-2-3-4-5 is an ace-high nothing.
+- **Celebrating a 6-5-4-3-2.** It's a straight. In this game, straights are bad.
+- **Counting on the Omaha half with your best lows.** Hands like 7-4-3-2-x have almost no Omaha value, and a nut low cannot scoop a board like A-K-Q-9-8.
+- **Drawing two or three cards when you were already pat.** Steve Badger's advice is "don't draw": a pat jack-low or ten-low is often a favorite.
+- **Treating this as 2-7 triple draw.** Triple draw has three draws and no board. This is one draw plus a board.
+- **Using the board in the 2-7 half.** It doesn't play there. Only your five cards.
+
+## Lore and reputation
+
+Kevin Haney, writing in Card Player, rates 2-7 as the best of the Dramaha family at 9 out of 10, and says first-timers grasp it quickly and it produces more action than the other versions. That's his opinion, not a measurement.
+
+CountingOuts says the deuce-to-seven version is becoming more popular than the high version, and that both get spread in Las Vegas, especially while the WSOP is in town. It shows up as "Deuce to Seven Drawmaha" in a $8-$16 mixed game at Resorts World (Card Player, 2023) and in Phenom Poker's online mixes as "Dramaha 2-7".

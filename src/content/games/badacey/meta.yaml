@@ -1,0 +1,48 @@
+name: Badacey
+abbrevs: [Badacy, Badaci]
+nicknames: [A-5 Badugi]
+summary: A-5 triple draw where half the pot goes to the best ace-to-five low and half to the best badugi, with the ace low in both.
+family: draw
+structures: [limit]
+holeCards: 5
+draws: 3
+showdown: badacey
+related: [badugi, badeucy, a-5-triple-draw, archie]
+sources:
+  - title: WSOP 2026 Live-Action Rules (Badaci, rules 316-325)
+    url: https://assets.wsopcdn.com/wsop/853ee602-e1e9-4019-a0cf-381419d805c6.pdf
+  - title: BARGE — Badacey
+    url: https://www.barge.org/rulebook/badacey.html
+  - title: BARGE — Lowball scales
+    url: https://www.barge.org/rulebook/lowball-scales.html
+  - title: Wizard of Odds — Badeucy and Badacey
+    url: https://wizardofodds.com/games/poker/badeucy-badacey/
+  - title: Wikipedia — Baduci
+    url: https://en.wikipedia.org/wiki/Baduci
+  - title: CountingOuts — Badacey rules and basic strategy
+    url: https://www.countingouts.com/badacey-rules-and-basic-strategy/
+  - title: Card Player Lifestyle — Mixed games guide, draw games
+    url: https://cardplayerlifestyle.com/poker-tips-strategy/mixed-games-poker-guide-draw-games/
+  - title: PokerNews — WSOP Dealer's Choice strategy
+    url: https://www.pokernews.com/strategy/wsop-mixed-games-strategy-dealers-choice-30648.htm
+  - title: PokerListings — WSOP Dealer's Choice events, history and specifics
+    url: https://www.pokerlistings.com/blog/wsop-dealers-choice-events-the-history-and-specifics
+examples:
+  - id: scoop
+    title: A-2-3-4 rainbow plus a 5 is the nuts for both halves
+    players:
+      - { name: Alma, cards: As 2h 3d 4c 5s }
+      - { name: Bruno, cards: 2s 3h 4d 5c 6h }
+    winners: { badugi: [Alma], low: [Alma] }
+  - id: one-way
+    title: A perfect low that's easy to freeroll
+    players:
+      - { name: Cora, cards: 2h 4h 6h 7h Ac }
+      - { name: Dmitri, cards: Ks Qd 9c 5h 5s }
+    winners: { badugi: [Dmitri], low: [Cora] }
+  - id: quartered
+    title: Tie the badugi, lose the low
+    players:
+      - { name: Ann, cards: As 2h 3d 4c Ks }
+      - { name: Ben, cards: Ah 2s 3c 4d 5h }
+    winners: { badugi: [Ann, Ben], low: [Ben] }

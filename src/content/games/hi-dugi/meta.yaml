@@ -1,0 +1,18 @@
+name: Hi-dugi
+abbrevs: [Hidugi, High Badugi, Hi-Badugi]
+nicknames: [Hi-dugi (Mixed Game Festival spelling)]
+summary: "Badugi's evil twin where four different suits is still the goal, but pairs are good, quad aces are the nuts, and the whole pot goes to the highest hand."
+family: draw
+structures: [limit]
+holeCards: 4
+draws: 3
+showdown: custom
+parent: badugi
+related: [badugi, badugi-hi-lo, badugi-high-drawmaha, archie]
+sources:
+  - title: Card Player Lifestyle — Mixed game poker rules (Hi-dugi)
+    url: https://cardplayerlifestyle.com/poker-tips-strategy/mixed-game-poker-rules/
+  - title: Card Player — The Coach's Game at Resorts World, Part 1
+    url: https://www.cardplayer.com/cardplayer-poker-magazines/66506-chad-eveslage-36-2/articles/24732-the-coach-s-game-at-resorts-world-part-1
+  - title: Poker Chip Forum — Hi-dugi hand ranking
+    url: https://www.pokerchipforum.com/threads/hi-dugi-hand-ranking.87914/

@@ -1,0 +1,48 @@
+name: 2-7 Single Draw
+abbrevs: [NL 2-7, 2-7 SD, NL 2-7 Single Draw, No-Limit 2-7 Lowball Draw]
+nicknames: [Kansas City Lowball, Billy Baxter Lowball, Deuce-to-Seven Draw, Low Poker]
+summary: No-limit lowball with one draw. You get one swing at your five cards, and the worst-looking hand wins.
+family: draw
+structures: [no-limit, pot-limit, limit]
+holeCards: 5
+draws: 1
+showdown: draw-27
+related: [2-7-triple-draw, a-5-single-draw, five-card-draw]
+sources:
+  - title: WSOP 2025 Official Tournament Rules (No-Limit Single Draw)
+    url: https://wsop.gg-global-cdn.com/wsop/pdfs/2025-WSOP-Tournament-Rules.pdf
+  - title: WSOP 2026 Live-Action Rules (lowball sections)
+    url: https://assets.wsopcdn.com/wsop/853ee602-e1e9-4019-a0cf-381419d805c6.pdf
+  - title: Robert's Rules of Poker v11 (lowball, deuce-to-seven, no-limit lowball)
+    url: https://www.pagat.com/docs/RobsPkrRules11.pdf
+  - title: PokerNews — How to Play 2-7 Single Draw
+    url: https://www.pokernews.com/poker-rules/2-7-single-draw.htm
+  - title: WSOP — Matt Perrins wins stunning WSOP victory (1973 debut, Billy Baxter)
+    url: https://www.wsop.com/news/matt-perrins-wins-stunning-wsop-victory/
+  - title: Pagat — Lowball
+    url: https://www.pagat.com/poker/variants/lowball.html
+  - title: Wikipedia — Lowball (poker)
+    url: https://en.wikipedia.org/wiki/Lowball_(poker)
+  - title: Wikipedia — Draw poker
+    url: https://en.wikipedia.org/wiki/Draw_poker
+  - title: PokerNews — WSOP Dealer's Choice strategy
+    url: https://www.pokernews.com/strategy/wsop-mixed-games-strategy-dealers-choice-30648.htm
+examples:
+  - id: smooth-seven
+    title: A pat seven-low beats a one-card draw that got there
+    players:
+      - { name: Kim, cards: 7s 6d 4c 3h 2s }
+      - { name: Lou, cards: 9h 8d 5c 4s 2d, discards: Kh }
+    winners: { low: [Kim] }
+  - id: draw-hits-straight
+    title: The one-card draw that wrecked itself
+    players:
+      - { name: Nate, cards: 7h 6d 5c 4s 3h, discards: Ac }
+      - { name: Olga, cards: Ks Qd Jh 9c 8s }
+    winners: { low: [Olga] }
+  - id: pair-of-deuces
+    title: Any hand without a pair beats a pair, even an ace-high one
+    players:
+      - { name: Quinn, cards: 2s 2d 3c 4h 5s }
+      - { name: Ria, cards: As Kd Qh Jc 9s }
+    winners: { low: [Ria] }

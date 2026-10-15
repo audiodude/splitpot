@@ -1,0 +1,22 @@
+name: Archie 49/0
+abbrevs: [Archie 49, Archie Zero, Archie 0]
+nicknames: [Archie points game]
+summary: "Archie with a pip-count half instead of poker hands: face cards are zero, ace is one, and the sheet says 49 beats 0 or vice versa, depending on who you ask."
+family: draw
+structures: [limit]
+holeCards: 5
+draws: 3
+showdown: custom
+parent: archie
+related: [archie, ari, drawmaha-49, drawmaha-zero, a-5-triple-draw]
+sources:
+  - title: Card Player Lifestyle — Mixed game poker rules (Archie 49/0)
+    url: https://cardplayerlifestyle.com/poker-tips-strategy/mixed-game-poker-rules/
+  - title: Poker Chip Forum — Archie variants thoughts (49 and Zero)
+    url: https://www.pokerchipforum.com/threads/moxington-archie-variants-thoughts.124482/
+  - title: WSOP 2026 Live-Action Rules (base Archie)
+    url: https://assets.wsopcdn.com/wsop/853ee602-e1e9-4019-a0cf-381419d805c6.pdf
+  - title: Card Player — Spice up your home game with Archie variants (Haney)
+    url: https://www.cardplayer.com/poker-news/spice-up-your-poker-home-game-archie-variants-haney
+  - title: Card Player — The Coach's Game at Resorts World, Part 1
+    url: https://www.cardplayer.com/cardplayer-poker-magazines/66506-chad-eveslage-36-2/articles/24732-the-coach-s-game-at-resorts-world-part-1

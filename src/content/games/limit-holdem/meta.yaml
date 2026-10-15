@@ -1,0 +1,39 @@
+name: Limit Hold'em
+abbrevs: [LHE, FLHE, Fixed-Limit Hold'em]
+nicknames: [Limit, Fixed-limit Hold'em, the "H" in H.O.R.S.E.]
+summary: Hold'em where you can only bet the fixed amount, so everybody calls with the draw and the raises come in even-sized steps.
+family: board
+structures: [limit]
+holeCards: 2
+draws: 0
+showdown: holdem
+parent: no-limit-holdem
+related: [no-limit-holdem, pot-limit-omaha, omaha-hi-lo, pineapple]
+sources:
+  - title: WSOP 2026 Live-Action Rules (limit raises 130-133, buy-in 104, kill pots)
+    url: https://assets.wsopcdn.com/wsop/853ee602-e1e9-4019-a0cf-381419d805c6.pdf
+  - title: Wikipedia — Texas hold 'em
+    url: https://en.wikipedia.org/wiki/Texas_hold_%27em
+  - title: PokerListings — Limit Texas Hold'em rules
+    url: https://www.pokerlistings.com/poker-rules/limit-texas-holdem
+  - title: Poker TDA Rules (half-bet reopening, house limit on raises)
+    url: https://www.pokertda.com/view-poker-tda-rules/
+  - title: Wikipedia — H.O.R.S.E.
+    url: https://en.wikipedia.org/wiki/H.O.R.S.E.
+  - title: Wikipedia — The Poker Players Championship (10-game mix includes limit hold'em)
+    url: https://en.wikipedia.org/wiki/The_Poker_Players_Championship
+examples:
+  - id: kicker
+    title: Both pair kings, the better kicker takes it
+    board: Ks 8d 4c 9h 2s
+    players:
+      - { name: Alice, cards: Kd Qc }
+      - { name: Bob, cards: Kh Jc }
+    winners: { high: [Alice] }
+  - id: straight-chop
+    title: The board is a straight and nobody beats it
+    board: 5c 6d 7h 8s 9d
+    players:
+      - { name: Alice, cards: Kd 2c }
+      - { name: Bob, cards: Qh 3d }
+    winners: { high: [Alice, Bob] }

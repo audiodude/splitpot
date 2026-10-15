@@ -1,0 +1,17 @@
+name: Simultaneous Hold'em-Omaha
+abbrevs: [SOHE]
+nicknames: [Simultaneous Omaha and Hold'em, Hold'em-Omaha]
+summary: Six hole cards split into a Hold'em hand and an Omaha hand; each plays the same board for half the pot.
+family: board
+structures: [limit, pot-limit]
+holeCards: 6
+draws: 0
+showdown: custom
+related: [omaha-hi-lo, big-o, 5-card-plo, double-board-omaha]
+sources:
+  - title: "BARGE Rulebook — Simultaneous Omaha/Hold'em"
+    url: https://www.barge.org/rulebook/sohe-simultaneous-omaha-holdem.html
+  - title: "Card Player Lifestyle — Mixed game poker rules"
+    url: https://cardplayerlifestyle.com/poker-tips-strategy/mixed-game-poker-rules/
+  - title: "Card Player — Spice up your poker home game: simultaneous Omaha and Hold'em"
+    url: https://www.cardplayer.com/poker-news/30114-spice-up-your-poker-home-game-simultaneous-omaha-and-hold-em

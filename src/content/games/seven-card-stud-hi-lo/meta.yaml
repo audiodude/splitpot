@@ -1,0 +1,54 @@
+name: Seven-Card Stud Hi-Lo (Eight-or-Better)
+abbrevs: [Stud 8, Stud/8, Stud 8/b, Stud 8/O, Stud Hi-Lo, Stud E8]
+nicknames: [Stud Eight or Better]
+summary: Seven-card stud where half the pot goes to the best high and half to the best 8-or-better low, and an open pair gets you nothing.
+family: stud
+structures: [limit]
+holeCards: 7
+draws: 0
+showdown: stud-8
+parent: seven-card-stud
+related: [seven-card-stud, seven-card-stud-hi-lo-no-qualifier, super-stud-8, razz, omaha-hi-lo]
+sources:
+  - title: WSOP 2026 Live-Action Rules (Seven-Card Stud/8, rules 241-248)
+    url: https://assets.wsopcdn.com/wsop/853ee602-e1e9-4019-a0cf-381419d805c6.pdf
+  - title: Robert's Rules of Poker v11 (Stud high-low)
+    url: https://www.pagat.com/docs/RobsPkrRules11.pdf
+  - title: TDA 2019 Rules
+    url: https://ris.dls.virginia.gov/uploads/11VAC20/dibr/Poker%20Tournament%20Directors%20Assoc_2019%20Rules-20221228170122.pdf
+  - title: PokerNews — Seven-Card Stud Hi-Lo 8-or-Better rules
+    url: https://www.pokernews.com/poker-rules/seven-card-stud8better.htm
+  - title: Upswing Poker — Stud Hi-Lo
+    url: https://upswingpoker.com/poker-rules/stud-hi-lo/
+  - title: Pagat — Seven-card stud
+    url: https://www.pagat.com/poker/variants/7stud.html
+  - title: BARGE Rulebook
+    url: https://www.barge.org/rulebook.pdf
+  - title: Card Player — Spice up your home game, super-sized stud hi-lo
+    url: https://www.cardplayer.com/poker-news/29944-spice-up-your-poker-home-game-super-sized-stud-hi-lo
+examples:
+  - id: scoop
+    title: A wheel is the nut low and a straight, so it takes both halves
+    players:
+      - { name: Alice, cards: Ah 2d 3c 4h 5s Kd Kc }
+      - { name: Bob, cards: Ks Kh 9c 9d Qs 6c 7h }
+    winners: { high: [Alice], low: [Alice] }
+  - id: no-low
+    title: Nobody has five low ranks, so high takes the whole pot
+    players:
+      - { name: Alice, cards: Ks Kd 9c 9h 4s Qc 2d }
+      - { name: Bob, cards: Ah 3d 7h 8s Jd Tc Jc }
+    winners: { high: [Alice], low: [] }
+  - id: quartered
+    title: Two identical lows quarter the low half
+    players:
+      - { name: Alice, cards: Ac 2d 4h 6s 7d Kc 9s }
+      - { name: Bob, cards: Ah 2c 4d 6c 7h Qd 9h }
+      - { name: Carol, cards: Js Jh Jd 3s 3c 8c Td }
+    winners: { high: [Carol], low: [Alice, Bob] }
+  - id: one-card-short
+    title: Four wheel cards and a nine is not a low
+    players:
+      - { name: Alice, cards: As 2d 3c 4h 9d Kh Ks }
+      - { name: Bob, cards: 8h 7d 6c 5s 3d Qc Jh }
+    winners: { high: [Alice], low: [Bob] }

@@ -1,0 +1,96 @@
+## It's Hold'em upside down, with no board and three do-overs
+
+You get five cards, nobody shares any, and the **lowest** hand wins the whole pot. No community cards, no flop. Instead you get **three draws**: three separate chances to throw away any of your cards and take replacements, with a betting round after each one.
+
+"Lowest hand wins" sounds easy until you learn the catch. This is *deuce-to-seven* lowball, which means the hand rankings you already know stay exactly as they are, you just want the worst one. Pairs are bad. Straights are bad. Flushes are bad. And the **ace is high**, which means it's the worst card in the deck. The best possible hand is **7-5-4-3-2** with at least two suits, because 6-5-4-3-2 is a straight and straights are poison.
+
+## 30-second cheat sheet
+
+- Five cards each, face down. Button and two blinds, like Hold'em.
+- Four betting rounds with a draw before the last three. You draw 0 to 5 cards each time. Drawing zero is called **standing pat**.
+- Limit betting: small bet before the first draw and after it, big bet (double) after the second and third draws. Pot-limit exists too, but limit is the default.
+- **Lowest five-card hand wins it all.** You must use all five cards.
+- Aces are high. Straights and flushes count against you. Pairs count against you.
+- Best hand: **7-5-4-3-2**, not all one suit. Next: 7-6-4-3-2, then 7-6-5-3-2, then 7-6-5-4-2, then 8-5-4-3-2.
+- Six players max at the WSOP, because three draws chew through the deck.
+
+## Full rules
+
+### The deal
+There's a button, a small blind and a big blind. Everyone gets five cards face down, dealt one at a time starting left of the button. The first betting round starts with the player to the left of the big blind, who can fold, call, or raise. The big blind has the option when it gets back to them.
+
+### The draws and the betting after them
+After that first betting round, there's a draw. Starting with the first active player left of the button and going clockwise, each player discards anywhere from zero to five cards face down and receives that many replacements. Then there's a betting round that starts with the first active player left of the button (the small blind, if they're still in). Do that dance three times in total.
+
+At the WSOP, players place their discards first, then the dealer announces each player's draw count before dealing, which locks the numbers in. A card is burned before every draw, even if everyone stood pat. If you take all five cards, you get all five in a row.
+
+In limit, the first two betting rounds (before the draw and after the first draw) use the small bet. The last two (after the second and third draws) use the big bet, which is double. Four betting rounds, 1-1-2-2. A bet plus up to four raises is allowed when more than two players are in.
+
+If the deck runs low, the dealer reshuffles the earlier discards and burns, but **not** the cards discarded in the draw round that's currently happening. The very last stub card is only used if it completes the round. That's the reason tables are capped at six.
+
+### Showdown
+After the last betting round, everyone still in turns their cards up. **Lowest five-card hand wins.** You compare the way you'd compare any no-pair hand, from the top card down:
+
+- Aces are only high, never low. A-2-3-4-5 is not a straight here, it's an ace-high hand, so it loses to any king-high hand but beats any pair.
+- Straights and flushes are ranked as straights and flushes, which means they are *worse* than any pair. 7-6-5-4-3 loses to K-Q-J-9-8, and it loses to a pair of aces too.
+- Pairs are bad, and a pair of aces is the worst pair.
+- Compare from the highest card down. 8-6-4-3-2 beats 8-7-4-3-2 (the six comes up before the seven), and 9-7-5-3-2 beats 10-6-4-3-2.
+- Exact ties split the pot. In tournaments, the odd chip goes to the first seat left of the button.
+
+The top of the ranking list goes: 7-5-4-3-2, 7-6-4-3-2, 7-6-5-3-2, 7-6-5-4-2, then 8-5-4-3-2. That eight-five is the fifth-best hand possible, which is why a "smooth eight" is worth fighting for.
+
+Cards speak at showdown, meaning the hand is read off the table. But you can't claim a hand better than the one you hold, and if you miscall your hand and cause an opponent to muck a winner, your hand can be ruled dead. If you spread a paired hand, say "pair".
+
+### Rooms disagree
+Draw games are full of house rules. This page follows the WSOP tournament rules and the WSOP live-action rules, but you will hit these differences:
+
+- **Exposed card on the deal:** at the WSOP, every exposed card is replaced. Robert's Rules says you must keep an exposed 2, 3, 4, 5 or 7 and only replace the others, including a 6.
+- **How a five-card draw is dealt:** WSOP deals all five in a row. Robert's Rules deals four, then the fifth after everyone else has drawn.
+- **Changing your mind:** live-action rules let you change your draw number until a card is dealt or someone acts on your number. WSOP tournament rules say the number is locked once the discards are placed, though you can still swap *which* cards you discard.
+- **Max players:** the WSOP says six. Some explainers say seven.
+- **Structure:** nearly always limit. WSOP Dealer's Choice also lists a pot-limit version.
+- **Joining a game:** at the WSOP you can wait for the big blind, post the big blind, or kill the pot by posting double the big blind. Robert's lists only waiting or killing.
+
+## Worked examples
+
+### The number one
+
+<Example game="2-7-triple-draw" id="the-number-one" />
+
+Alice's 7-5-4-3-2 is the nuts, the "number one". Bob's 8-5-4-3-2 is the fifth best hand in the whole game, and it still loses. Seven-high beats eight-high.
+
+### Straights and flushes lose to king-high
+
+<Example game="2-7-triple-draw" id="straights-and-flushes" />
+
+Carl's 6-5-4-3-2 looks like the most beautiful low hand you've ever seen, but it's a straight. Eve's 7-5-4-3-2 is perfect except all five are hearts, which makes it a flush. Dana, with K-J-9-7-4 and no pair, flush, or straight, beats both of them.
+
+### The ace trap
+
+<Example game="2-7-triple-draw" id="ace-is-high" />
+
+Frank has A-2-3-4-5. In a lot of low games that's the best hand there is. Here it's just a hand with an ace at the top, and Gina's K-Q-J-9-8 beats it. Frank would still beat any pair.
+
+### The chop
+
+<Example game="2-7-triple-draw" id="chop" />
+
+Ivy and Jon have the same ranks in different suits. Suits never break ties, so they split the pot.
+
+## How you'll embarrass yourself
+
+- **Treating the ace as low.** A-2-3-4-5 is the standard "wheel" in some games. Here it's ace-high junk.
+- **Standing pat on 6-5-4-3-2.** It's a straight, so it loses to every hand with no pair, no straight and no flush, even K-Q-J-9-8. Break it up and draw to the seven-high.
+- **Thinking five hearts are fine.** A flush is a flush even when it's all deuces and treys. Break it up.
+- **Forgetting the big bet doubles after the *second* draw, not the first.**
+- **Acting out of turn after the draw.** Post-draw betting starts left of the button, not left of the big blind.
+- **Miscalling your hand.** If you announce "seven low" while holding a pair of sevens and an opponent mucks because of it, your hand can be dead.
+- **Hold'em reflexes.** An eight-high with a smooth draw is a premium hand, and a lone ace is a liability, not a gift.
+
+## Lore and reputation
+
+Two-seven lowball has been a WSOP game since 1973 in its single-draw form (see 2-7 Single Draw). The triple-draw version is the one that became the flagship draw game of mixed games. According to PokerNews, 2-7 Triple Draw was introduced at the WSOP in 2004 and has run every year since 2007, and a $10,000 championship was added in 2014 (Phil Ivey won it in 2024). It's been part of the $50K Poker Players Championship rotation since 2010.
+
+Where triple draw itself came from is disputed. A WSOP.com article from 2011 says David Sklansky credited limit "double-draw" lowball at Vegas World in the early 1980s, while others point to ten-handed triple-draw lowball at Amarillo Slim's Super Bowl of Poker in Reno or Lake Tahoe somewhere between 1979 and 1984. Both are claims, not documentation.
+
+The famous trick is the **snow**: standing pat on a hand that isn't actually good, so everyone thinks you've made it.

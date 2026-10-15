@@ -1,0 +1,22 @@
+name: Short Deck (6+) Hold'em
+abbrevs: [SD, 6+, Six-plus Hold'em]
+nicknames: [Short deck, Six Plus]
+summary: Hold'em with the 2s through 5s removed, so flushes beat full houses and aces make the low straight.
+family: board
+structures: [no-limit, pot-limit]
+holeCards: 2
+draws: 0
+showdown: custom
+parent: no-limit-holdem
+related: [no-limit-holdem, pot-limit-omaha, bomb-pot]
+sources:
+  - title: "WSOP 2026 Live-Action Rules (Short Deck, rules 363-369)"
+    url: https://assets.wsopcdn.com/wsop/853ee602-e1e9-4019-a0cf-381419d805c6.pdf
+  - title: "Wikipedia — Six-plus hold'em"
+    url: https://en.wikipedia.org/wiki/Six-plus_hold_%27em
+  - title: "PokerNews — Short deck rules"
+    url: https://www.pokernews.com/poker-hands/short-deck.htm
+  - title: "PokerListings — Short Deck Hold'em"
+    url: https://www.pokerlistings.com/poker-rules/short-deck-holdem
+  - title: "PokerCoaching — Short deck poker rules"
+    url: https://pokercoaching.com/blog/how-to-play-poker/short-deck-poker-rules/

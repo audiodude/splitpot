@@ -1,0 +1,39 @@
+name: Pineapple
+abbrevs: [Pineapple Hold'em]
+nicknames: [Regular Pineapple, Simple Pineapple]
+summary: Hold'em with three hole cards where you throw one away before the flop. Everyone's hand is just a bit better.
+family: board
+structures: [no-limit, limit, pot-limit]
+holeCards: 3
+draws: 0
+showdown: holdem
+parent: no-limit-holdem
+related: [crazy-pineapple, no-limit-holdem, irish-poker]
+sources:
+  - title: "WSOP 2026 Live-Action Rules (Hold'em variation: Pineapple)"
+    url: https://assets.wsopcdn.com/wsop/853ee602-e1e9-4019-a0cf-381419d805c6.pdf
+  - title: Wikipedia — Community card poker
+    url: https://en.wikipedia.org/wiki/Community_card_poker
+  - title: Pagat — Texas Hold'em (Pineapple, Crazy Pineapple, Tahoe, Irish)
+    url: https://www.pagat.com/poker/variants/texasholdem.html
+  - title: BeatTheFish — Pineapple
+    url: https://beatthefish.com/poker/pineapple/
+  - title: Wizard of Odds — Pineapple and Crazy Pineapple
+    url: https://wizardofodds.com/games/pineapple-and-crazy-pineapple/
+  - title: Wizard of Vegas forum — Pineapple poker (anecdotes)
+    url: https://wizardofvegas.com/forum/gambling/tables/39219-pineapple-poker/
+examples:
+  - id: kept-flush
+    title: Alice keeps the two hearts, tosses the 2 of clubs
+    board: 7h 9h Jc 3h 2d
+    players:
+      - { name: Alice, cards: Ah Kh, discards: 2c }
+      - { name: Bob, cards: Qs Qd, discards: 5c }
+    winners: { high: [Alice] }
+  - id: blind-discard
+    title: Alice throws away a jack before the flop, and the flop is two jacks
+    board: Jc Js 4d 8h 3c
+    players:
+      - { name: Alice, cards: Qs Qd, discards: Jh }
+      - { name: Bob, cards: Jd 9d, discards: 2h }
+    winners: { high: [Bob] }

@@ -1,0 +1,85 @@
+## Drawmaha, except the draw half is blackjack
+
+Take [Drawmaha](/games/drawmaha): five hole cards, a flop, one draw, a turn, a river, and a pot split in two. The Omaha half is unchanged: Omaha *high*, exactly two hole cards plus exactly three from the board.
+
+The other half goes to the hand whose points come **closest to 21 without going over**. Card values are the same as in the other point games:
+
+- Ace = **1** (never 11)
+- Two through ten = **face value**
+- Jack, Queen, King = **0**
+
+There's no dealer to beat and no hitting: you just compare your five final cards against the other players.
+
+Note that this page follows **BARGE's rulebook**, the only rule-sheet-style source for this game. Card Player's Kevin Haney describes one important difference, covered under "Rooms disagree." It's often called "Dramaha 21" or, if you want to sound cheeky, "Dramaha Blackjack."
+
+## 30-second cheat sheet
+
+- Five hole cards, betting, three-card flop, betting.
+- **One draw** (BARGE: 0 to 3 cards), then turn, betting, river, betting.
+- **Half the pot**: best Omaha high hand, exactly 2 hole cards + exactly 3 board cards.
+- **Half the pot**: the points total closest to 21 without going over, from your five final hole cards. Board ignored.
+- **Ace = 1. 2 to 10 = face value. J, Q, K = 0.**
+- BARGE: cards that would push you over 21 are simply ignored. You play the best subset of your hand, so you can't bust.
+- **Tiebreaker:** if two players reach the same total, the one using **more cards** wins.
+- Limit or pot-limit.
+
+## Full rules
+
+### The deal and first round
+Button and blinds. Everybody gets five cards face down. Betting begins left of the big blind, with the small bet in limit.
+
+### The flop
+The dealer burns a card and deals three face-up cards. Betting round, small bet in limit.
+
+### The draw
+Each player, starting left of the button, announces how many cards to replace. BARGE allows 0 to 3. The WSOP doesn't spread this game, so there's no casino default; the table sets the cap and whether the turn comes before or after the draw cards. Then there's a betting round.
+
+Only your final five cards count. Throw away a ten and it's gone from both halves.
+
+### The turn, river, and showdown
+Turn, betting at the big bet in limit, river, final betting round.
+
+**Omaha half.** Exactly two hole cards plus exactly three board cards, best high hand wins half the pot.
+
+**21 half.** Look at your five hole cards and pick the combination whose points come closest to 21 without going over. Cards you don't use are ignored. The closest total wins. If two players have the same total, **the player using more cards wins**. A player can scoop. Ties that survive the card-count tiebreak split the half.
+
+Here are BARGE's own examples:
+
+- A-K-Q-T-T is a **five-card 21**: T + T + A = 21, and the king and queen are zero.
+- A-Q-T-6-4 is a **five-card 21**: 1 + 10 + 6 + 4.
+- K-T-T-8-6 is a **three-card 20**: T + T. The 8 and 6 would push it over 21, so they're ignored.
+- 9-8-7-6-5 is a **three-card 21**: 9 + 7 + 5.
+
+### Rooms disagree
+- **Bust handling.** This is the big one. BARGE: extra cards are ignored and you play the best subset up to 21, so you can't bust. Haney (Card Player, May 2025): a hand that goes over 21 **busts** the whole draw side, leaving only the Omaha half. These are different games, and under Haney's rule it's unclear what happens if *everyone* busts. No source says, so don't assume. Ask which one the table is playing.
+- **Whether zero-point cards count as cards.** BARGE's examples count a king or queen toward the number of cards used (A-K-Q-T-T is a "five-card" 21). One of Haney's examples doesn't count a king toward the card count. That only matters for the more-cards tiebreak, and the sources don't settle it, so ask.
+- **Face-card value.** BARGE warns that some online sources score face cards as 1. BARGE and Haney use 0.
+- **Not in the WSOP rules.** The WSOP, the Resorts World mixed game and Phenom Poker's online mixes don't list it.
+
+## Worked examples
+
+### Picking the best 21 from five cards
+Under BARGE's rules, three players keep their five cards:
+
+- **Gus:** 4♠ 5♦ 6♥ A♣ 5♣ → 4 + 5 + 6 + 1 + 5 = **21** using all five cards.
+- **Hal:** 9♠ 8♦ 7♥ 6♣ 5♠ → the full hand is 35, so he picks a subset. 9 + 7 + 5 = **21** with three cards (so does 8 + 7 + 6). No four cards fit under 21, since the four lowest are 5 + 6 + 7 + 8 = 26.
+- **Ivy:** K♣ T♥ T♠ 8♣ 4♦ → T + T = **20**. Adding the 4 makes 24 and adding the 8 makes 28, so those are ignored (the king is zero).
+
+Gus and Hal both reach 21, but Gus uses five cards to Hal's three, so Gus wins the 21 half. Ivy's 20 is a point short. Under Haney's rule, Hal's full hand totals 35 and Ivy's totals 32, so both would bust and be out of that half altogether, and Gus wins it anyway. The Omaha half goes to whoever the board favors.
+
+### The best possible dealt hand
+Haney's best-case example is A♦ A♣ 8♦ 8♣ 3♥: 1 + 1 + 8 + 8 + 3 = 21 with all five cards. Pairs and flushes are irrelevant to the 21 half.
+
+## How you'll embarrass yourself
+
+- **Counting an ace as 11.** It's 1, always.
+- **Counting a ten as zero.** Tens are 10 points. It's the face cards that are zero.
+- **Forgetting the card-count tiebreak.** A five-card 21 beats a three-card 21. If you're holding two ways to get 21, use more cards.
+- **Assuming you can bust.** Under BARGE's rules you can't, and under Haney's you can. Ask.
+- **Chasing 21 combos with no Omaha value.** Haney says no one had a good sense of what a playable hand looks like, so play was slow and tight.
+
+## Lore and reputation
+
+BARGE notes it was part of the Drawmaha mix tournament at EMBARGO 2026, the best evidence this game is spread anywhere other than home games.
+
+Haney (Card Player, May 2025) calls it "somewhat gimmicky," rates it 6 out of 10, and says he took it out of his own home rotation after a few rounds. In an earlier column on Old School Dramaha (March 2025) he also mentions a Dramaha game whose draw side is "the highest blackjack hand," which appears to be this game. That's his opinion and a loose inference, not a rule.

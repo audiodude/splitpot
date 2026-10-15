@@ -1,0 +1,79 @@
+## It's like Big O, except the first flop card is face up before anyone bets
+
+[Big O](/games/big-o) is [Omaha Hi-Lo](/games/omaha-hi-lo) with five hole cards. Courchevel Hi-Lo is Big O with one twist: right after the hole cards are dealt, the dealer turns the **first flop card face up** in the middle of the table, before the first betting round. Everyone starts with a peek at one piece of the board. The rest of the rules are unchanged: exactly two hole cards, exactly three board cards, half the pot to high, half to an 8-or-better low.
+
+The name comes from the French ski resort. Wikipedia repeats an "urban legend" that bored tourists wanted a game nobody had played.
+
+## 30-second cheat sheet
+
+- Five hole cards each, then **one board card face up**, then the first betting round.
+- After that betting, two more flop cards, flop betting, turn, river, same as always.
+- The exposed card is a **real board card**. It's part of the flop, not a burn. The flop is not three fresh cards.
+- **Exactly two** hole cards and **exactly three** board cards for each hand, high and low.
+- Low: five different ranks, all **8 or lower**, aces low. The [wheel](/glossary#wheel) is the nuts. No qualifying low means high takes the whole pot.
+- [Pot-limit](/glossary#pot-limit) is the norm, but PokerStars also spreads [limit](/glossary#limit) and [no-limit](/glossary#no-limit).
+
+## Full rules
+
+### The deal
+Blinds go in, and every player gets five hole cards. Then the dealer puts **one card face up** on the board, which is the first card of the flop. This is the [Courchevel door card](/glossary#courchevel-door-card). Nobody has bet yet.
+
+### Preflop betting
+Betting starts with the first player left of the big blind, as in any blinds game. You make this decision knowing your five cards and one board card.
+
+### Flop, turn, river
+After preflop betting, the dealer burns a card and deals the **other two** flop cards, which completes the three-card flop. Then a betting round that starts with the first active player left of the button. Burn, turn, betting, burn, river, final betting, showdown. In limit play, the preflop and flop use the small bet, and the turn and river use the big bet.
+
+The WSOP caps Courchevel at **8 players**.
+
+### Building your hands
+Same as [Big O](/games/big-o). For each of high and low, you use **exactly two** of your five hole cards plus **exactly three** of the five board cards. High and low can use different pairs from your hand.
+
+- **High:** best five-card poker hand.
+- **Low:** five different ranks, none above 8, aces low, straights and flushes don't hurt. A-2-3-4-5 is the nuts. Compare from the highest card down.
+- **No low** means the best high wins the whole pot. One player can scoop both halves.
+- Tied hands split their half, so you can get [quartered](/glossary#quartered). The [odd chip](/glossary#odd-chip) usually goes to the high half.
+
+### What the exposed card tells you
+A low card on the board means everyone has a live low draw. A king or a queen means the other two flop cards both have to be 8 or lower for a low to be possible on the flop, and PokerListings notes that this is useful information before you put chips in.
+
+### Rooms disagree
+- **Burn before the door card.** The WSOP says no burn between the deal and the first board card. Mixed Game Masters says the dealer burns first. Pokergamedatabase says no burns at all. This only affects card-exposure procedure, not who wins.
+- **Who acts first preflop.** PokerStars says first player left of the big blind. PokerListings says "left of the button," which is loose wording for a blinds game. This page follows PokerStars.
+- **Player cap.** The WSOP says 8. PokerStars and PokerListings give no cap.
+- **Is it spread live?** The WSOP rule sheet covers Courchevel in a high-only text, not a hi-lo one. We found no live Las Vegas game listing for either version. The hi-lo version is best documented online: Wikipedia says PokerStars has had it since 2013 and, as of 2019, ran micro-stakes hi-lo sit-and-gos several times a day.
+
+## Worked examples
+
+### A king door card
+
+<Example game="courchevel-hi-lo" id="king-door" />
+
+The king of spades was the face-up card, so a low looked unlikely at first. Then the rest of the flop came 4-7, the turn was a 2 and the river a 6, and a low showed up anyway. Alice's A-3 plus the 2-4-6 makes 6-4-3-2-A for the low half. Bob has K-K in hand and the king on board, which is three kings and the best high. He has no low, since his only low cards are a pair of eights, and a low needs five different ranks.
+
+### No low possible
+
+<Example game="courchevel-hi-lo" id="no-low" />
+
+The board has a king, a queen and a nine, all above 8, so only two cards (the 3 and the 2) could be part of a low. A low needs three from the board. Alice's A-4-5-6-7 is a pile of low cards that goes nowhere, and Bob's three kings take the whole pot.
+
+### An ace door card
+
+<Example game="courchevel-hi-lo" id="ace-door" />
+
+Alice's 3-5 plus the ace, deuce and four on the board makes A-2-3-4-5. That's the wheel, a straight and the nut low, so she scoops. Bob has A-2 in his hand and gets counterfeited by the board's ace and deuce. He still has three sixes, but a straight beats trips.
+
+## How you'll embarrass yourself
+
+- **Treating the exposed card as a burn.** It's a real board card. The flop only has two new cards left.
+- **Ignoring it for low.** With a king door card, you need two low flop cards for a low to exist after the flop. With a low door card, everyone has a live low draw.
+- **Overplaying a board set.** A pair in hand plus the door card is a monster for high, but a split game can still hand half the pot to a low.
+- **Chasing second- and third-nut lows.** Five cards each means lots of near-nut lows. PokerListings warns about exactly this.
+- **Using three hole cards for a flush.** Still exactly two.
+- **Believing straights and flushes spoil a low.** They don't.
+
+## Lore and reputation
+
+Courchevel is named for the French Alpine ski resort. Wikipedia says the Aviation Club de France in Paris, now closed, was where it was most commonly played, and that it spread to the UK. Online, PokerStars gives the hi-lo version its own rules page.
+
+A web-search snippet attributed to BetMGM says Courchevel "has never appeared in WSOP or any popular poker tournament." We couldn't open that page, and the WSOP's 2026 live-action rule sheet does define Courchevel, so we don't trust the claim.

@@ -1,0 +1,20 @@
+name: 5 Card Double Board Bomb Pot PLO
+abbrevs: [5-card DB bomb pot, PLO5 double board bomb pot]
+nicknames: [Double board PLO5 bomb pot]
+summary: Five-card PLO, everyone antes, no pre-flop betting, two boards, half the pot each.
+family: board
+structures: [pot-limit]
+holeCards: 5
+draws: 0
+showdown: custom
+parent: double-board-omaha
+related: [double-board-omaha, bomb-pot, 5-card-plo, derailment, courchevel]
+sources:
+  - title: "WSOP 2026 Live-Action Rules (5 Card Double Board Bomb Pot PLO)"
+    url: https://assets.wsopcdn.com/wsop/853ee602-e1e9-4019-a0cf-381419d805c6.pdf
+  - title: "PLOMastermind — Double board PLO bomb pots"
+    url: https://plomastermind.com/double-board-plo-bomb-pots/
+  - title: "The Lodge — What is a poker bomb pot?"
+    url: https://thelodgepokerclub.com/what-is-a-poker-bomb-pot/
+  - title: "Tournament Directors Association rules"
+    url: https://www.pokertda.com/view-poker-tda-rules/

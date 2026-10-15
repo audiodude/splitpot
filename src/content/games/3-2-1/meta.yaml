@@ -1,0 +1,24 @@
+name: 3-2-1
+abbrevs: ["321", Chowaha]
+nicknames: [Three flops two turns one river, 3-2-1 Omaha 8, Four-Card Chowaha High/Low]
+summary: Omaha Hi-Lo with three flops, two turns and one river, so you choose which flop and turn to build your hand on.
+family: board
+structures: [limit, pot-limit]
+holeCards: 4
+draws: 0
+showdown: custom
+parent: omaha-hi-lo
+related: [omaha-hi-lo, double-board-omaha, bomb-pot, big-o]
+sources:
+  - title: Card Player Lifestyle — Mixed game poker rules
+    url: https://cardplayerlifestyle.com/poker-tips-strategy/mixed-game-poker-rules/
+  - title: Card Player Lifestyle — Fun poker card games to throw in the mix (3-2-1)
+    url: https://cardplayerlifestyle.com/poker-tips-strategy/3-more-fun-wacky-home-poker-games-to-throw-in-the-mix/
+  - title: PokerNews — PLO 3-2-1 (EPT Prague 2016)
+    url: https://www.pokernews.com/strategy/plo-variant-pot-limit-omaha-3-2-1-26713.htm
+  - title: BARGE Rulebook — Four Card Chowaha
+    url: https://www.barge.org/rulebook/four-card-chowaha.html
+  - title: BARGE Rulebook — Chowaha
+    url: https://www.barge.org/rulebook/chowaha.html
+  - title: Bill Rini — Chowaha (2005)
+    url: https://www.billrini.com/2005/10/17/chowaha/

@@ -108,7 +108,7 @@ button[aria-pressed='true'] { background: var(--accent); border-color: var(--acc
 .facet { margin: 0.5rem 0; }
 .facet-label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); }
 .game-list { list-style: none; padding: 0; margin: 0; }
-.game-list li { padding: 0.6rem 0; border-bottom: 1px solid var(--border); }
+.game-list > li { padding: 0.6rem 0; border-bottom: 1px solid var(--border); }
 .game-list a.name { font-weight: 700; text-decoration: none; }
 .game-list .abbr { color: var(--muted); font-size: 0.85rem; margin-left: 0.35rem; }
 .game-list p { margin: 0.15rem 0; }

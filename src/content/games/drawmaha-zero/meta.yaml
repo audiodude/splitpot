@@ -1,0 +1,22 @@
+name: Drawmaha Zero
+abbrevs: [Dramaha Zero, Drawmaha 0, Dramaha 0]
+nicknames: [Zero, The opposite of 49]
+summary: "Drawmaha 49 flipped: the lowest pip count wins, so the kings, queens and jacks you wanted nothing to do with are now your best friends."
+family: hybrid
+structures: [limit, pot-limit]
+holeCards: 5
+draws: 1
+showdown: custom
+parent: drawmaha
+related: [drawmaha-49, drawmaha-21, archie-49-0, 2-7-drawmaha]
+sources:
+  - title: BARGE Rulebook — Dramaha Zero
+    url: https://www.barge.org/rulebook/dramaha-zero.html
+  - title: Card Player (Kevin Haney) — Point-based Dramaha variants
+    url: https://www.cardplayer.com/cardplayer-poker-magazines/66566-mike-moncek-38-9/articles/25372-spice-up-your-home-game-point-based-dramaha-variants
+  - title: Card Player Lifestyle — Mixed game poker rules
+    url: https://cardplayerlifestyle.com/poker-tips-strategy/mixed-game-poker-rules/
+  - title: Poker Chip Forum — Dramaha 49 vs Dramaha Zero
+    url: https://www.pokerchipforum.com/threads/dramaha-49-vs-dramaha-zero-discussion.142080/
+  - title: Card Player — The Coach's Game at Resorts World
+    url: https://www.cardplayer.com/cardplayer-poker-magazines/66506-chad-eveslage-36-2/articles/24732-the-coach-s-game-at-resorts-world-part-1

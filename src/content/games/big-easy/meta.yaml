@@ -1,0 +1,42 @@
+name: Big Easy
+abbrevs: [Big Easy, 5+ Card O8]
+nicknames: [Omaha Hi-Lo 5+ card, 6-Card O8 (when six are dealt)]
+summary: Big O where the dealer can hand out five, six or more hole cards depending on how many players are dealt in.
+family: board
+structures: [pot-limit]
+holeCards: 5
+draws: 0
+showdown: omaha-8
+parent: big-o
+related: [big-o, omaha-hi-lo, omaha-hi-lo-regular, courchevel-hi-lo, 6-card-plo]
+sources:
+  - title: WSOP 2026 Live-Action Rules (Big Easy)
+    url: https://assets.wsopcdn.com/wsop/853ee602-e1e9-4019-a0cf-381419d805c6.pdf
+  - title: PokerNews — Big O rules (parent game)
+    url: https://www.pokernews.com/poker-rules/big-o.htm
+  - title: PokerStars — 5-card Omaha Hi/Lo (baseline)
+    url: https://www.pokerstars.com/poker/games/omaha/5-card-high-low/
+  - title: Wikipedia — Omaha hold 'em
+    url: https://en.wikipedia.org/wiki/Omaha_hold_%27em
+examples:
+  - id: no-low
+    title: Six low cards in hand, but the board has only two
+    board: Ks Qd 9h 5c 2s
+    players:
+      - { name: Alice, cards: Ad 3c 4s 6d 7h Jc }
+      - { name: Bob, cards: Kh Kc Jd Td 8c 9s }
+    winners: { high: [Bob], low: [] }
+  - id: different-pairs
+    title: Six cards means fifteen combos, and Alice needs two of them
+    board: 2h 4d 7c Qs Qd
+    players:
+      - { name: Alice, cards: Ac 3s 5s Qh 9d 9c }
+      - { name: Bob, cards: Ad 6h Kc Kd 8s 8d }
+    winners: { high: [Alice], low: [Alice] }
+  - id: counterfeit
+    title: A-2 in a six-card hand, counterfeited by the board
+    board: Ad 2c 9s Th 6h
+    players:
+      - { name: Alice, cards: Ah 2h 3s 7s Ks Kd }
+      - { name: Bob, cards: 3c 4c Jc Qc 8d 8h }
+    winners: { high: [Alice], low: [Bob] }

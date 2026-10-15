@@ -1,0 +1,46 @@
+name: A-5 Single Draw
+abbrevs: [NL A-5, NL Ace-to-Five Draw, NL California Lowball]
+nicknames: [No-Limit California Lowball, No-Limit Ace-to-Five Draw]
+summary: California lowball with big-bet betting. One draw, ace-to-five low, no sevens rule, check-raise allowed.
+family: draw
+structures: [no-limit, pot-limit]
+holeCards: 5
+draws: 1
+showdown: draw-a5
+parent: california-lowball
+related: [2-7-single-draw, a-5-triple-draw, five-card-draw]
+sources:
+  - title: WSOP 2026 Live-Action Rules (lowball, rules 266-291)
+    url: https://assets.wsopcdn.com/wsop/853ee602-e1e9-4019-a0cf-381419d805c6.pdf
+  - title: Robert's Rules of Poker v11 (no-limit and pot-limit lowball)
+    url: https://www.pagat.com/docs/RobsPkrRules11.pdf
+  - title: BARGE — California Lowball
+    url: https://www.barge.org/rulebook/california-lowball.html
+  - title: PokerNews — History in Spades, defunct WSOP bracelet events
+    url: https://www.pokernews.com/news/2010/10/history-in-spades-defunct-bracelet-events-from-the-wsop-9161.htm
+  - title: PokerNews — WSOP Dealer's Choice strategy
+    url: https://www.pokernews.com/strategy/wsop-mixed-games-strategy-dealers-choice-30648.htm
+  - title: Pagat — Lowball
+    url: https://www.pagat.com/poker/variants/lowball.html
+  - title: Wikipedia — Draw poker
+    url: https://en.wikipedia.org/wiki/Draw_poker
+examples:
+  - id: six-seven-eight
+    title: Six beats seven beats eight
+    players:
+      - { name: P1, cards: 7s 5d 4c 2h Ad }
+      - { name: P2, cards: 8h 6c 3d 2s As }
+      - { name: P3, cards: 6d 5h 4s 3h 2c }
+    winners: { low: [P3] }
+  - id: draw-pairs-up
+    title: The one-card draw that paired
+    players:
+      - { name: Cam, cards: 8s 6h 4d 3c 3h, discards: Kc }
+      - { name: Dee, cards: Qc Jd Th 9s 7d }
+    winners: { low: [Dee] }
+  - id: suited-straight
+    title: A straight flush is just a six-low
+    players:
+      - { name: Eddie, cards: 6s 5s 4s 3s 2s }
+      - { name: Flo, cards: 7h 5d 4c 3d Ad }
+    winners: { low: [Eddie] }

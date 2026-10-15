@@ -1,0 +1,22 @@
+name: Action Razz
+abbrevs: []
+nicknames: [Face/Butt Razz]
+summary: Razz, except your seven cards need a jack, queen or king to qualify, so the wheel can lose to queens full of kings.
+family: stud
+structures: [limit]
+holeCards: 7
+draws: 0
+showdown: custom
+parent: razz
+related: [razz, razzdugi, 2-7-razz, seven-card-stud]
+sources:
+  - title: BARGE Rulebook (2.2 Action Razz)
+    url: https://www.barge.org/rulebook.pdf
+  - title: Card Player — Greg Raymer, Introducing Action Razz
+    url: https://www.cardplayer.com/poker-news/25642-poker-strategy-with-greg-raymer-introducing-action-razz
+  - title: BARGE — Action Razzdugi
+    url: https://www.barge.org/rulebook/action-razzdugi.html
+  - title: Card Player Lifestyle — Mixed game poker rules
+    url: https://cardplayerlifestyle.com/poker-tips-strategy/mixed-game-poker-rules/
+  - title: Card Player (Haney) — Spice up your home game, stud lowball variants
+    url: https://www.cardplayer.com/cardplayer-poker-magazines/1632969-acr-poker-39-1/articles/1633666-spice-up-your-home-game-stud-lowball-variants

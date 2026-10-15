@@ -1,0 +1,18 @@
+name: Drawmaha 21
+abbrevs: [Dramaha 21]
+nicknames: [Dramaha Blackjack]
+summary: Drawmaha where the draw half goes to the hand closest to 21. Blackjack with five cards and a flop.
+family: hybrid
+structures: [limit, pot-limit]
+holeCards: 5
+draws: 1
+showdown: custom
+parent: drawmaha
+related: [drawmaha-49, drawmaha-zero, 2-7-drawmaha]
+sources:
+  - title: BARGE Rulebook — Dramaha 21
+    url: https://www.barge.org/rulebook/dramaha-21.html
+  - title: Card Player (Kevin Haney) — Point-based Dramaha variants
+    url: https://www.cardplayer.com/cardplayer-poker-magazines/66566-mike-moncek-38-9/articles/25372-spice-up-your-home-game-point-based-dramaha-variants
+  - title: Card Player (Kevin Haney) — Old School Dramaha
+    url: https://www.cardplayer.com/poker-news/29945-spice-up-your-poker-home-game-old-school-dramaha

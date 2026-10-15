@@ -1,0 +1,38 @@
+name: No-Limit Hold'em
+abbrevs: [NLHE, NLH, NL Hold'em]
+nicknames: [Hold'em, Texas Hold'em]
+summary: The Hold'em you already know. In a mixed game it's the one round where your whole stack is on the table.
+family: board
+structures: [no-limit]
+holeCards: 2
+draws: 0
+showdown: holdem
+related: [limit-holdem, pot-limit-omaha, short-deck-holdem, pineapple, crazy-pineapple, bomb-pot]
+sources:
+  - title: WSOP 2026 Live-Action Rules (Texas Hold'em, no-limit rules, run-it-twice, odd chip, straddle)
+    url: https://assets.wsopcdn.com/wsop/853ee602-e1e9-4019-a0cf-381419d805c6.pdf
+  - title: Wikipedia — Texas hold 'em
+    url: https://en.wikipedia.org/wiki/Texas_hold_%27em
+  - title: Poker TDA Rules (raise, odd chip, string-bet rules)
+    url: https://www.pokertda.com/view-poker-tda-rules/
+  - title: PokerNews — Texas Hold'em rules
+    url: https://www.pokernews.com/poker-rules/texas-holdem.htm
+  - title: Pagat — Texas Hold'em
+    url: https://www.pagat.com/poker/variants/texasholdem.html
+  - title: Wikipedia — The Poker Players Championship (NLHE with antes in the 10-game mix)
+    url: https://en.wikipedia.org/wiki/The_Poker_Players_Championship
+examples:
+  - id: one-card-flush
+    title: One heart in your hand is enough for a flush
+    board: Ah Kh Qh 9h 3c
+    players:
+      - { name: Alice, cards: 2h Kc }
+      - { name: Bob, cards: Jd Jc }
+    winners: { high: [Alice] }
+  - id: board-plays
+    title: The board is a royal flush, so everybody chops
+    board: As Ks Qs Js Ts
+    players:
+      - { name: Alice, cards: 2c 3d }
+      - { name: Bob, cards: 4h 5h }
+    winners: { high: [Alice, Bob] }

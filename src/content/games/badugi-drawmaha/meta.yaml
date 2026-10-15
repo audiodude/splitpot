@@ -1,0 +1,46 @@
+name: Badugi Drawmaha
+abbrevs: [Dramadugi, DramaDugi, Drawmaha Badugi, Drawmaha Low-Dugi, Dramaha Low-Dugi, Drawmaha-Dugi]
+nicknames: [Dramadugi, Low-Dugi]
+summary: Drawmaha where the draw half is the best badugi from your five cards. Rainbow low cards are great, except at Omaha.
+family: hybrid
+structures: [limit, pot-limit]
+holeCards: 5
+draws: 1
+showdown: drawmaha-badugi
+parent: drawmaha
+related: [badugi, badacey, badugi-high-drawmaha, 2-7-drawmaha]
+sources:
+  - title: WSOP 2026 Live-Action Rules (Drawmaha, Badugi)
+    url: https://assets.wsopcdn.com/wsop/853ee602-e1e9-4019-a0cf-381419d805c6.pdf
+  - title: BARGE Rulebook — Dramadugi
+    url: https://www.barge.org/rulebook/dramadugi.html
+  - title: Card Player (Kevin Haney) — The Badugi Dramahas
+    url: https://www.cardplayer.com/poker-news/29943-spice-up-your-poker-home-game-the-badugi-dramahas
+  - title: Steve Badger — Dramaha strategy
+    url: http://www.stevebadger.com/poker/dramaha/
+  - title: Card Player Lifestyle — Mixed game poker rules
+    url: https://cardplayerlifestyle.com/poker-tips-strategy/mixed-game-poker-rules/
+  - title: Red Chip Poker — LOB (Limit Omaha Badugi)
+    url: https://redchippoker.com/lob-poker-omaha-badugi/
+examples:
+  - id: three-card-wins
+    title: Nobody has a badugi, so three cards decide
+    board: 5c 5s 9s Kd Jc
+    players:
+      - { name: Alice, cards: Ad 2c 3h 6h 6c }
+      - { name: Bob, cards: Ac 3d 4h 5h 5d }
+    winners: { draw: [Alice], omaha: [Bob] }
+  - id: four-beats-three
+    title: A king-high badugi beats a three-card A-2-3
+    board: Ah 6s 6d 9c Jd
+    players:
+      - { name: Erin, cards: Kh Ks 4d 3c 2h }
+      - { name: Frank, cards: Ac 2d 3h 4h 9h }
+    winners: { draw: [Erin], omaha: [Frank] }
+  - id: badugi-scoop
+    title: A four-card badugi that is also a straight
+    board: 5s 6d 7h Kc Qc
+    players:
+      - { name: Carol, cards: Ad 2c 3h 4s 9d }
+      - { name: Dave, cards: Kh Kd Qh Qd Jh }
+    winners: { draw: [Carol], omaha: [Carol] }

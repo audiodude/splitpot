@@ -1,0 +1,42 @@
+name: A-5 Drawmaha
+abbrevs: [Drawmaha A-5, Ace-5 Drawmaha, A-5 Dramaha, Ace-to-Five Dramaha]
+nicknames: [Ace-to-Five Drawmaha]
+summary: Drawmaha with an ace-to-five low for the draw half. The wheel is a monster, and the ace has two jobs.
+family: hybrid
+structures: [limit, pot-limit]
+holeCards: 5
+draws: 1
+showdown: drawmaha-a5
+parent: drawmaha
+related: [2-7-drawmaha, a-5-triple-draw, a-5-single-draw, badugi-drawmaha]
+sources:
+  - title: WSOP 2026 Live-Action Rules (Drawmaha, ace-to-five lowball)
+    url: https://assets.wsopcdn.com/wsop/853ee602-e1e9-4019-a0cf-381419d805c6.pdf
+  - title: Card Player Lifestyle — Mixed game poker rules
+    url: https://cardplayerlifestyle.com/poker-tips-strategy/mixed-game-poker-rules/
+  - title: Card Player (Kevin Haney) — Old School Dramaha
+    url: https://www.cardplayer.com/poker-news/29945-spice-up-your-poker-home-game-old-school-dramaha
+  - title: BARGE Rulebook — Dramaha
+    url: https://www.barge.org/rulebook/dramaha.html
+examples:
+  - id: wheel-scoop
+    title: The wheel is a low and a straight
+    board: 6h 7c 8d Kc Js
+    players:
+      - { name: Alice, cards: 5s 4d 3h 2c Ad }
+      - { name: Bob, cards: Kh Kd Qs Qd Jh }
+    winners: { draw: [Alice], omaha: [Alice] }
+  - id: pair-of-aces-loses
+    title: King-high beats a pair of aces
+    board: Ac 5h 5d 9h Td
+    players:
+      - { name: Erin, cards: Kh Qs Jd 9c 7s }
+      - { name: Dave, cards: Ah Ad 2c 3s 4h }
+    winners: { draw: [Erin], omaha: [Dave] }
+  - id: top-down
+    title: Compare from the top card down
+    board: 7s 7c 7d Ks Qh
+    players:
+      - { name: Gina, cards: 8c 6d 4h 2s Ac }
+      - { name: Hana, cards: 8d 7h 3c 2d Ah }
+    winners: { draw: [Gina], omaha: [Hana] }

@@ -1,0 +1,41 @@
+name: Super Stud
+abbrevs: [Super Stud High, Super Stud Hi]
+nicknames: [Super]
+summary: Seven-card stud, except you start with five cards and have to throw two of the hidden ones away before the fun starts.
+family: stud
+structures: [limit]
+holeCards: 7
+draws: 0
+showdown: stud
+parent: seven-card-stud
+related: [super-stud-8, seven-card-stud, razz, razzdugi, razzdeucey, seven-card-stud-hi-lo]
+sources:
+  - title: WSOP 2026 Live-Action Rules
+    url: https://assets.wsopcdn.com/wsop/853ee602-e1e9-4019-a0cf-381419d805c6.pdf
+  - title: BARGE Rulebook (2.60 Super Stud)
+    url: https://www.barge.org/rulebook.pdf
+  - title: Card Player (Haney) — Spice up your home game, super-sized stud hi-lo
+    url: https://www.cardplayer.com/poker-news/29944-spice-up-your-poker-home-game-super-sized-stud-hi-lo
+  - title: CountingOuts — Super Stud Hi/Lo rules and basic strategy
+    url: https://www.countingouts.com/super-stud-hi-low-eight-or-better-rules-and-basic-strategy/
+  - title: Steve Badger — Super Stud
+    url: http://www.stevebadger.com/poker/super-stud/
+examples:
+  - id: rolled-up
+    title: Rolled-up trips are a lot more common here
+    players:
+      - { name: Alice, cards: Kh Kd Ks 7c 5d 2s 9h }
+      - { name: Bob, cards: Ac Ad Qh Qd 8s 3c 4h }
+    winners: { high: [Alice] }
+  - id: hidden-straight
+    title: Seven cards, best five, and a straight hiding behind a pair
+    players:
+      - { name: Carol, cards: 5h 6d 7c 8s 9h Kc Kd }
+      - { name: Dan, cards: As Ad Qs Qc 3h 4d 2c }
+    winners: { high: [Carol] }
+  - id: tie
+    title: Same five-card hand, split pot
+    players:
+      - { name: Gina, cards: As Kd Qh Jc 9s 3d 2c }
+      - { name: Hal, cards: Ah Ks Qd Jh 9c 4d 2h }
+    winners: { high: [Gina, Hal] }

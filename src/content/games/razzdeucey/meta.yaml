@@ -1,0 +1,41 @@
+name: Razzdeucey
+abbrevs: [Razzdeucy, Razzduci, Razz-deucey, Razz/Baduci]
+nicknames: [Badeucey in stud form, 2-7 Razzdugi, Super Stud Badeucey]
+summary: "Stud-style Badeucey: half the pot to the best 2-7 low, half to the best aces-high badugi, from the same seven cards. Despite the name, there is no A-5 razz in it."
+family: stud
+structures: [limit]
+holeCards: 7
+draws: 0
+showdown: razzdeucey
+parent: razzdugi
+related: [razzdugi, 2-7-razz, razz, super-stud, badeucy]
+sources:
+  - title: WSOP 2026 Live-Action Rules (Razzduci, rules 332-336)
+    url: https://assets.wsopcdn.com/wsop/853ee602-e1e9-4019-a0cf-381419d805c6.pdf
+  - title: Card Player Lifestyle — Mixed game poker rules
+    url: https://cardplayerlifestyle.com/poker-tips-strategy/mixed-game-poker-rules/
+  - title: Card Player — Spice up your home game, stud lowball variants
+    url: https://www.cardplayer.com/cardplayer-poker-magazines/1632969-acr-poker-39-1/articles/1633666-spice-up-your-home-game-stud-lowball-variants
+  - title: Card Player — The Coach's Game at Resorts World, part 1
+    url: https://www.cardplayer.com/cardplayer-poker-magazines/66506-chad-eveslage-36-2/articles/24732-the-coach-s-game-at-resorts-world-part-1
+  - title: BARGE Rulebook
+    url: https://www.barge.org/rulebook.pdf
+examples:
+  - id: scoop
+    title: 2-3-4-5-7 with four suits is the dream
+    players:
+      - { name: Alice, cards: 2c 3d 4h 5s 7c Kd Qh }
+      - { name: Bob, cards: 2h 3c 4d 6s 8h Ks Kc }
+    winners: { low: [Alice], badugi: [Alice] }
+  - id: ace-trap
+    title: A-2-3-4 is the worst four-card badugi, and K-high beats it
+    players:
+      - { name: Alice, cards: As 2h 3c 4d 2d 3h 4c }
+      - { name: Bob, cards: Ks Qh Jd Tc 9s 9h 8d }
+    winners: { low: [Bob], badugi: [Bob] }
+  - id: nut-low-loses-badugi
+    title: The nut low, but all clubs and diamonds
+    players:
+      - { name: Alice, cards: 2c 3c 4c 5d 7d Kh Qs }
+      - { name: Bob, cards: Js Th 9d 8c Ah Ac Kd }
+    winners: { low: [Alice], badugi: [Bob] }

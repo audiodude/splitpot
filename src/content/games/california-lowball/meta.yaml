@@ -1,0 +1,55 @@
+name: California Lowball
+abbrevs: [A-5 Lowball, A-5 SD, Cal Lowball]
+nicknames: [Ace-to-Five Draw, Ace-to-Five Single Draw, Low Poker]
+summary: The old Gardena favorite. One draw, ace-to-five low, usually with a joker, and a "sevens rule" that makes you bet a good hand.
+family: draw
+structures: [limit, no-limit, pot-limit]
+holeCards: 5
+draws: 1
+showdown: draw-a5
+related: [a-5-single-draw, 2-7-single-draw, a-5-triple-draw, five-card-draw, archie]
+sources:
+  - title: Robert's Rules of Poker v11 (Section 11, ace-to-five lowball)
+    url: https://www.pagat.com/docs/RobsPkrRules11.pdf
+  - title: WSOP 2026 Live-Action Rules (lowball, rules 266-283)
+    url: https://assets.wsopcdn.com/wsop/853ee602-e1e9-4019-a0cf-381419d805c6.pdf
+  - title: BARGE — California Lowball
+    url: https://www.barge.org/rulebook/california-lowball.html
+  - title: BARGE — The Sevens Rule
+    url: https://www.barge.org/rulebook/sevens-rule.html
+  - title: BARGE — Lowball scales
+    url: https://www.barge.org/rulebook/lowball-scales.html
+  - title: Pagat — Lowball
+    url: https://www.pagat.com/poker/variants/lowball.html
+  - title: Wikipedia — Draw poker
+    url: https://en.wikipedia.org/wiki/Draw_poker
+  - title: Wikipedia — Lowball (poker)
+    url: https://en.wikipedia.org/wiki/Lowball_(poker)
+  - title: PokerNews — History in Spades, defunct WSOP bracelet events
+    url: https://www.pokernews.com/news/2010/10/history-in-spades-defunct-bracelet-events-from-the-wsop-9161.htm
+examples:
+  - id: wheel-vs-six
+    title: The wheel beats a six, a flush doesn't hurt
+    players:
+      - { name: Ann, cards: As 2d 3c 4s 5d }
+      - { name: Bo, cards: 6h 5h 4h 3h 2h }
+    winners: { low: [Ann] }
+  - id: pairs-compare
+    title: Lower pair wins, and the kickers decide the rest
+    players:
+      - { name: Ivy, cards: As Ad 6c 5h 4s }
+      - { name: Jon, cards: Ah Ac 7d 3s 2h }
+      - { name: Hal, cards: 2s 2d 3c 4h 5d }
+    winners: { low: [Ivy] }
+  - id: king-high-beats-pair
+    title: Ugly but pair-free beats pretty but paired
+    players:
+      - { name: Gus, cards: Ks Jd 8c 6h 4s }
+      - { name: Kay, cards: Ac Ad 2h 3s 4d }
+    winners: { low: [Gus] }
+  - id: chop
+    title: Same ranks, different suits, split pot
+    players:
+      - { name: Lena, cards: 7s 5d 4c 3h 2s }
+      - { name: Max, cards: 7h 5c 4d 3s 2d }
+    winners: { low: [Lena, Max] }

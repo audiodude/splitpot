@@ -1,0 +1,96 @@
+## It's ace-to-five triple draw, except you only get four cards and suits matter
+
+You've (maybe) seen triple draw: you're dealt a hand, you get three chances to swap cards, and the lowest hand wins. Badugi keeps that structure but changes the hand. You get **four** cards, not five, and a good hand is not just low. It's **four cards that are all different suits and all different ranks.**
+
+If you have two hearts, only one of them counts. If you have two sevens, only one of them counts. Every duplicate cuts your hand down. Then lowest wins.
+
+The name is believed to come from a Korean word for a black-and-white spotted dog (it's also the Korean name for the game Go, "baduk"). That has nothing to do with the rules, but it will win you a trivia point.
+
+## 30-second cheat sheet
+
+- Four cards each, face down. Button, small blind and big blind.
+- Pre-draw betting, then three draws (0 to 4 cards each), each followed by a betting round. Four betting rounds in total.
+- Limit is by far the most common: small bet on the first two rounds, big bet on the last two. Pot-limit and no-limit exist but are rarer.
+- Your hand is the biggest set of cards with **no repeated rank and no repeated suit.** Duplicates get dropped, your choice which.
+- **Four cards beats three, three beats two, two beats one**, whatever the ranks. K-Q-J-10 of four suits beats A-2-3 plus a duplicate.
+- Within the same number of cards, **lower is better**, compared from the highest card down. **Aces are low.**
+- The nuts is **A-2-3-4 in four suits.** Straights and flushes mean nothing here except that they reduce your card count.
+- No qualifier, and the pot goes to one winner or splits between ties.
+
+## Full rules
+
+### The deal
+There's a button, a small blind and a big blind. Everyone gets four cards face down, no community cards. The first betting round starts left of the big blind: call, raise or fold, and the big blind can raise even if everyone just calls.
+
+### The draws
+After the first round, each player in turn, starting left of the button, can replace anywhere from zero to four cards. Standing pat means taking none. Each draw is followed by betting, which starts with the first active player left of the button. Three draws, four betting rounds.
+
+Limit structure is 1-1-2-2: small bet before the draw and after the first draw, big bet (double) after the second and third draws. The WSOP says that when played limit, the game will usually be played with three draws.
+
+At the WSOP, draw cards are pushed and pulled to the player. If you let the dealer pitch them to you and one comes up face up, you keep it. You can receive four in a row. If the deck runs out, the dealer shuffles the earlier discards, but not the ones from the current draw round, and the very last stub card is only used if it completes the draws.
+
+If you want to join a game in progress, wait for the big blind or post a full big blind.
+
+### How your hand is read
+At showdown, everyone turns all four cards face up even if only one to three of them count. Cards speak, so you don't have to say anything. Reduce your four cards to the biggest subset with all different ranks *and* all different suits. If there are duplicates, you pick which to drop so the hand left is best.
+
+- **Four cards** (a true badugi) beats any three-card hand, which beats any two-card hand, which beats any one-card hand.
+- Within the same number of cards, compare the **highest card first**, and lower wins. Then the next highest, and so on.
+- Aces are low. The nuts is A-2-3-4 in four suits, called the wheel. Then A-2-3-5, A-2-4-5, A-3-4-5, 2-3-4-5, A-2-3-6...
+- Suits don't have a ranking. Equal ranks tie.
+- Unused cards never break ties. Two hands that reduce to the same ranks split.
+
+The WSOP example: Ad-2c-3h-6h against Ac-3d-4h-5h. Each hand has two hearts, so each plays three cards. A-2-3 beats A-3-4. Another example from BARGE: 7-4-2-2 plays as 7-4-2 and beats 7-5-A-A, which plays as 7-5-A.
+
+### Ties and odd chips
+Ties split the pot evenly. Badugi has no dedicated odd-chip rule, so the WSOP's general rules for button games apply [inference, because the Badugi section is silent on this]. That's the first tied hand clockwise from the button, unless the WSOP's mixed-games simplification gives it to the worst position instead.
+
+### Rooms disagree
+- **Number of draws and structure:** every source I read agrees on three draws and 1-1-2-2 in limit. PokerNews adds that it's "usually fixed limit". No source gave a different standard.
+- **Maximum players:** the WSOP and Pagat say up to eight. Wikipedia says it's usually played six-handed, and Card Player Lifestyle says triple-draw games are usually kept to six.
+- **Origin story:** Pagat credits early play to Winnipeg ("Off Suit Lowball", 1980s), Korea in the 1980s and Southern US prisons, and says Paul "Eskimo" Clark popularized it in the US around 2004. Wikipedia says several sources credit Clark with bringing it from Vietnam. Those conflict, so treat the history as unsettled.
+- **WSOP event history:** Wikipedia and PokerNews both say the WSOP added a $1,500 Badugi tournament in 2023. PokerNews' own table is inconsistent, so this page only says "since 2023".
+
+## Worked examples
+
+### Four beats three
+
+<Example game="badugi" id="four-beats-three" />
+
+Rosa's K-Q-J-10 is ugly, but it's four different ranks in four different suits. Sam's A-2-3 looks gorgeous, but he has only three cards, since the second three is a duplicate. Four cards beat three, so Rosa wins.
+
+### Two hearts collide
+
+<Example game="badugi" id="wsop-three-card" />
+
+This is the WSOP's own example. Both hands have two hearts, so each plays only three cards. Tess has A-2-3, Uma has A-3-4. A-2-3 is lower, so Tess wins. Notice Tess dropped the 6♥ rather than the 3♥, since 3♥ makes the better hand.
+
+### A pair costs you a card
+
+<Example game="badugi" id="barge-pairs" />
+
+Vic's pair of twos means he plays 7-4-2, three cards. Wes's pair of aces means he plays 7-5-A, also three. Same size, so compare from the top: seven ties, then the four beats the five. Vic wins.
+
+### Same hand, different junk
+
+<Example game="badugi" id="chop" />
+
+Xena has two spades, so she drops the 7♠ and plays 3♠-2♥-A♦. Yuri has a pair of threes, so he drops one and plays 3-2-A too. Same three ranks, the dropped card doesn't matter, and they split. (This one is from BARGE.)
+
+## How you'll embarrass yourself
+
+- **Treating a paired or suited hand as a four-card hand.** Any repeated suit or rank cuts you to three, two or one.
+- **Thinking a low three-card hand beats a high badugi.** The number of cards comes first.
+- **Forgetting you choose which duplicate to drop.** Drop the card that leaves the best combination.
+- **Overplaying high badugis.** PokerNews says K-Q-9-6 on the first draw is often a loser if opponents are drawing to low three-card hands.
+- **Drawing three or four cards from early position.** George Danzer (quoted by PokerNews) says it screams weakness and you're out of position.
+- **Not counting outs.** A three-card badugi drawing one has ten outs (cards of the missing suit that don't pair a rank you hold), per Wikipedia. That's roughly a 51% chance of hitting one over three draws, per Wikipedia and PokerNews.
+- **Thinking standing pat has to mean strength.** Snowing, standing pat with a non-badugi as a bluff, is a legitimate play. That's a strategy note, not a rule.
+
+## Lore and reputation
+
+Pagat notes two earlier North Carolina home-game "doogie" hi-lo games from 2000 that used the same hand idea. Pagat speculates "doogie" may come from Doogie Howser. Pagat also lists "Airborn" as Florida prison slang for the game.
+
+Badugi is on the WSOP Dealer's Choice menu (it's in PokerNews' and PokerListings' 20-game lists), in the WSOP Triple Draw Mix, and has been a stand-alone $1,500 event since 2023 (Wikipedia). Online, it's mostly on PokerStars (PokerNews).
+
+Badugi is also the parent of Badeucy, Badacey, Badugi Hi-Lo, Hi-Dugi and the Drawmaha-dugi family (BARGE, Card Player).

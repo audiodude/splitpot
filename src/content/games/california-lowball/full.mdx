@@ -1,0 +1,115 @@
+## It's 2-7 single draw, except the ace is low, and there may be a joker
+
+You know the shape of this one from 2-7 single draw: five cards, one betting round, one draw, one more betting round, lowest hand takes the pot. California lowball is the older cousin that uses **ace-to-five** rankings, which are much kinder to you:
+
+- Aces are **low**. The ace is your best card.
+- **Straights and flushes don't count against you.** They are just cards.
+- Only **pairs** hurt. Any hand with no pair beats any hand with a pair.
+
+The best hand is **5-4-3-2-A**, the wheel (or "bicycle"), in any suits. This was the big game in Gardena, California, back when it was the dominant game in the card rooms there.
+
+It also has two quirks 2-7 doesn't: the traditional **joker**, and in limit games the **sevens rule**, which forces you to bet a good hand.
+
+## 30-second cheat sheet
+
+- Five cards, face down. Button and blinds, sometimes with an ante.
+- **You must open with a bet or fold.** No checking around to get a free draw. In some structures the big blind can be called, in others the open has to be at least twice the big blind.
+- One draw (0 to 5 cards), then one more betting round, then showdown.
+- **Lowest five-card hand wins the whole pot.** Ace is low, straights and flushes are ignored, pairs are bad. Best hand: 5-4-3-2-A.
+- If a **joker** is in the game, it's the lowest card not already in your hand (not wild, can never pair you).
+- Limit is traditional and the bet usually doubles after the draw. No-limit and pot-limit versions exist.
+- Limit only: the **sevens rule**. See below.
+- Six players max at the WSOP.
+
+## Full rules
+
+### The deal and the opening round
+It's a button game normally played with one or more blinds, sometimes with an ante added. Everybody gets five cards face down. You then have to **open with a bet or fold**. Some games let the big blind be called, others require the open to be at least double the big blind.
+
+A short hand before the draw is still live: you just get the missing cards. After the draw you must hold exactly five cards or the hand is fouled and dead.
+
+New players who don't want to wait for the big blind usually kill the pot (post double the big blind, which doubles the limits) to get dealt in right away.
+
+### The draw
+Each active player, starting left of the button, discards 0 to 5 cards and gets replacements. Robert's Rules say a player can receive up to four consecutive cards, with the fifth dealt after everyone else has drawn. The WSOP deals up to five in a row. Any card exposed at the draw is replaced after everyone else has drawn.
+
+### The post-draw betting round
+Betting starts with the first active player left of the button. In limit the usual structure doubles the bet after the draw, except in Northern California, where it stays the same, according to Robert's Rules.
+
+### The sevens rule (limit only)
+This is the strangest thing in the game. Robert's Rules, which assume it's in use unless posted otherwise, say: after the draw, if you **check** a hand that is seven-high or better and it turns out to be the best hand, all of the post-draw betting is void for you. You win only the pot as it stood before the draw. If you check and your hand is beaten, you lose the pot and any calls you made.
+
+So when you have a good low after the draw and you're first to act, you're supposed to bet it. Say you hold 6-4-3-2-A and check. If everyone checks, you win only the pot that existed at the draw. If someone bets and you call, and your hand is best, his bet goes back to him and you still get only the pre-draw pot. If his hand is better, you lose your call as well.
+
+The sevens rule **is not used** in no-limit or pot-limit lowball. After the draw you can check any hand.
+
+### The joker
+The traditional game adds one joker to the deck (also called the fitter or the bug). It plays as the **lowest card not already in your hand**. 8-6-4-A-joker is 8-6-4-2-A. It's not wild: it can't pair you and it can't be anything else.
+
+### Showdown
+Lowest five-card hand wins the whole pot. Compare from the highest card down:
+
+- **No pair beats pair**, so K-J-8-6-4 beats A-A-2-3-4.
+- Among no-pair hands, the lower highest card wins. 7-5-4-3-2 beats 7-6-3-2-A.
+- Among pairs, the lower pair wins. A pair of aces beats a pair of deuces. When pairs are equal, the remaining cards decide, so A-A-6-5-4 beats A-A-7-3-2.
+- The best hands: 5-4-3-2-A, 6-4-3-2-A, 6-5-3-2-A, 6-5-4-2-A, 6-5-4-3-A, 6-5-4-3-2, 7-4-3-2-A...
+- Ties split. For odd chips, the WSOP gives it to the first hand clockwise from the button in a normal split, or to the worst position under its mixed-game simplification.
+
+Hands are called by their top card: "a seven" is a seven-high hand. BARGE counts one wheel, five sixes and fifteen sevens, so 21 hands are seven-or-better, and 56 hands are eight-or-better.
+
+Cards speak, but you can't claim a better hand than you hold. If you miscall and make someone else fold or foul, your hand is dead. If your hand has a pair, announce "pair" when you spread it.
+
+### Rooms disagree
+This page follows Robert's Rules of Poker (Section 11) and the WSOP live-action rules (rules 266-283). They differ:
+
+- **Exposed card before the draw (limit):** Robert's says an exposed card of seven or under must be taken and a higher one is replaced. The WSOP replaces every exposed card.
+- **Joker default:** Robert's says it's assumed in use unless the room posts otherwise. The WSOP says jokers are not used unless the room posts them. BARGE and Pagat say it's usually or often played with a joker.
+- **Check-raise:** Robert's and BARGE ban it in limit A-5. WSOP rule 282 permits it.
+- **Draw size:** four in a row then one (Robert's), five in a row (WSOP), or zero to five (BARGE).
+- **Blinds:** Pagat describes a dealer small blind plus the next two players each posting a big blind. Robert's and the WSOP just say one or more blinds.
+- **Sevens rule penalty:** Robert's and Pagat void the post-draw winnings only. BARGE says in some clubs you forfeit the entire pot.
+- **Bet doubling:** doubles after the draw (Robert's usual, Pagat "some"), or stays the same (Northern California).
+- **Max players:** the WSOP says six.
+
+## Worked examples
+
+### The wheel and a flush
+
+<Example game="california-lowball" id="wheel-vs-six" />
+
+Ann has the wheel. Bo has 6-5-4-3-2 all in hearts, which would be a straight flush in high poker and is just a six-low here. Five-high beats six-high, so Ann wins. Neither the straight nor the flush hurts Bo, he's just second best.
+
+### Pairs
+
+<Example game="california-lowball" id="pairs-compare" />
+
+Everyone has a pair, so it's the lower pair that counts first: Ivy and Jon have aces, Hal has deuces, and aces are lower. Between Ivy and Jon, the pair is identical so the other cards decide. Ivy's 6-5-4 beats Jon's 7-3-2 because the highest remaining card is compared first.
+
+### Pretty vs ugly
+
+<Example game="california-lowball" id="king-high-beats-pair" />
+
+Kay's A-A-2-3-4 looks like a monster. It's a pair, and Gus's K-J-8-6-4 has none. Gus wins.
+
+### The chop
+
+<Example game="california-lowball" id="chop" />
+
+Lena and Max hold the same ranks, 7-5-4-3-2. Suits don't matter. They split.
+
+## How you'll embarrass yourself
+
+- **Treating straights and flushes as bad.** That's 2-7. Here 5-4-3-2-A is the nuts and A-2-3-4-6 beats any seven-low.
+- **Checking a seven-or-better after the draw in a limit game.** The sevens rule says that can cost you the post-draw pot.
+- **Limping pre-draw.** You have to open or fold, unless the big blind can be called in your room's structure.
+- **Spreading a pair without saying "pair".** If someone folds because of it, you can lose the pot.
+- **Treating the joker as wild.** It's the lowest card you don't already hold, and it never pairs you.
+- **Worrying about straights and flushes.** Only pairs and high cards matter.
+
+## Lore and reputation
+
+Wikipedia calls it "the primary poker game played in California during the heyday of Gardena in the 1970s". Its popularity has dropped since stud and community-card games arrived. BARGE's version of the story: "This was the big game in California, until someone realized Hold'em wasn't illegal."
+
+At the WSOP, limit ace-to-five draw was a bracelet event from 1971 (won by Johnny Moss) through 2004 (Norm Ketchum, $1,500 limit, 184 entries). No-limit A-5 events ran in the 1980s: Billy Baxter in 1982, David Angel in 1983 (with joker) and Mike Cox in 1986 (with joker and rebuys). BARGE spread a no-limit California lowball bounty tournament in 2021.
+
+One thing to watch for: PokerNews' history table says straights and flushes count in A-5, which is wrong. Every rules source says they don't.

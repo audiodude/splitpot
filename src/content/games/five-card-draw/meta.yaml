@@ -1,0 +1,56 @@
+name: Five-Card Draw
+abbrevs: [5CD, NL 5 Card Draw, Draw High]
+nicknames: [California Draw, Guts to Open, Jackpots, Draw Poker]
+summary: The poker you learned at your cousin's kitchen table. Five cards, one swap, best normal poker hand wins.
+family: draw
+structures: [no-limit, pot-limit, limit]
+holeCards: 5
+draws: 1
+showdown: draw-high
+related: [california-lowball, a-5-single-draw, 2-7-single-draw, drawmaha, archie]
+sources:
+  - title: Robert's Rules of Poker v11 (Section 12, Draw High)
+    url: https://www.pagat.com/docs/RobsPkrRules11.pdf
+  - title: Pagat — Five-Card Draw
+    url: https://www.pagat.com/poker/variants/5draw.html
+  - title: PokerNews — How to Play Five-Card Draw
+    url: https://www.pokernews.com/strategy/5-card-draw-rules-how-to-play-five-card-draw-poker-23741.htm
+  - title: PokerNews — WSOP Dealer's Choice strategy
+    url: https://www.pokernews.com/strategy/wsop-mixed-games-strategy-dealers-choice-30648.htm
+  - title: PokerListings — WSOP Dealer's Choice events, history and specifics
+    url: https://www.pokerlistings.com/blog/wsop-dealers-choice-events-the-history-and-specifics
+  - title: BARGE — Five-Card Draw
+    url: https://www.barge.org/rulebook/five-card-draw.html
+  - title: Wikipedia — Draw poker
+    url: https://en.wikipedia.org/wiki/Draw_poker
+  - title: Card Player Lifestyle — Mixed games guide, draw games
+    url: https://cardplayerlifestyle.com/poker-tips-strategy/mixed-games-poker-guide-draw-games/
+  - title: PokerNews — History in Spades, defunct WSOP bracelet events
+    url: https://www.pokernews.com/news/2010/10/history-in-spades-defunct-bracelet-events-from-the-wsop-9161.htm
+  - title: WSOP 2026 Live-Action Rules
+    url: https://assets.wsopcdn.com/wsop/853ee602-e1e9-4019-a0cf-381419d805c6.pdf
+examples:
+  - id: flush-beats-pair
+    title: Same ranking as Hold'em, just with no board
+    players:
+      - { name: Mia, cards: Kh Kd 8s 5c 2h }
+      - { name: Noel, cards: As Js 9s 6s 3s }
+    winners: { high: [Noel] }
+  - id: kickers
+    title: Same pair, so the kicker decides
+    players:
+      - { name: Olive, cards: Kh Kd Qs 7c 3d }
+      - { name: Pat, cards: Ks Kc Jd 9h 4s }
+    winners: { high: [Olive] }
+  - id: wheel-straight
+    title: The wheel is still a straight in high poker
+    players:
+      - { name: Rex, cards: As 2d 3c 4h 5s }
+      - { name: Sue, cards: Qh Qd Qc 9s 3h }
+    winners: { high: [Rex] }
+  - id: chop
+    title: Same ranks, different suits, split pot
+    players:
+      - { name: Tom, cards: Ah Kd 9c 7s 2d }
+      - { name: Una, cards: As Kc 9d 7h 2s }
+    winners: { high: [Tom, Una] }

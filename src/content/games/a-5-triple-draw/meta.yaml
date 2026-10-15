@@ -1,0 +1,54 @@
+name: A-5 Triple Draw
+abbrevs: [A-5 TD, A5TD, Ace-to-Five Triple Draw, A-5 Lowball Triple Draw]
+nicknames: [Ace-to-Five]
+summary: Triple draw where the ace is your best card and straights and flushes are harmless. The nuts is A-2-3-4-5, any suits.
+family: draw
+structures: [limit]
+holeCards: 5
+draws: 3
+showdown: draw-a5
+related: [a-5-single-draw, 2-7-triple-draw, badacey, archie]
+sources:
+  - title: WSOP 2025 Official Tournament Rules (Limit Triple Draw, Ace to Five)
+    url: https://wsop.gg-global-cdn.com/wsop/pdfs/2025-WSOP-Tournament-Rules.pdf
+  - title: WSOP 2026 Live-Action Rules (ace-to-five lowball)
+    url: https://assets.wsopcdn.com/wsop/853ee602-e1e9-4019-a0cf-381419d805c6.pdf
+  - title: Robert's Rules of Poker v11 (ace-to-five lowball)
+    url: https://www.pagat.com/docs/RobsPkrRules11.pdf
+  - title: Pagat — Lowball
+    url: https://www.pagat.com/poker/variants/lowball.html
+  - title: Wikipedia — Lowball (poker)
+    url: https://en.wikipedia.org/wiki/Lowball_(poker)
+  - title: PokerNews — WSOP Dealer's Choice strategy
+    url: https://www.pokernews.com/strategy/wsop-mixed-games-strategy-dealers-choice-30648.htm
+  - title: PokerNews — Your guide to the WSOP Dealer's Choice event (A-5 returns in 2014)
+    url: https://www.pokernews.com/news/2014/06/your-guide-to-wsop-dealer-s-choice-event-18575.htm
+  - title: PokerNews — History in Spades, defunct WSOP bracelet events
+    url: https://www.pokernews.com/news/2010/10/history-in-spades-defunct-bracelet-events-from-the-wsop-9161.htm
+  - title: Asian Poker Tour — Ace-to-Five handbook
+    url: https://www.theasianpokertour.com/info/pokerhandbook/acetofive
+examples:
+  - id: the-wheel
+    title: The wheel beats a smooth six
+    players:
+      - { name: Ann, cards: As 2d 3c 4h 5s }
+      - { name: Bo, cards: 6h 4d 3s 2s Ad }
+    winners: { low: [Ann] }
+  - id: straight-flush-is-fine
+    title: A suited straight is a perfectly good low
+    players:
+      - { name: Cy, cards: 6s 5s 4s 3s 2s }
+      - { name: Di, cards: 7h 5d 4c 3h Ad }
+    winners: { low: [Cy] }
+  - id: highest-card-first
+    title: Compare from the top, not the bottom
+    players:
+      - { name: Eli, cards: 7s 5d 4c 3h 2s }
+      - { name: Fay, cards: 7h 6d 3c 2d Ah }
+    winners: { low: [Eli] }
+  - id: pair-loses-to-king-high
+    title: Any no-pair hand beats any pair
+    players:
+      - { name: Gus, cards: Ks Jd 8c 6h 4s }
+      - { name: Hal, cards: Ac Ad 2h 3s 4d }
+    winners: { low: [Gus] }

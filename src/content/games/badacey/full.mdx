@@ -1,0 +1,82 @@
+## It's A-5 triple draw, except the pot is split with a badugi
+
+If you've played ace-to-five triple draw you already know the structure: five cards, three draws, four betting rounds, small-small-big-big, ace low, straights and flushes don't hurt. In Badacey, the same five cards are judged **two ways at once** and the pot is **split in half**:
+
+- **Half one:** the best A-5 low, using all five cards.
+- **Half two:** the best **badugi**: the best set of up to four cards with all different suits and all different ranks.
+
+Aces are low in both halves. That's the difference from Badeucy, its cousin, which uses 2-7 low and an ace-high badugi. A player can win both halves, one half, or neither.
+
+## 30-second cheat sheet
+
+- Five cards each, face down. Button, small blind, big blind.
+- Pre-draw betting, then three draws (0 to 5 cards each), each followed by betting. Small bet before the first draw and after it, big bet (double) after the second and third draws.
+- **Half 1: A-5 low**, all five cards. Ace low, no straight or flush penalty, pairs are bad. Best: A-2-3-4-5. **No qualifier**: no eight-or-better rule here.
+- **Half 2: badugi**, best four-or-fewer cards of different suits and ranks. More cards beats fewer, then lowest wins. Ace is low, so the best badugi is A-2-3-4 in four suits.
+- The one hand that can't be beaten in either half: **A, 2, 3, 4 of four different suits, plus a 5 of any suit.**
+- Usually limit, six players max.
+
+## Full rules
+
+### The deal and betting
+There's a button, a small blind and a big blind. Everyone gets five cards face down. Betting starts left of the big blind, and after each draw it starts with the first live player left of the button.
+
+Each draw, you can discard up to five cards, and you can receive five in a row. Limit sizing is small, small, big, big. A new player joining mid-game waits for the big blind or posts a full big blind.
+
+### The two halves
+The two halves are independent and both come from the same five cards. If everyone else folds, the last player takes the whole pot.
+
+**A-5 low half.** Use all five cards. Aces are low, straights and flushes don't count, pairs are bad. Compare from the highest card down. The best hand is A-2-3-4-5, in any suits. There's **no qualifier**. BARGE says explicitly that Badacey doesn't use the eight-or-better rule, and none of the WSOP text mentions one.
+
+**Badugi half.** Pick the best subset of your five cards, up to four, where every card has a different suit and a different rank. With five cards you drop whichever card or cards leave you the best set. Aces are low here too, so A-2-3-4 in four suits is the best badugi.
+
+- A four-card badugi beats any three-card hand, which beats any two-card hand, which beats any one-card hand.
+- Among hands with the same number of cards, compare the highest card first and lower wins.
+- If nobody has a four-card badugi, the best three-card hand wins that half, and so on.
+
+### Ties and chips
+Each half splits independently, so you can be **quartered**: tie one half, lose the other, and walk away with a quarter of the pot. For odd chips, the WSOP's low-low split rule gives the odd chip by position clockwise from the button, but its mixed-games simplification gives it to the worst position in all button games. That applies here as an inference, because the Badacey section doesn't say.
+
+### Rooms disagree
+- **Ante or blinds:** the WSOP, BARGE and Card Player Lifestyle say blinds. Wizard of Odds' summary says "All players make an ante bet." Blinds is the standard in rooms, and this page uses it.
+- **Spelling:** Badacey (most explainers, BARGE, PokerNews), Badacy (PokerListings, Wikipedia), Badaci (WSOP live-action rules 2026).
+- **Draw limit:** the WSOP says up to five. Wikipedia's Baduci article, which also covers Badacy, says "up to a maximum of three cards" in one paragraph and zero to five in its intro. This page uses five.
+- **Max players:** the WSOP says six, and Card Player Lifestyle says "usually capped at 6". No source disagrees.
+- **Is it separate from Badeucy?** Yes. Badeucy pairs the badugi with a deuce-to-seven low and makes the badugi aces-high. Badacey pairs it with ace-to-five and an ace-low badugi. Wikipedia: "The only difference is in hand evaluation."
+
+## Worked examples
+
+### The scoop
+
+<Example game="badacey" id="scoop" />
+
+Alma holds A♠ 2♥ 3♦ 4♣ 5♠. The A-5 low is the wheel, the nuts. The badugi is A-2-3-4 in four suits, also the nuts. She wins both halves. Bruno's 2-3-4-5-6 is a very good hand, but it loses both: his badugi 2-3-4-5 is higher than hers and his six-low loses to a five-low.
+
+### The one-way hand
+
+<Example game="badacey" id="one-way" />
+
+Cora has 2♥ 4♥ 6♥ 7♥ A♣. Her A-5 low is 7-6-4-2-A, a very good low that needs no qualifier. Her badugi is a disaster: with four hearts, only one heart can play, so her best is A♣ plus a heart, two cards. Dmitri's K♠ Q♦ 9♣ 5♥ is a four-card badugi, and any four-card badugi beats any two-card hand. His pair of fives wrecks his low. Result: Dmitri wins the badugi half, Cora wins the low half. She's a one-way hand, and anyone drawing to a badugi can freeroll her.
+
+### Quartered
+
+<Example game="badacey" id="quartered" />
+
+Ann and Ben both have A-2-3-4 in four suits for the badugi, so they split that half. Ben's fifth card is a 5, giving him the wheel, and Ann's is a king, giving her king-high. Ben wins the low half outright. Ben gets three quarters of the pot and Ann gets one.
+
+## How you'll embarrass yourself
+
+- **Using Badeucy's ace treatment.** In Badacey the ace is low in both halves.
+- **Chasing a pat 8-badugi.** With five cards dealt, showdown badugis are much stronger. CountingOuts advises aiming for at least a seven-badugi and a seven-low rather than holding an eight-badugi in a multiway pot.
+- **Thinking a made low means safety.** A hand like 2♥4♥6♥7♥A♣ has a great low but is a one-way hand. Someone drawing to a badugi can freeroll you.
+- **Throwing away cards like 2♥ 4♥ 6♥** because they don't help the badugi. They're still too valuable for the low (CountingOuts).
+- **Believing there's an eight-or-better requirement.** There isn't.
+- **Playing it seven- or eight-handed.** Five-card hands and three draws run the deck out. Rooms cap it at six.
+
+## Lore and reputation
+
+CountingOuts says Badacey is "almost always included in any mixed rotation that includes draw variants", slightly less prevalent than Badeucy, and most games are higher stakes. It's on the WSOP Dealer's Choice menu (PokerNews and PokerListings 20-game lists), and Wikipedia says Badacey and Badeucy were both offered in the 2022 $10,000 Dealer's Choice championship. PokerListings says the first WSOP Dealer's Choice (2014) described Badeucy and Badacy as "rarely played (at the time)".
+
+It's also on the Coach's Game list at Resorts World (Card Player, 2023, a 17-game list) and the Mixed Game Festival rule sheet (Card Player Lifestyle). Card Player Lifestyle says it's hard to find unless you're near a casino spreading a regular mix, with no online offerings as of its 2021 guide.
+
+Who invented it, and when, isn't documented in any source I read.

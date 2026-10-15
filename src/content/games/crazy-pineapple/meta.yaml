@@ -1,0 +1,43 @@
+name: Crazy Pineapple
+abbrevs: [CP, Crazy Pineapple Hold'em]
+nicknames: [Crazy P]
+summary: Hold'em with three hole cards where you see the whole flop and bet on it before you have to throw one away.
+family: board
+structures: [limit, no-limit, pot-limit]
+holeCards: 3
+draws: 0
+showdown: holdem
+parent: pineapple
+related: [pineapple, no-limit-holdem, irish-poker, crazy-pineapple-hi-lo, omaha-hi-lo]
+sources:
+  - title: "WSOP 2026 Live-Action Rules (Hold'em variation: Crazy Pineapple)"
+    url: https://assets.wsopcdn.com/wsop/853ee602-e1e9-4019-a0cf-381419d805c6.pdf
+  - title: Pagat — Texas Hold'em (Crazy Pineapple, Hi-Lo, Tahoe, Irish)
+    url: https://www.pagat.com/poker/variants/texasholdem.html
+  - title: Wikipedia — Community card poker
+    url: https://en.wikipedia.org/wiki/Community_card_poker
+  - title: Wikibooks — Poker/CrazyPineapple
+    url: https://en.wikibooks.org/wiki/Poker/CrazyPineapple
+  - title: Wikipedia — H.O.R.S.E. (C.H.O.R.S.E.)
+    url: https://en.wikipedia.org/wiki/H.O.R.S.E.
+  - title: Wizard of Vegas forum — Pineapple poker (anecdotes)
+    url: https://wizardofvegas.com/forum/gambling/tables/39219-pineapple-poker/
+  - title: Wizard of Odds — Pineapple and Crazy Pineapple
+    url: https://wizardofodds.com/games/pineapple-and-crazy-pineapple/
+  - title: BeatTheFish — Pineapple
+    url: https://beatthefish.com/poker/pineapple/
+examples:
+  - id: flush-over-set
+    title: Alice discards a card after the flop and keeps her flush draw
+    board: 2h 5h Jc 9h 3s
+    players:
+      - { name: Alice, cards: Ah 8h, discards: 8c }
+      - { name: Bob, cards: Jd Js, discards: Qc }
+    winners: { high: [Alice] }
+  - id: discard-after-flop
+    title: Two pair, because Alice saw the flop before she had to choose
+    board: Kc 7d 2s 4h Js
+    players:
+      - { name: Alice, cards: Kd 7c, discards: 8c }
+      - { name: Bob, cards: Ah Kh, discards: Qh }
+    winners: { high: [Alice] }

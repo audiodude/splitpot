@@ -1,0 +1,48 @@
+name: Courchevel Hi-Lo
+abbrevs: [Courchevel 8, Courchevel O8, Courchevel Hi/Lo]
+nicknames: [Courchevel Eight or Better, 5-Card O8 with a door card]
+summary: Big O with the first flop card dealt face up before the first bet, so you start with a peek at the board.
+family: board
+structures: [pot-limit, limit, no-limit]
+holeCards: 5
+draws: 0
+showdown: omaha-8
+parent: courchevel
+related: [courchevel, big-o, big-easy, omaha-hi-lo]
+sources:
+  - title: PokerStars — Courchevel Hi/Lo rules
+    url: https://www.pokerstars.com/poker/games/omaha/courchevel/high-low/
+  - title: PokerStars — 5-card Omaha Hi/Lo (baseline)
+    url: https://www.pokerstars.com/poker/games/omaha/5-card-high-low/
+  - title: WSOP 2026 Live-Action Rules (Courchevel deal procedure)
+    url: https://assets.wsopcdn.com/wsop/853ee602-e1e9-4019-a0cf-381419d805c6.pdf
+  - title: PokerListings — Courchevel rules
+    url: https://www.pokerlistings.com/poker-rules/courchevel-poker
+  - title: CountingOuts — Courchevel rules and basic strategy
+    url: https://www.countingouts.com/courchevel-rules-and-basic-strategy/
+  - title: Mixed Game Masters — Courchevel rules
+    url: https://mixedgamemasters.com/strategy/courchevel/rules-and-key-differences/
+  - title: Wikipedia — Omaha hold 'em
+    url: https://en.wikipedia.org/wiki/Omaha_hold_%27em
+examples:
+  - id: king-door
+    title: A king door card, and the low still arrives
+    board: Ks 4d 7h 2s 6c
+    players:
+      - { name: Alice, cards: Ad 3c 9h 9d Jh }
+      - { name: Bob, cards: Kh Kd 8d 8s Td }
+    winners: { high: [Bob], low: [Alice] }
+  - id: no-low
+    title: A high door card and a high flop mean no low
+    board: Kc Qd 3h 9s 2d
+    players:
+      - { name: Alice, cards: Ac 4s 5d 6s 7c }
+      - { name: Bob, cards: Kd Ks Jh Jc 8s }
+    winners: { high: [Bob], low: [] }
+  - id: ace-door
+    title: An ace door card helps a wheel scoop
+    board: As 2d 6h 9c 4s
+    players:
+      - { name: Alice, cards: 3c 5d Kd Kc Qc }
+      - { name: Bob, cards: Ah 2h 6d 6c 9h }
+    winners: { high: [Alice], low: [Alice] }

@@ -1,0 +1,22 @@
+name: Mexican Stud
+abbrevs: [Mexican Poker, Mexican 5-Card Stud, Stud Loco]
+nicknames: [Mexican Poker, Stud Loco]
+summary: Five-card stud with a 41-card deck, a joker, and the freedom to choose whether to turn your hidden card face up.
+family: stud
+structures: [limit]
+holeCards: 5
+draws: 0
+showdown: custom
+parent: five-card-stud
+related: [five-card-stud, seven-card-stud, razz]
+sources:
+  - title: WSOP 2026 Live-Action Rules (Mexican Poker / Mexican Stud)
+    url: https://assets.wsopcdn.com/wsop/853ee602-e1e9-4019-a0cf-381419d805c6.pdf
+  - title: Parkwest Bicycle Casino — Rules for Mexican Poker
+    url: https://www.thebike.com/play/poker_mexican_poker.php
+  - title: BARGE Rulebook (2.40 Mexican Poker)
+    url: https://www.barge.org/rulebook.pdf
+  - title: Wikipedia — Stud poker
+    url: https://en.wikipedia.org/wiki/Stud_poker
+  - title: Wikipedia — Five-card stud
+    url: https://en.wikipedia.org/wiki/Five-card_stud

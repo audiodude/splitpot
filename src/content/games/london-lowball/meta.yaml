@@ -1,0 +1,20 @@
+name: London Lowball
+abbrevs: [A-6 Razz, Ace-to-Six Stud Lowball]
+nicknames: []
+summary: Razz with the straight-and-flush penalty added, played pot-limit, almost never seen outside London clubs and BARGE.
+family: stud
+structures: [pot-limit]
+holeCards: 7
+draws: 0
+showdown: custom
+parent: razz
+related: [razz, 2-7-razz, five-card-stud, seven-card-stud]
+sources:
+  - title: BARGE Rulebook (2.38 London Lowball, Appendix A)
+    url: https://www.barge.org/rulebook.pdf
+  - title: Wikipedia — Razz (poker)
+    url: https://en.wikipedia.org/wiki/Razz_(poker)
+  - title: Pagat — Seven Card Stud (London Lowball section)
+    url: https://www.pagat.com/poker/variants/7stud.html
+  - title: Poker-Vibe — review of Poker 24/7 by Stewart Reuben
+    url: http://www.poker-vibe.com/books/24-7/

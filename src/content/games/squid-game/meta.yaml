@@ -1,0 +1,19 @@
+name: Squid Game
+abbrevs: []
+nicknames: [Limit Squid Game, Triple-board Omaha with lowest-river elimination]
+summary: Omaha with three boards. After the rivers the board with the lowest river card is eliminated and the other two split the pot.
+family: board
+structures: [limit, pot-limit]
+holeCards: 4
+draws: 0
+showdown: custom
+related: [derailment, double-board-omaha, bomb-pot, big-o, omaha-hi-lo]
+sources:
+  - title: "Card Player Lifestyle — Mixed game poker rules"
+    url: https://cardplayerlifestyle.com/poker-tips-strategy/mixed-game-poker-rules/
+  - title: "Upswing Poker — Crazy poker games to try in your home game"
+    url: https://upswingpoker.com/crazy-poker-games-try-home-game/
+  - title: "VIP-Grinders — Doug Polk introduces long list of new poker games"
+    url: https://www.vip-grinders.com/doug-polk-introduces-long-list-of-new-poker-games-in-latest-poker-video/
+  - title: "WSOP 2026 Live-Action Rules (Derailment)"
+    url: https://assets.wsopcdn.com/wsop/853ee602-e1e9-4019-a0cf-381419d805c6.pdf

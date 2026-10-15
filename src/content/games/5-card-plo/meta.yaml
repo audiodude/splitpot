@@ -1,0 +1,35 @@
+name: 5-Card Pot-Limit Omaha
+abbrevs: [PLO5, 5-card PLO, PL5O]
+nicknames: [5-card Omaha, Five-card Omaha, Omaha-5]
+summary: PLO with a fifth hole card, so you still use exactly two but now have ten ways to pick them.
+family: board
+structures: [pot-limit, limit]
+holeCards: 5
+draws: 0
+showdown: omaha
+parent: pot-limit-omaha
+related: [pot-limit-omaha, 6-card-plo, courchevel, 5-card-double-board-bomb-pot-plo, big-o, big-easy]
+sources:
+  - title: WSOP 2026 Live-Action Rules (Big O/Big Easy 8-max, 5-card double-board bomb pot PLO, 5-card PLO run-it-twice)
+    url: https://assets.wsopcdn.com/wsop/853ee602-e1e9-4019-a0cf-381419d805c6.pdf
+  - title: Wikipedia — Omaha hold 'em (five-card, six-card, Big O)
+    url: https://en.wikipedia.org/wiki/Omaha_hold_%27em
+  - title: Pagat — Omaha (Five Card Omaha)
+    url: https://www.pagat.com/poker/variants/omaha.html
+  - title: CardPlayer — How to play 5-card PLO
+    url: https://www.cardplayer.com/online-poker/how-to-play-5-card-plo
+examples:
+  - id: trips-in-hand
+    title: Three nines in your hand are only a pair
+    board: 2s 5h 8c Qd Jc
+    players:
+      - { name: Alice, cards: 9c 9d 9h As Kd }
+      - { name: Bob, cards: Qh 5d 3c 4h 7s }
+    winners: { high: [Bob] }
+  - id: second-nut-flush
+    title: Both have a heart flush, but only one has the ace
+    board: 2h 6h Jh Kc 9d
+    players:
+      - { name: Alice, cards: Ah 4h 7c 8s 3d }
+      - { name: Bob, cards: Kh Qh Jc 5s 5d }
+    winners: { high: [Alice] }

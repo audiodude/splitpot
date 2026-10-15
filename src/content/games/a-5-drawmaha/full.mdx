@@ -1,0 +1,84 @@
+## Drawmaha, except the draw half is an ace-to-five low
+
+Take [Drawmaha](/games/drawmaha): five hole cards, a flop, one draw, a turn, a river, and a pot split in two. The Omaha half is unchanged: Omaha *high*, exactly two of your cards plus exactly three from the board.
+
+The change is the other half. Instead of the best five-card high hand, it goes to the **lowest** five-card hand under **ace-to-five** rules (the "California lowball" ranking). Aces are low, straights and flushes don't count against you, and the best hand is the wheel, A-2-3-4-5.
+
+If you know 2-7 Drawmaha, this is its friendlier cousin for low hands: there's nothing to trip over with straights and flushes. The catch is that the ace now matters a lot on *both* sides of the pot.
+
+## 30-second cheat sheet
+
+- Five hole cards, betting, three-card flop, betting.
+- **One draw**: announce a number (1 to 3 at the WSOP, or stand pat), get replacements, then turn, betting, river, betting.
+- **Half the pot**: best Omaha high hand, exactly 2 hole cards + exactly 3 board cards.
+- **Half the pot**: lowest hand from your own five final cards, board ignored.
+- Low half rules: **ace is low**, **straights and flushes don't count**, pairs are bad. The best hand is **5-4-3-2-A**.
+- Compare low hands from the top card down. 6-4-3-2-A beats 6-5-3-2-A.
+- No qualifier: the low half always gets paid.
+- Limit or pot-limit. Seven players max at the WSOP.
+
+## Full rules
+
+### The deal and first round
+Button and blinds (the WSOP also allows antes or several blinds). Everyone gets five cards face down. Betting begins left of the big blind.
+
+### The flop
+The dealer burns a card and deals three face-up board cards. Betting round, starting left of the button.
+
+### The draw
+Starting left of the button, each player says how many cards to replace: one to three, or none (standing pat) in the WSOP rules. You can't change your mind after you say it. The dealer burns, deals the turn, and then gives out the replacement cards, and there's a betting round.
+
+Only your final five cards play, so anything you discard is gone from both halves.
+
+### The turn, the river, and showdown
+Turn betting, river card, final betting round, showdown. The pot is cut into two halves.
+
+**Omaha half.** Exactly two of your five cards and exactly three board cards, best high hand wins.
+
+**A-5 low half.** All five of your cards, board ignored, lowest hand wins:
+
+- The ace is always low, and a hand of A-2-3-4-5 is the best possible: the **wheel**.
+- Straights and flushes don't hurt you. A suited wheel is still the nuts.
+- Any hand with no pair beats any hand with a pair. This is the standard lowball ranking; the WSOP rule text only spells out the wheel and the straight-and-flush part, and doesn't say otherwise.
+- Compare from the highest card down. 8-6-4-2-A beats 8-7-3-2-A, because the second card decides it.
+
+One player can win both halves. Ties split their half. The WSOP gives an odd chip to the first tied player clockwise from the button.
+
+### Rooms disagree
+- **Draw cap and order.** Same fights as [Drawmaha](/games/drawmaha): this page uses the WSOP's 1-to-3 cards or stand pat, with the turn dealt before the draw cards. BARGE's base game allows 0 to 5, and some rooms deal the draw cards first.
+- **Names.** WSOP says "Ace-5", Card Player Lifestyle says "Drawmaha A-5", Kevin Haney says "Ace-to-Five". Dramaha and Drawmaha are the same word.
+- **Qualifier.** None of the sources describe one, so this page assumes there isn't one. That's an inference from the WSOP's general "best five-card hand from hole cards" wording, not a stated rule.
+
+## Worked examples
+
+### The wheel does double duty
+
+<Example game="a-5-drawmaha" id="wheel-scoop" />
+
+Alice holds the wheel (5-4-3-2-A), the best low hand. On a board of 6-7-8-K-J, her 5♠ 4♦ plus the board's 6-7-8 makes an eight-high straight, so the same five cards win the Omaha half too. Bob has Kh Kd Qs Qd Jh, which is terrible for low and only makes three kings on this board. Alice scoops.
+
+### A pair of aces is still a pair
+
+<Example game="a-5-drawmaha" id="pair-of-aces-loses" />
+
+Dave holds A-A-2-3-4. He has a pair, so Erin's K-Q-J-9-7 (a king-high hand with no pair) wins the low half. Dave still wins the Omaha half: Ah Ad plus the board's Ac 5h 5d is aces full of fives, which beats Erin's two pair.
+
+### Compare from the top down
+
+<Example game="a-5-drawmaha" id="top-down" />
+
+Gina's 8-6-4-2-A and Hana's 8-7-3-2-A are both eight-lows. Match them from the top: the eights tie, then the 6 beats the 7. Gina takes the low half. On the Omaha side, Hana's 7♥ plus any other hole card and the board's three sevens is four of a kind, which beats Gina's three sevens.
+
+## How you'll embarrass yourself
+
+- **Using 2-7 rules.** Aces are *low* here. Straights and flushes don't hurt.
+- **Throwing the ace away.** Haney notes the ace is a key card for Omaha strength *and* for the low side, which makes deciding what to keep hard.
+- **Assuming a wheel draw wins Omaha too.** It does only when the board connects. Alice in the first example was lucky.
+- **Standing on a pair because it's "low."** A pair loses to any unpaired hand. 8-8-5-3-2 loses to K-Q-J-9-7.
+- **Forgetting there is only one draw.** If you draw one card to a wheel and miss, you don't get another chance.
+
+## Lore and reputation
+
+Kevin Haney, writing in Card Player in 2025, says an A-5 version of Dramaha exists "but is far less popular", gives it 5 out of 10, and says it plays second fiddle to the 2-7 version. His reasons: the ace may be too important for Omaha, and starting-hand values are harder to judge. For a small rotation he suggests a badugi or point variant instead. That's an opinion, not a fact about the game.
+
+The WSOP rules and Card Player Lifestyle's Mixed Game Festival rule sheet both list it. The research for this site found no real-room rotation that features it by name: the Resorts World mixed game and Phenom Poker's online mixes leave it out.

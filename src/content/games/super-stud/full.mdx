@@ -1,0 +1,71 @@
+## It's seven-card stud, except you start with five cards and must discard two
+
+If you've played seven-card stud, you know the shape: a few cards down, a few cards up, betting on every street, best five-card high hand wins. Super Stud is the same game with a twist at the start. You're dealt **four cards face down and one face up**, bet on that five-card hand, and then **throw away two of your hidden cards**. After that you're back to normal stud: two down, one up, and three more cards still to come.
+
+Same ending, better beginning. You get to pick your best three starting cards out of five, so everyone shows up with a stronger hand than regular stud would have given them.
+
+## 30-second cheat sheet
+
+- Ante. Four cards face down, one face up. Bet (third street).
+- **Before the next card is dealt, discard two of your four hidden cards.** Never the up card. Forget, and your hand is dead.
+- Then it's ordinary seven-card stud: 4th, 5th and 6th streets face up, 7th face down, betting after each. Five betting rounds in all.
+- Small bet on 3rd and 4th street, big bet on 5th through 7th. Usually limit, up to seven players, six is comfortable.
+- Best five-card high hand from your final seven cards (three down, four up) wins. No straight or flush surprises: standard high ranking.
+- On 4th street, an open pair lets any player choose a small or big bet (Super Stud High only, per the WSOP rules).
+- It's rare. The sources I found spend nearly all their ink on Super Stud 8, and its high-only cousin is mostly "a game on the list".
+
+## Full rules
+
+### The deal
+Everyone antes. Each player gets four cards face down and one face up (the **door card**). The player with the lowest door card, ace high and ties broken by suit (clubs, diamonds, hearts, spades), posts the **bring-in** and the action goes clockwise. The WSOP rules only say "all rules for Seven Card Stud apply" for the high version and mention the high-card bring-in as the exception for the 8-or-better one, so this page assumes the low card brings it in, which is also what [BARGE's rulebook](https://www.barge.org/rulebook.pdf) says. [INFERENCE from the WSOP text.]
+
+### The forced discard
+After the first betting round, and before 4th street is dealt, every player must discard two of their four hidden cards. You can't discard your up card. Your hand is then the normal stud position: two down, one up. If you fail to discard before the first 4th-street card is dealt, your hand is dead. In Las Vegas the discard comes after the betting on third street. Some Atlantic City rooms let you do it while you're acting, per CountingOuts, but don't count on that.
+
+### Streets 4 through 7
+Deal three more cards face up (4th, 5th, 6th street) and a last card face down (7th). There's a betting round after each, so five in total: small bet on 3rd and 4th street, big bet on 5th, 6th and 7th. The best high hand showing acts first on every street after the first. On 4th street, if someone's board shows a pair, any player may choose the small or big bet.
+
+### Showdown
+Everyone left shows their seven cards and the best five-card poker hand wins. Standard high ranking. Ties split, and an odd chip goes to the highest card by suit among the tied hands' five playing cards.
+
+### Running out of cards
+Five cards each, plus burns, plus a seven-handed table makes the deck thin. By the WSOP rule, before 6th street the dealer counts players + 2 and, if there isn't enough, reshuffles the stub, burns and muck together. The WSOP says a community card is never used in Super Stud.
+
+### Rooms disagree
+- **Bring-in:** WSOP wording implies the low card for high Super Stud. BARGE says the same. This page follows that, flagged as inference since the WSOP never says it outright.
+- **Running out of cards:** WSOP reshuffles the muck. CountingOuts says rooms usually deal a community card on 7th, as in normal stud.
+- **Discard timing:** after third-street betting (WSOP, Vegas) vs while acting (some Atlantic City rooms).
+- **Player count:** WSOP says up to seven, Badger says six is the norm.
+
+## Worked examples
+
+### Rolled-up trips
+
+<Example game="super-stud" id="rolled-up" />
+
+Alice's three kings beat Bob's two pair. Starting with five cards and keeping the best three makes this kind of hand much more common: CountingOuts calculates about 1.3% of deals being rolled up here, against about 0.24% in regular stud.
+
+### The hidden straight
+
+<Example game="super-stud" id="hidden-straight" />
+
+Carol has a pair of kings on the board and a straight in her seven cards. You always play the best five of your seven, so the straight beats Dan's two pair, aces and queens.
+
+### Tie
+
+<Example game="super-stud" id="tie" />
+
+Both players make A-K-Q-J-9. Suits never break ties for the pot in poker, so they split. The suit only matters for odd chips and for who must bring it in.
+
+## How you'll embarrass yourself
+
+- **Forgetting to discard.** Your hand is dead. Haney writes "avoid being that guy at all costs". CountingOuts tells of a player who tabled a nine-card straight and forfeited the pot.
+- **Throwing away your up card.** You can only discard down cards.
+- **Playing it like regular stud.** Everyone has a stronger set of starting cards, so a hand like a small pair isn't what it used to be.
+- **Forgetting about your own discards.** They're dead cards that only you know about, so if you toss a king, your opponent's king isn't as scary.
+
+## Lore and reputation
+
+Honest assessment: this is a **rare** game. The WSOP lists "Super Stud" and "Super Stud 8/O" in its sample $20-$40 mixes, and BARGE treats "Super" as a modifier that can be bolted onto stud, stud 8 or razz. But the write-ups I found (Badger, CountingOuts, Haney) are about the 8-or-better version, and nothing I found says the high-only game is spread often. Haney (Card Player, 2025) reports "increasingly more Stud 8 is being played as 'Super'". If you're offered a Super Stud night, expect the hi-lo version.
+
+There's also a home-game cousin where all five cards are dealt down and you pick which one to turn up ("roll your own"). Haney describes it, and it's not a casino game.

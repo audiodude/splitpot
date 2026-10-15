@@ -1,0 +1,49 @@
+name: Razz
+abbrevs: [A-5 Razz, Stud Low]
+nicknames: [Seven-card stud lowball, the R in HORSE]
+summary: "Seven-card stud played backwards: lowest hand wins the whole pot, aces are low, straights and flushes don't count against you, and the king brings it in."
+family: stud
+structures: [limit]
+holeCards: 7
+draws: 0
+showdown: razz
+parent: seven-card-stud
+related: [seven-card-stud, 2-7-razz, action-razz, razzdugi, razzdeucey, london-lowball, seven-card-stud-hi-lo-no-qualifier, super-stud]
+sources:
+  - title: WSOP 2026 Live-Action Rules (Seven-Card Stud Low / Razz, rules 237-240)
+    url: https://assets.wsopcdn.com/wsop/853ee602-e1e9-4019-a0cf-381419d805c6.pdf
+  - title: Robert's Rules of Poker v11 (Razz)
+    url: https://www.pagat.com/docs/RobsPkrRules11.pdf
+  - title: TDA 2019 Rules
+    url: https://ris.dls.virginia.gov/uploads/11VAC20/dibr/Poker%20Tournament%20Directors%20Assoc_2019%20Rules-20221228170122.pdf
+  - title: PokerNews — Razz rules
+    url: https://www.pokernews.com/poker-rules/razz.htm
+  - title: Wikipedia — Razz
+    url: https://en.wikipedia.org/wiki/Razz_(poker)
+  - title: Pagat — Seven-card stud (Razz and London Lowball)
+    url: https://www.pagat.com/poker/variants/7stud.html
+  - title: BARGE Rulebook
+    url: https://www.barge.org/rulebook.pdf
+  - title: Card Player — Spice up your home game, stud lowball variants
+    url: https://www.cardplayer.com/cardplayer-poker-magazines/1632969-acr-poker-39-1/articles/1633666-spice-up-your-home-game-stud-lowball-variants
+  - title: Card Player — Greg Raymer introduces Action Razz
+    url: https://www.cardplayer.com/poker-news/25642-poker-strategy-with-greg-raymer-introducing-action-razz
+examples:
+  - id: flush-and-straight-dont-matter
+    title: A suited wheel is still the nuts
+    players:
+      - { name: Alice, cards: Ah 2h 3h 4h 5h Kd Qc }
+      - { name: Bob, cards: 6s 4s 3s 2s As Jd 9c }
+    winners: { low: [Alice] }
+  - id: compare-from-the-top
+    title: Both have a six-low, so you compare the next card down
+    players:
+      - { name: Alice, cards: As Ad 2c 3h 4d 6s Kc }
+      - { name: Bob, cards: Ac 2h 3s 5d 6c Kd Qs }
+    winners: { low: [Alice] }
+  - id: pair-trap
+    title: Queen-high beats a pair of aces
+    players:
+      - { name: Alice, cards: As Ad 2c 2d 3h 3s 4c }
+      - { name: Bob, cards: Kh Qd Js Tc 9h 9d 2h }
+    winners: { low: [Bob] }

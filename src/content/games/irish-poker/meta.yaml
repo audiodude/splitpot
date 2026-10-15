@@ -1,0 +1,35 @@
+name: Irish Poker
+abbrevs: [Irish, Irish Hold'em]
+nicknames: [Irish Omaha (loosely)]
+summary: Four hole cards, bet the flop with all of them, then throw two away. Rare, mostly home games.
+family: board
+structures: [no-limit, pot-limit]
+holeCards: 4
+draws: 0
+showdown: omaha
+parent: crazy-pineapple
+related: [crazy-pineapple, pineapple, pot-limit-omaha, no-limit-holdem]
+sources:
+  - title: "Pagat — Texas Hold'em variants (Irish)"
+    url: https://www.pagat.com/poker/variants/texasholdem.html
+  - title: "Wikipedia — Community card poker"
+    url: https://en.wikipedia.org/wiki/Community_card_poker
+  - title: "PokerListings — Irish Poker rules"
+    url: https://www.pokerlistings.com/poker-rules/irish-poker
+  - title: "Card Player — How to play Irish Poker"
+    url: https://www.cardplayer.com/online-poker/how-to-play-irish-poker
+examples:
+  - id: kept-straight
+    title: Kept 8-6 beats the kept pair of kings
+    board: 5d 9h 7c Ks 2d
+    players:
+      - { name: Alice, cards: Kh Kd }
+      - { name: Bob, cards: 8h 6h }
+    winners: { high: [Bob] }
+  - id: kept-flush
+    title: The suited ace you kept makes a flush
+    board: 2s 7s 9s Kd 3c
+    players:
+      - { name: Alice, cards: As Qs }
+      - { name: Bob, cards: Kh Kc }
+    winners: { high: [Alice] }

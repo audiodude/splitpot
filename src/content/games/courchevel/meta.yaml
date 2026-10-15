@@ -1,0 +1,41 @@
+name: Courchevel
+abbrevs: [Courchevel PLO]
+nicknames: [Courchevel Omaha, 5-card Omaha with a door card]
+summary: Five-card PLO where the first flop card is turned face up before the first bet, so you're betting with a peek at the board.
+family: board
+structures: [pot-limit]
+holeCards: 5
+draws: 0
+showdown: omaha
+parent: 5-card-plo
+related: [5-card-plo, pot-limit-omaha, courchevel-hi-lo, 6-card-plo]
+sources:
+  - title: WSOP 2026 Live-Action Rules (Courchevel, 8-participant maximum)
+    url: https://assets.wsopcdn.com/wsop/853ee602-e1e9-4019-a0cf-381419d805c6.pdf
+  - title: Wikipedia — Omaha hold 'em (Courchevel)
+    url: https://en.wikipedia.org/wiki/Omaha_hold_%27em
+  - title: Pagat — Omaha (Courchevel)
+    url: https://www.pagat.com/poker/variants/omaha.html
+  - title: PokerListings — Courchevel poker rules
+    url: https://www.pokerlistings.com/poker-rules/courchevel-poker
+  - title: Poker Game Database — Courchevel
+    url: https://pokergamedatabase.com/games/courchevel.html
+  - title: Mixed Game Masters — Courchevel rules and key differences
+    url: https://mixedgamemasters.com/strategy/courchevel/rules-and-key-differences/
+  - title: Wikipedia — Community card poker
+    url: https://en.wikipedia.org/wiki/Community_card_poker
+examples:
+  - id: set-over-set
+    title: The door card gave Alice a set, but the flop gave Bob a bigger one
+    board: 8h Kd 3c Js 2d
+    players:
+      - { name: Alice, cards: 8c 8d 5s 6h 9c }
+      - { name: Bob, cards: Kc Ks Tc 4d 7s }
+    winners: { high: [Bob] }
+  - id: door-flush
+    title: Still exactly two from your hand and three from the board
+    board: Qc 2c 7c Kh 4d
+    players:
+      - { name: Alice, cards: Ac 9c 3s 3d Js }
+      - { name: Bob, cards: Qh Qd Kd Ks 5s }
+    winners: { high: [Alice] }

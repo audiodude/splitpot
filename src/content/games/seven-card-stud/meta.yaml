@@ -1,0 +1,46 @@
+name: Seven-Card Stud
+abbrevs: [Stud, 7CS, Stud High]
+nicknames: [Seven-Toed Pete, Down the River]
+summary: No community cards, no blinds, no button; seven cards each, four face up for everyone to read, best five-card high hand wins.
+family: stud
+structures: [limit]
+holeCards: 7
+draws: 0
+showdown: stud
+related: [seven-card-stud-hi-lo, seven-card-stud-hi-lo-no-qualifier, razz, five-card-stud, super-stud, mexican-stud]
+sources:
+  - title: WSOP 2026 Live-Action Rules (Section IX, Seven-Card Stud)
+    url: https://assets.wsopcdn.com/wsop/853ee602-e1e9-4019-a0cf-381419d805c6.pdf
+  - title: Robert's Rules of Poker v11
+    url: https://www.pagat.com/docs/RobsPkrRules11.pdf
+  - title: TDA 2019 Rules (RP-10, stud procedures)
+    url: https://ris.dls.virginia.gov/uploads/11VAC20/dibr/Poker%20Tournament%20Directors%20Assoc_2019%20Rules-20221228170122.pdf
+  - title: PokerNews — Seven-Card Stud rules
+    url: https://www.pokernews.com/poker-rules/seven-card-stud.htm
+  - title: Pagat — Seven-card stud
+    url: https://www.pagat.com/poker/variants/7stud.html
+  - title: Wikipedia — Seven-card stud
+    url: https://en.wikipedia.org/wiki/Seven-card_stud
+  - title: Wikipedia — Stud poker
+    url: https://en.wikipedia.org/wiki/Stud_poker
+  - title: BARGE Rulebook
+    url: https://www.barge.org/rulebook.pdf
+examples:
+  - id: wheel-beats-two-pair
+    title: Best five of seven, and the ace plays low in a straight
+    players:
+      - { name: Alice, cards: Ks Kd 7c 7h 2s 9s 4d }
+      - { name: Bob, cards: Ah 2d 3s 4c 5h Kc 9d }
+    winners: { high: [Bob] }
+  - id: suits-dont-matter
+    title: Same straight, different suits, split pot
+    players:
+      - { name: Alice, cards: Ah 2d 3s 4c 5h Kd 9c }
+      - { name: Bob, cards: As 2c 3h 4d 5s Kc 9d }
+    winners: { high: [Alice, Bob] }
+  - id: flush-over-trips
+    title: Three sevens lose to a flush you can't see on the table
+    players:
+      - { name: Alice, cards: 7s 7h 7d Ks 2c 9c 4d }
+      - { name: Bob, cards: Ah Jh 9h 6h 3h Kd 2s }
+    winners: { high: [Bob] }

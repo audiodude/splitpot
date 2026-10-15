@@ -1,0 +1,24 @@
+name: Double Board Omaha
+abbrevs: [DBPLO, Double Board PLO]
+nicknames: [Double-flop PLO, top board bottom board PLO]
+summary: PLO with two boards, each its own Omaha hand, so you can win half, win it all, or get quartered.
+family: board
+structures: [pot-limit]
+holeCards: 4
+draws: 0
+showdown: custom
+parent: pot-limit-omaha
+related: [pot-limit-omaha, bomb-pot, 5-card-double-board-bomb-pot-plo, derailment, ultimate-big-o]
+sources:
+  - title: "WSOP 2026 Live-Action Rules (Double Board Omaha)"
+    url: https://assets.wsopcdn.com/wsop/853ee602-e1e9-4019-a0cf-381419d805c6.pdf
+  - title: "The Lodge — What is a poker bomb pot?"
+    url: https://thelodgepokerclub.com/what-is-a-poker-bomb-pot/
+  - title: "casino.org — What is a bomb pot in poker?"
+    url: https://www.casino.org/blog/what-is-a-bomb-pot-in-poker/
+  - title: "PLOMastermind — Double board PLO bomb pots"
+    url: https://plomastermind.com/double-board-plo-bomb-pots/
+  - title: "Wikipedia — Community card poker"
+    url: https://en.wikipedia.org/wiki/Community_card_poker
+  - title: "Tournament Directors Association rules"
+    url: https://www.pokertda.com/view-poker-tda-rules/

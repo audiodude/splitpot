@@ -1,0 +1,47 @@
+name: Big O
+abbrevs: [Big O, 5-Card O8, PLO8-5]
+nicknames: [Five-Card Omaha Hi-Lo, 5 Card Pot-Limit Omaha Hi-Lo 8 or Better, Big-O]
+summary: Omaha Hi-Lo with five hole cards instead of four, so everyone holds A-2 and the nuts is the only hand that matters.
+family: board
+structures: [pot-limit, limit]
+holeCards: 5
+draws: 0
+showdown: omaha-8
+parent: omaha-hi-lo
+related: [omaha-hi-lo, big-easy, omaha-hi-lo-regular, courchevel-hi-lo, ultimate-big-o, 3-2-1, 5-card-plo]
+sources:
+  - title: WSOP 2026 Live-Action Rules (Big O)
+    url: https://assets.wsopcdn.com/wsop/853ee602-e1e9-4019-a0cf-381419d805c6.pdf
+  - title: PokerStars — 5-card Omaha Hi/Lo
+    url: https://www.pokerstars.com/poker/games/omaha/5-card-high-low/
+  - title: PokerNews — Big O rules
+    url: https://www.pokernews.com/poker-rules/big-o.htm
+  - title: Card Player — Big O glossary entry
+    url: https://www.cardplayer.com/rules-of-poker/glossary/big-o-poker
+  - title: Mixed Game Masters — PLO8 rules (odd chip variations)
+    url: https://mixedgamemasters.com/strategy/pot-limit-omaha-hi-lo/rules/
+  - title: Wikipedia — Omaha hold 'em
+    url: https://en.wikipedia.org/wiki/Omaha_hold_%27em
+examples:
+  - id: five-suited
+    title: Five spades in hand, still no flush
+    board: 2s 9s Kd 6h 4c
+    players:
+      - { name: Alice, cards: As 3s Ks Qs Js }
+      - { name: Bob, cards: 9h 9d 7c 3d 8d }
+    winners: { high: [Bob], low: [Alice] }
+  - id: wheel-scoop
+    title: The wheel makes the nut low and a straight
+    board: 2c 3d 4h Ks 9c
+    players:
+      - { name: Alice, cards: Ad 5s Kh Qd Jc }
+      - { name: Bob, cards: 9d 9h 6d 7h Qs }
+    winners: { high: [Alice], low: [Alice] }
+  - id: three-way-low
+    title: Three players hold A-2 and share the low
+    board: 3c 4d 8h Kc Kd
+    players:
+      - { name: Alice, cards: As 2s 9c 9d Th }
+      - { name: Bob, cards: Ah 2h Qc Qd 7s }
+      - { name: Carol, cards: Ac 2d Js Jd 5c }
+    winners: { high: [Bob], low: [Alice, Bob, Carol] }

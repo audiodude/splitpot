@@ -1,0 +1,13 @@
+name: Watermelon
+abbrevs: []
+nicknames: []
+summary: Five-card Omaha with three boards, but the pot goes to whoever wins the most boards, not split by board.
+family: board
+structures: [pot-limit]
+holeCards: 5
+draws: 0
+showdown: custom
+related: [squid-game, double-board-omaha, bomb-pot, big-o]
+sources:
+  - title: "Card Player Lifestyle — Mixed game poker rules"
+    url: https://cardplayerlifestyle.com/poker-tips-strategy/mixed-game-poker-rules/

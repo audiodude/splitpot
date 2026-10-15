@@ -1,0 +1,16 @@
+name: Badugi Hi-Lo
+abbrevs: [Badugi High-Low, Badugi Hi/Lo]
+nicknames: [Hi-Lo Badugi]
+summary: "Badugi with the pot split between the lowest badugi and the \"highest\" one, which is judged by its lowest card, so a hand can be great one way and dead the other."
+family: draw
+structures: [limit]
+holeCards: 4
+draws: 3
+showdown: custom
+parent: badugi
+related: [badugi, hi-dugi, badeucy, badacey]
+sources:
+  - title: Card Player — The Coach's Game at Resorts World, Part 1
+    url: https://www.cardplayer.com/cardplayer-poker-magazines/66506-chad-eveslage-36-2/articles/24732-the-coach-s-game-at-resorts-world-part-1
+  - title: Card Player Lifestyle — Mixed game poker rules (Badugi Hi-Low)
+    url: https://cardplayerlifestyle.com/poker-tips-strategy/mixed-game-poker-rules/

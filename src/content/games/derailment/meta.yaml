@@ -1,0 +1,18 @@
+name: Derailment
+abbrevs: []
+nicknames: [Three-board PLO bomb pot]
+summary: A three-board PLO bomb pot where the board with the lowest river card is thrown out and the rest split the pot.
+family: board
+structures: [pot-limit]
+holeCards: 4
+draws: 0
+showdown: custom
+parent: 5-card-double-board-bomb-pot-plo
+related: [bomb-pot, double-board-omaha, 5-card-double-board-bomb-pot-plo]
+sources:
+  - title: "WSOP 2026 Live-Action Rules (Derailment)"
+    url: https://assets.wsopcdn.com/wsop/853ee602-e1e9-4019-a0cf-381419d805c6.pdf
+  - title: "Poker Chip Forum — Derailment clarification"
+    url: https://www.pokerchipforum.com/threads/derailment-clarification.113691/
+  - title: "Poker Chip Forum — Bomb pot timing and structure"
+    url: https://www.pokerchipforum.com/threads/bomb-pot-timing-structure.110280/

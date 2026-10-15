@@ -1,0 +1,43 @@
+name: 2-7 Razz
+abbrevs: [27 Razz, Deuce-to-Seven Razz, Kansas City Razz, 2-7 Stud Lowball]
+nicknames: [Kansas City Razz, Deuce Razz]
+summary: "Razz with deuce-to-seven rules: aces high, straights and flushes count against you, and the ace of spades is the automatic bring-in."
+family: stud
+structures: [limit]
+holeCards: 7
+draws: 0
+showdown: razz-27
+parent: razz
+related: [razz, razzdeucey, 2-7-triple-draw, 2-7-single-draw, london-lowball]
+sources:
+  - title: WSOP 2026 Live-Action Rules (Kansas City Razz, rule 238)
+    url: https://assets.wsopcdn.com/wsop/853ee602-e1e9-4019-a0cf-381419d805c6.pdf
+  - title: BARGE Rulebook (Deuce-to-Seven Razz)
+    url: https://www.barge.org/rulebook.pdf
+  - title: Card Player — A better way to play razz, 2-7 stud lowball explained
+    url: https://www.cardplayer.com/cardplayer-poker-magazines/66487-the-greatest-50-poker-players-35-9/articles/24506-a-better-way-to-play-razz-2-7-stud-lowball-explained
+  - title: Wikipedia — Razz
+    url: https://en.wikipedia.org/wiki/Razz_(poker)
+  - title: Card Player — Spice up your home game, stud lowball variants
+    url: https://www.cardplayer.com/cardplayer-poker-magazines/1632969-acr-poker-39-1/articles/1633666-spice-up-your-home-game-stud-lowball-variants
+  - title: Pagat — Lowball
+    url: https://www.pagat.com/poker/variants/low.html
+examples:
+  - id: straight-trap
+    title: Seven cards that contain 3-4-5-6-7, and why that's bad news
+    players:
+      - { name: Alice, cards: 7h 3s 4h 6s Td Jh 5h }
+      - { name: Bob, cards: 2c 3d 5s 7c 9d Ks Kd }
+    winners: { low: [Bob] }
+  - id: ace-is-high
+    title: A-2-3-4-5 is just ace-high here, and king-high beats it
+    players:
+      - { name: Alice, cards: As 2d 3c 4h 5s 5d 4c }
+      - { name: Bob, cards: Kd Qs Jh 9c 8d 8h 9s }
+    winners: { low: [Bob] }
+  - id: flush-trap
+    title: The nuts 7-5-4-3-2 is useless if it's all one suit
+    players:
+      - { name: Alice, cards: 7h 5h 4h 3h 2h Kc Qd }
+      - { name: Bob, cards: Ts 8d 6c 4s 2c Ad Ks }
+    winners: { low: [Bob] }

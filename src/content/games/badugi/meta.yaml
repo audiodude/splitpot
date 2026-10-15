@@ -1,0 +1,52 @@
+name: Badugi
+abbrevs: [BDG]
+nicknames: [Badougi, Padooki, Off Suit Lowball]
+summary: Four cards, three draws, and you want four different suits and four different ranks, all as low as possible. A pair or a repeated suit costs you a card.
+family: draw
+structures: [limit, pot-limit, no-limit]
+holeCards: 4
+draws: 3
+showdown: badugi
+related: [badacey, badeucy, badugi-hi-lo, hi-dugi, a-5-triple-draw, 2-7-triple-draw, badugi-drawmaha]
+sources:
+  - title: WSOP 2026 Live-Action Rules (Section XI, Badugi)
+    url: https://assets.wsopcdn.com/wsop/853ee602-e1e9-4019-a0cf-381419d805c6.pdf
+  - title: Pagat — Badugi
+    url: https://www.pagat.com/poker/variants/badugi.html
+  - title: Wikipedia — Badugi
+    url: https://en.wikipedia.org/wiki/Badugi
+  - title: PokerNews — How to Play Badugi
+    url: https://www.pokernews.com/poker-rules/badugi.htm
+  - title: BARGE — Badugi
+    url: https://www.barge.org/rulebook/badugi.html
+  - title: BARGE — Lowball scales
+    url: https://www.barge.org/rulebook/lowball-scales.html
+  - title: Card Player Lifestyle — Mixed games guide, draw games
+    url: https://cardplayerlifestyle.com/poker-tips-strategy/mixed-games-poker-guide-draw-games/
+  - title: PokerNews — WSOP Dealer's Choice strategy
+    url: https://www.pokernews.com/strategy/wsop-mixed-games-strategy-dealers-choice-30648.htm
+examples:
+  - id: four-beats-three
+    title: Any four-card badugi beats any three-card hand
+    players:
+      - { name: Rosa, cards: Kd Qc Jh Ts }
+      - { name: Sam, cards: As 2d 3h 3c }
+    winners: { badugi: [Rosa] }
+  - id: wsop-three-card
+    title: Two hearts collide, so both play three cards (WSOP's own example)
+    players:
+      - { name: Tess, cards: Ad 2c 3h 6h }
+      - { name: Uma, cards: Ac 3d 4h 5h }
+    winners: { badugi: [Tess] }
+  - id: barge-pairs
+    title: A pair costs you a card, but you choose which one to drop
+    players:
+      - { name: Vic, cards: 7s 4d 2h 2c }
+      - { name: Wes, cards: 7h 5s Ad Ac }
+    winners: { badugi: [Vic] }
+  - id: chop
+    title: Unused cards never break ties
+    players:
+      - { name: Xena, cards: 7s 3s 2h Ad }
+      - { name: Yuri, cards: 3c 3d 2s Ah }
+    winners: { badugi: [Xena, Yuri] }

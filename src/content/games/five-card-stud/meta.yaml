@@ -1,0 +1,38 @@
+name: Five-Card Stud
+abbrevs: [5-Card Stud, 5CS]
+nicknames: [Hole-card stud, The original stud]
+summary: Stud with one hidden card and four showing, so nearly every bet is a tell. A history lesson more than a mixed-game staple.
+family: stud
+structures: [limit, pot-limit, no-limit]
+holeCards: 5
+draws: 0
+showdown: stud
+related: [seven-card-stud, mexican-stud, razz, london-lowball]
+sources:
+  - title: Wikipedia — Five-card stud
+    url: https://en.wikipedia.org/wiki/Five-card_stud
+  - title: Upswing Poker — Five Card Stud rules
+    url: https://upswingpoker.com/poker-rules/five-card-stud/
+  - title: BARGE Rulebook (2.30 Five Card Stud)
+    url: https://www.barge.org/rulebook.pdf
+  - title: Wikipedia — Stud poker
+    url: https://en.wikipedia.org/wiki/Stud_poker
+examples:
+  - id: pair-showing
+    title: A pair on the board beats an ace-high hand
+    players:
+      - { name: Alice, cards: Kh Kd 7s 4c 2d }
+      - { name: Bob, cards: As Qd Jh 9c 3s }
+    winners: { high: [Alice] }
+  - id: kicker
+    title: Same pair, the kicker decides
+    players:
+      - { name: Carol, cards: Qs Qh Ac 7d 3s }
+      - { name: Dan, cards: Qd Qc Ks Jh 2c }
+    winners: { high: [Carol] }
+  - id: four-straight
+    title: Four to a straight is worth nothing
+    players:
+      - { name: Eve, cards: 5h 6d 7c 8s Kh }
+      - { name: Frank, cards: 9s 9d 2c 3h 4d }
+    winners: { high: [Frank] }

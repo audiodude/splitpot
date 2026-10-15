@@ -1,0 +1,43 @@
+name: Seven-Card Stud Hi-Lo No Qualifier
+abbrevs: [Stud Hi-Lo Regular, Stud H/L Regular, Stud NQ, Stud/Q, Stud High-Low No Qualifier]
+nicknames: [Stud Regular, Stud Q]
+summary: Stud Hi-Lo where the low half has no 8-or-better rule, so a ten-low or even a pair can drag half the pot, and the low board acts first.
+family: stud
+structures: [limit]
+holeCards: 7
+draws: 0
+showdown: stud-no-qualifier
+parent: seven-card-stud-hi-lo
+related: [seven-card-stud-hi-lo, seven-card-stud, razz, super-stud-8]
+sources:
+  - title: WSOP 2026 Live-Action Rules (Seven Card Stud High Low Regular, rule 249)
+    url: https://assets.wsopcdn.com/wsop/853ee602-e1e9-4019-a0cf-381419d805c6.pdf
+  - title: BARGE Rulebook (Stud High/Low No Qualifier)
+    url: https://www.barge.org/rulebook.pdf
+  - title: Wikipedia — Stud poker
+    url: https://en.wikipedia.org/wiki/Stud_poker
+  - title: Card Player — Spice up your home game, super-sized stud hi-lo
+    url: https://www.cardplayer.com/poker-news/29944-spice-up-your-poker-home-game-super-sized-stud-hi-lo
+  - title: PokerNews — Dealer's Choice game list
+    url: https://www.pokernews.com/poker-rules/dealers-choice.htm
+  - title: Robert's Rules of Poker v11
+    url: https://www.pagat.com/docs/RobsPkrRules11.pdf
+examples:
+  - id: ugly-low
+    title: A ten-low wins the low half because nobody needs to qualify
+    players:
+      - { name: Alice, cards: Ks Kd Qc Qh 9s 4d 2c }
+      - { name: Bob, cards: Ah Jd Tc 9d 7s 6c 6h }
+    winners: { high: [Alice], low: [Bob] }
+  - id: wheel-not-enough
+    title: A wheel takes low but a full house takes high
+    players:
+      - { name: Alice, cards: Ah 2d 3c 4s 5h Kc 9d }
+      - { name: Bob, cards: Qs Qh Qc 8d 8h 7s 6d }
+    winners: { high: [Bob], low: [Alice] }
+  - id: pair-low
+    title: A one-pair low beats a two-pair low
+    players:
+      - { name: Alice, cards: Ks Kd Kc Js Jd 4h 4s }
+      - { name: Bob, cards: 9s 9d 9c 6s 6d Ah 2c }
+    winners: { high: [Alice], low: [Bob] }

@@ -1,0 +1,41 @@
+name: Super Stud 8
+abbrevs: [Super Stud 8/O, Super Stud 8/b, Super Stud Hi/Lo, Super Stud/8, Super 8]
+nicknames: [Super, Super Stud Eight-or-Better]
+summary: Stud 8 where you start with five cards, throw away two, and the high card (not the low) has to bring it in.
+family: stud
+structures: [limit]
+holeCards: 7
+draws: 0
+showdown: stud-8
+parent: super-stud
+related: [super-stud, seven-card-stud-hi-lo, seven-card-stud-hi-lo-no-qualifier, razzdugi, razzdeucey]
+sources:
+  - title: WSOP 2026 Live-Action Rules
+    url: https://assets.wsopcdn.com/wsop/853ee602-e1e9-4019-a0cf-381419d805c6.pdf
+  - title: Card Player (Haney) — Spice up your home game, super-sized stud hi-lo
+    url: https://www.cardplayer.com/poker-news/29944-spice-up-your-poker-home-game-super-sized-stud-hi-lo
+  - title: CountingOuts — Super Stud Hi/Lo rules and basic strategy
+    url: https://www.countingouts.com/super-stud-hi-low-eight-or-better-rules-and-basic-strategy/
+  - title: Steve Badger — Super Stud
+    url: http://www.stevebadger.com/poker/super-stud/
+  - title: BARGE Rulebook (2.60 Super Stud)
+    url: https://www.barge.org/rulebook.pdf
+examples:
+  - id: split
+    title: High to one hand, low to the other
+    players:
+      - { name: Alice, cards: As 2d 4c 6h 7s Kd 9c }
+      - { name: Bob, cards: Qs Qd 8c 8h 3d Jc 5s }
+    winners: { high: [Bob], low: [Alice] }
+  - id: scoop
+    title: A wheel is both the best low and a straight
+    players:
+      - { name: Carol, cards: 5h 4d 3c 2s Ah Kd Kh }
+      - { name: Dan, cards: Kc Ks Qh Qd 9s 8c 2h }
+    winners: { high: [Carol], low: [Carol] }
+  - id: no-low
+    title: Nobody has five low cards, so high takes it all
+    players:
+      - { name: Eve, cards: Js Jd Jc 9h 4s 2d 7c }
+      - { name: Frank, cards: As Ac 5d 6h 8s 9c Kd }
+    winners: { high: [Eve], low: [] }
